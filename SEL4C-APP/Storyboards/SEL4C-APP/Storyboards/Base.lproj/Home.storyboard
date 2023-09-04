@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWr-mM-XOU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="qs1-LW-IY6">
+            <objects>
+                <viewController id="dWr-mM-XOU" customClass="HomeVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2zG-DY-wZv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-BK-5xG">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="290"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emprendedor en proceso" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-BO-8Ik">
+                                        <rect key="frame" x="30" y="168.33333333333334" width="230" height="71.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="WUI-Vw-ltW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8k-bD-m7s">
+                                        <rect key="frame" x="268" y="179" width="113" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="hB9-9u-yzL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gqw-BO-8Ik" secondAttribute="bottom" constant="50" id="NNs-am-EKO"/>
+                                    <constraint firstItem="b8k-bD-m7s" firstAttribute="leading" secondItem="Gqw-BO-8Ik" secondAttribute="trailing" constant="8" symbolic="YES" id="Qgj-5p-9nH"/>
+                                    <constraint firstAttribute="height" constant="290" id="aPV-0t-QfZ"/>
+                                    <constraint firstItem="Gqw-BO-8Ik" firstAttribute="leading" secondItem="aOn-BK-5xG" secondAttribute="leading" constant="30" id="jNs-LI-w7j"/>
+                                    <constraint firstAttribute="bottom" secondItem="b8k-bD-m7s" secondAttribute="bottom" constant="60" id="n5o-VB-aaU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pah-i1-nnp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aOn-BK-5xG" firstAttribute="top" secondItem="2zG-DY-wZv" secondAttribute="top" id="F7i-yO-bFz"/>
+                            <constraint firstItem="aOn-BK-5xG" firstAttribute="leading" secondItem="pah-i1-nnp" secondAttribute="leading" id="fMK-MS-kTd"/>
+                            <constraint firstItem="aOn-BK-5xG" firstAttribute="trailing" secondItem="pah-i1-nnp" secondAttribute="trailing" id="jc5-XC-GXV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="f.square.fill" catalog="system" selectedImage="f.square.fill" id="2kh-0Y-qsl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-E9-TjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706.10687022900765" y="-192.25352112676057"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
