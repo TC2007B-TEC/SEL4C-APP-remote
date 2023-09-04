@@ -31,6 +31,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person.crop.circle.fill" catalog="system" selectedImage="person.crop.circle.fill" id="VsJ-lN-MPl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6W-0K-j4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

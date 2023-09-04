@@ -57,6 +57,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="f.square.fill" catalog="system" selectedImage="f.square.fill" id="2kh-0Y-qsl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-E9-TjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

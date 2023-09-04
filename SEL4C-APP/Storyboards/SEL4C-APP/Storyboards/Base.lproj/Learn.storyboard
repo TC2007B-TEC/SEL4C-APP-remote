@@ -32,6 +32,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" image="rectangle.stack" catalog="system" selectedImage="rectangle.stack" id="jhp-7L-rfL"/>
                     <navigationItem key="navigationItem" id="EgD-RN-Wuz"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQC-gk-yrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
