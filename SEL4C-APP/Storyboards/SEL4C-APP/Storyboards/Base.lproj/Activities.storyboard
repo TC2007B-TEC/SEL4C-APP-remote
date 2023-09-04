@@ -13,34 +13,76 @@
             <objects>
                 <viewController id="4E5-DJ-TJ8" customClass="ActivitiesVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7pi-60-Hsg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actividades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd3-pc-wgD">
-                                <rect key="frame" x="101" y="89" width="191" height="38"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAY-02-Npa">
+                                <rect key="frame" x="0.0" y="59" width="393" height="1207"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJH-MA-J4u" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actividades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZr-Zt-NMZ">
+                                                <rect key="frame" x="101" y="20" width="191" height="38"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="129-AR-4iH">
+                                                <rect key="frame" x="20" y="1040" width="353" height="130"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="hS3-Lz-oQs"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="129-AR-4iH" secondAttribute="bottom" constant="30" id="5Of-TD-Ynp"/>
+                                            <constraint firstItem="lZr-Zt-NMZ" firstAttribute="centerX" secondItem="NJH-MA-J4u" secondAttribute="centerX" id="E2o-a4-OMw"/>
+                                            <constraint firstAttribute="height" constant="1200" id="iBf-cz-QKk"/>
+                                            <constraint firstItem="129-AR-4iH" firstAttribute="leading" secondItem="NJH-MA-J4u" secondAttribute="leading" constant="20" id="oIY-Qd-NXL"/>
+                                            <constraint firstItem="lZr-Zt-NMZ" firstAttribute="top" secondItem="NJH-MA-J4u" secondAttribute="top" constant="20" id="wX8-w9-mwL"/>
+                                            <constraint firstAttribute="trailing" secondItem="129-AR-4iH" secondAttribute="trailing" constant="20" id="x3L-Ul-0bR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NJH-MA-J4u" secondAttribute="bottom" id="2NF-km-yBb"/>
+                                    <constraint firstItem="NJH-MA-J4u" firstAttribute="leading" secondItem="lAY-02-Npa" secondAttribute="leading" id="5gJ-Pm-y5n"/>
+                                    <constraint firstItem="NJH-MA-J4u" firstAttribute="top" secondItem="lAY-02-Npa" secondAttribute="top" id="tsd-V4-jAr"/>
+                                    <constraint firstAttribute="trailing" secondItem="NJH-MA-J4u" secondAttribute="trailing" id="uoZ-8r-fpE"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MMj-kz-HkE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nd3-pc-wgD" firstAttribute="centerX" secondItem="7pi-60-Hsg" secondAttribute="centerX" id="eHz-qL-83I"/>
-                            <constraint firstItem="nd3-pc-wgD" firstAttribute="top" secondItem="MMj-kz-HkE" secondAttribute="top" constant="30" id="p2P-A8-lgg"/>
+                            <constraint firstItem="MMj-kz-HkE" firstAttribute="trailing" secondItem="lAY-02-Npa" secondAttribute="trailing" id="3R0-ot-5Sp"/>
+                            <constraint firstItem="lAY-02-Npa" firstAttribute="leading" secondItem="MMj-kz-HkE" secondAttribute="leading" id="KFY-nv-gBi"/>
+                            <constraint firstItem="NJH-MA-J4u" firstAttribute="width" secondItem="7pi-60-Hsg" secondAttribute="width" id="Olx-Q5-2RA"/>
+                            <constraint firstItem="lAY-02-Npa" firstAttribute="bottom" secondItem="MMj-kz-HkE" secondAttribute="bottom" id="kGv-wd-BgC"/>
+                            <constraint firstItem="lAY-02-Npa" firstAttribute="top" secondItem="MMj-kz-HkE" secondAttribute="top" id="ran-4W-MK7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="checklist" catalog="system" selectedImage="checklist" id="KyO-PC-zDc"/>
+                    <size key="freeformSize" width="393" height="1300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUl-2O-7mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="454"/>
+            <point key="canvasLocation" x="-706.10687022900765" y="453.52112676056339"/>
         </scene>
     </scenes>
     <resources>
         <image name="checklist" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
