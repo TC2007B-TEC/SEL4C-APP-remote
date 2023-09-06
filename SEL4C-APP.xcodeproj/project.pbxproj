@@ -24,6 +24,9 @@
 		6690D06A2AA5782C005C0DE2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6690D0682AA5782C005C0DE2 /* Home.storyboard */; };
 		6690D0702AA5786C005C0DE2 /* Learn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6690D06E2AA5786B005C0DE2 /* Learn.storyboard */; };
 		6690D0732AA57880005C0DE2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6690D0712AA57880005C0DE2 /* Profile.storyboard */; };
+		66BB95772AA81A9C00DEF549 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95762AA81A9C00DEF549 /* LoginVC.swift */; };
+		66BB95792AA81AE500DEF549 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95782AA81AE500DEF549 /* RegisterVC.swift */; };
+		66BB957B2AA81DD700DEF549 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB957A2AA81DD700DEF549 /* WelcomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		6690D0692AA5782C005C0DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SEL4C-APP/Storyboards/Base.lproj/Home.storyboard"; sourceTree = "<group>"; };
 		6690D06F2AA5786B005C0DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SEL4C-APP/Storyboards/Base.lproj/Learn.storyboard"; sourceTree = "<group>"; };
 		6690D0722AA57880005C0DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SEL4C-APP/Storyboards/Base.lproj/Profile.storyboard"; sourceTree = "<group>"; };
+		66BB95762AA81A9C00DEF549 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		66BB95782AA81AE500DEF549 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		66BB957A2AA81DD700DEF549 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 				6690D0642AA57278005C0DE2 /* LearnVC.swift */,
 				6690D0662AA5728F005C0DE2 /* ProfileVC.swift */,
 				661BD35A2AA6B17A00A4AC62 /* ActivityLVC.swift */,
+				66BB95762AA81A9C00DEF549 /* LoginVC.swift */,
+				66BB95782AA81AE500DEF549 /* RegisterVC.swift */,
+				66BB957A2AA81DD700DEF549 /* WelcomeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,14 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BB95772AA81A9C00DEF549 /* LoginVC.swift in Sources */,
 				6690D0672AA5728F005C0DE2 /* ProfileVC.swift in Sources */,
 				6690D04F2AA55E63005C0DE2 /* HomeVC.swift in Sources */,
 				661BD35B2AA6B17A00A4AC62 /* ActivityLVC.swift in Sources */,
+				66BB957B2AA81DD700DEF549 /* WelcomeVC.swift in Sources */,
 				6670FA8E2AA6EEB800E4B2B8 /* ActivityVC.swift in Sources */,
 				6670FA912AA6F0FD00E4B2B8 /* ActivityVC+Row.swift in Sources */,
 				6690D0652AA57278005C0DE2 /* LearnVC.swift in Sources */,
 				6670FA8C2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift in Sources */,
 				6690D04B2AA55E63005C0DE2 /* AppDelegate.swift in Sources */,
+				66BB95792AA81AE500DEF549 /* RegisterVC.swift in Sources */,
 				661BD3592AA6AFEB00A4AC62 /* Activity.swift in Sources */,
 				6690D04D2AA55E63005C0DE2 /* SceneDelegate.swift in Sources */,
 			);

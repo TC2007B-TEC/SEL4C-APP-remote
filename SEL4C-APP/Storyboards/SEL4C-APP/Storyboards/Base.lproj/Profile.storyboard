@@ -16,18 +16,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
-                                <rect key="frame" x="153.66666666666666" y="89" width="86" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victoria Villa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
+                                <rect key="frame" x="95" y="370" width="203" height="38"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIo-hz-ZOP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaQ-0f-8Ca">
+                                        <rect key="frame" x="252.33333333333334" y="60" width="127.66666666666666" height="34.333333333333343"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cerrar Sesión"/>
+                                        <connections>
+                                            <segue destination="ALF-6s-6KF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tmW-sc-LTs"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl-sunglasses-sitting-down copy" translatesAutoresizingMaskIntoConstraints="NO" id="mlJ-e7-ce8">
+                                        <rect key="frame" x="-217.66666666666666" y="155" width="828.33333333333337" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="5x6-dX-oHa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="DmT-ys-F1P"/>
+                                    <constraint firstItem="mlJ-e7-ce8" firstAttribute="centerX" secondItem="eIo-hz-ZOP" secondAttribute="centerX" id="P1Z-AE-bQQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="mlJ-e7-ce8" secondAttribute="bottom" constant="-35" id="n8f-5D-INo"/>
+                                    <constraint firstItem="xaQ-0f-8Ca" firstAttribute="top" secondItem="eIo-hz-ZOP" secondAttribute="top" constant="60" id="pF1-M9-9gf"/>
+                                    <constraint firstAttribute="trailing" secondItem="xaQ-0f-8Ca" secondAttribute="trailing" constant="13" id="wlG-kT-goI"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-0o-ocL">
+                                <rect key="frame" x="71.666666666666686" y="478" width="250" height="103"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjj-em-hBl">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3f7-TT-2yO"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Resultados Iniciales" cornerStyle="capsule">
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-2o-SCf">
+                                        <rect key="frame" x="0.0" y="63" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FAx-xe-I2t"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Resultados Finales" cornerStyle="capsule">
+                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="rkr-Wz-GNf"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JiH-dO-oSm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TW9-n2-yUk" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="6GU-W9-yXb"/>
-                            <constraint firstItem="TW9-n2-yUk" firstAttribute="top" secondItem="JiH-dO-oSm" secondAttribute="top" constant="30" id="jcR-Gh-UBA"/>
+                            <constraint firstItem="TW9-n2-yUk" firstAttribute="top" secondItem="eIo-hz-ZOP" secondAttribute="bottom" constant="80" id="3dH-XC-lOn"/>
+                            <constraint firstItem="qMV-0o-ocL" firstAttribute="top" secondItem="TW9-n2-yUk" secondAttribute="bottom" constant="70" id="CKF-C8-art"/>
+                            <constraint firstItem="qMV-0o-ocL" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="M8b-dx-UNo"/>
+                            <constraint firstItem="eIo-hz-ZOP" firstAttribute="trailing" secondItem="JiH-dO-oSm" secondAttribute="trailing" id="W7p-8e-emj"/>
+                            <constraint firstItem="eIo-hz-ZOP" firstAttribute="leading" secondItem="JiH-dO-oSm" secondAttribute="leading" id="W9w-1m-AgM"/>
+                            <constraint firstItem="eIo-hz-ZOP" firstAttribute="top" secondItem="ID1-cD-Zah" secondAttribute="top" id="bzF-WY-TNY"/>
+                            <constraint firstItem="TW9-n2-yUk" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="uyq-sK-muQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person.crop.circle.fill" catalog="system" selectedImage="person.crop.circle.fill" id="VsJ-lN-MPl"/>
@@ -35,13 +98,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6W-0K-j4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="1742"/>
+            <point key="canvasLocation" x="-706.10687022900765" y="1741.549295774648"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="TNg-dK-42r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="ALF-6s-6KF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6L-H3-hPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80" y="1742"/>
         </scene>
     </scenes>
     <resources>
+        <image name="girl-sunglasses-sitting-down copy" width="828" height="828"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

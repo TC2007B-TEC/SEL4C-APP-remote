@@ -29,19 +29,23 @@ extension Activity {
     static var sampleData = [
         Activity(
             title: "Actividad 1",
-            notes: "Identificación", isComplete: true),
+            notes: "Identificación",
+            isComplete: true),
         Activity(
             title: "Actividad 2",
-            notes: "Investigación", isComplete: true),
+            notes: "Investigación",
+            isComplete: true),
         Activity(
             title: "Actividad 3",
-            notes: "Ideación", isComplete: false),
+            notes: "Ideación",
+            isComplete: false),
         Activity(
             title: "Actividad 4",
-            notes: "Socialización", isComplete: false),
+            notes: "Socialización",
+            isComplete: false),
         Activity(
             title: "Actividad Final",
-            notes: "", isComplete: false),
+            isComplete: false),
         
     ]
 }

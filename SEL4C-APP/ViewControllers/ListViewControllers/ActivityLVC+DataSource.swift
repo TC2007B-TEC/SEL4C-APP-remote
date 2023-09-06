@@ -35,20 +35,27 @@ extension ActivityLVC {
     ) {
         let activity = activity(withId: id)
         var contentConfiguration = cell.defaultContentConfiguration()
+        
         contentConfiguration.text = activity.title
+        contentConfiguration.textProperties.font = UIFont.boldSystemFont(ofSize: UIFont.preferredFont(forTextStyle: .title1).pointSize)
+        
         contentConfiguration.secondaryText = activity.notes
         contentConfiguration.secondaryTextProperties.font = UIFont.preferredFont(
-            forTextStyle: .caption1)
+            forTextStyle: .title3)
+        
         cell.contentConfiguration = contentConfiguration
 
         var doneButtonConfiguration = doneButtonConfiguration(for: activity)
         doneButtonConfiguration.tintColor = UIColor.systemPurple
+        
+        
+        
         cell.accessories = [
             .customView(configuration: doneButtonConfiguration), .disclosureIndicator(displayed: .always)
         ]
         
 //        var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
-//        backgroundConfiguration.backgroundColor = UIColor.systemPurple
+//        backgroundConfiguration.backgroundColor = UIColor.black
 //        cell.backgroundConfiguration = backgroundConfiguration
     }
     
@@ -73,7 +80,12 @@ extension ActivityLVC {
     -> UICellAccessory.CustomViewConfiguration
     {
         let symbolName = activity.isComplete ? "circle.fill" : "circle"
-        let symbolConfiguration = UIImage.SymbolConfiguration(textStyle: .title1)
+        // Define a custom font size (change the value as needed)
+        let fontSize: CGFloat = 35
+        
+        // Create a symbol configuration with the custom font size
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .regular)
+        
         let image = UIImage(systemName: symbolName, withConfiguration: symbolConfiguration)
         let button = UIButton()
         button.setImage(image, for: .normal)
