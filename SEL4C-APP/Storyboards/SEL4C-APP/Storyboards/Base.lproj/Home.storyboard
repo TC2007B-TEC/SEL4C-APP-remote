@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-BK-5xG">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="290"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emprendedor en proceso" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-BO-8Ik">
-                                        <rect key="frame" x="30" y="168.33333333333334" width="230" height="71.666666666666657"/>
+                                        <rect key="frame" x="30" y="158.33333333333334" width="230" height="71.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="230" id="WUI-Vw-ltW"/>
                                         </constraints>
@@ -28,8 +28,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8k-bD-m7s">
-                                        <rect key="frame" x="268" y="179" width="113" height="51"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8k-bD-m7s">
+                                        <rect key="frame" x="268" y="169" width="113" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="hB9-9u-yzL"/>
                                         </constraints>
@@ -42,7 +42,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Gqw-BO-8Ik" secondAttribute="bottom" constant="50" id="NNs-am-EKO"/>
                                     <constraint firstItem="b8k-bD-m7s" firstAttribute="leading" secondItem="Gqw-BO-8Ik" secondAttribute="trailing" constant="8" symbolic="YES" id="Qgj-5p-9nH"/>
-                                    <constraint firstAttribute="height" constant="290" id="aPV-0t-QfZ"/>
+                                    <constraint firstAttribute="height" constant="280" id="aPV-0t-QfZ"/>
                                     <constraint firstItem="Gqw-BO-8Ik" firstAttribute="leading" secondItem="aOn-BK-5xG" secondAttribute="leading" constant="30" id="jNs-LI-w7j"/>
                                     <constraint firstAttribute="bottom" secondItem="b8k-bD-m7s" secondAttribute="bottom" constant="60" id="n5o-VB-aaU"/>
                                 </constraints>
@@ -54,13 +54,62 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FT3-yE-JX4">
+                                <rect key="frame" x="71.666666666666686" y="687" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PEt-c8-u8Q"/>
+                                    <constraint firstAttribute="width" constant="250" id="uff-za-EN4"/>
+                                </constraints>
+                                <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Actividad actual en desarrollo" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="oaT-Zb-PlD" kind="show" id="GUE-MJ-znI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventajas de SEL4C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnk-qc-TQe">
+                                <rect key="frame" x="86.666666666666686" y="305" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="91k-kE-sku"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Colaboration" translatesAutoresizingMaskIntoConstraints="NO" id="C0j-an-yTR">
+                                <rect key="frame" x="33.666666666666657" y="477" width="326" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="H6D-9U-IqI"/>
+                                    <constraint firstAttribute="height" constant="200" id="d2e-uE-Ika"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gek-Me-liS">
+                                <rect key="frame" x="46.666666666666657" y="345" width="300" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="vcv-Q3-F0C"/>
+                                </constraints>
+                                <string key="text">SEL4C responde a las necesidades de aprendizaje de todo estudiante con espíritu emprendedor, incluso cuando no cuentan con acceso a experiencias en emprendimiento social o recursos humanos.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pah-i1-nnp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="C0j-an-yTR" firstAttribute="top" secondItem="Gek-Me-liS" secondAttribute="bottom" constant="10" id="2VT-ha-5He"/>
+                            <constraint firstItem="Gek-Me-liS" firstAttribute="top" secondItem="Tnk-qc-TQe" secondAttribute="bottom" constant="10" id="4Hw-8S-TEB"/>
+                            <constraint firstItem="FT3-yE-JX4" firstAttribute="centerX" secondItem="2zG-DY-wZv" secondAttribute="centerX" id="5HI-q4-8Mg"/>
+                            <constraint firstItem="Tnk-qc-TQe" firstAttribute="centerX" secondItem="2zG-DY-wZv" secondAttribute="centerX" id="CzM-i6-Eoi"/>
                             <constraint firstItem="aOn-BK-5xG" firstAttribute="top" secondItem="2zG-DY-wZv" secondAttribute="top" id="F7i-yO-bFz"/>
+                            <constraint firstItem="Gek-Me-liS" firstAttribute="centerX" secondItem="2zG-DY-wZv" secondAttribute="centerX" id="fAQ-26-Cgx"/>
                             <constraint firstItem="aOn-BK-5xG" firstAttribute="leading" secondItem="pah-i1-nnp" secondAttribute="leading" id="fMK-MS-kTd"/>
+                            <constraint firstItem="Tnk-qc-TQe" firstAttribute="top" secondItem="aOn-BK-5xG" secondAttribute="bottom" constant="25" id="hid-Fq-b54"/>
                             <constraint firstItem="aOn-BK-5xG" firstAttribute="trailing" secondItem="pah-i1-nnp" secondAttribute="trailing" id="jc5-XC-GXV"/>
+                            <constraint firstItem="FT3-yE-JX4" firstAttribute="top" secondItem="C0j-an-yTR" secondAttribute="bottom" constant="10" id="s0e-yG-KzE"/>
+                            <constraint firstItem="C0j-an-yTR" firstAttribute="centerX" secondItem="2zG-DY-wZv" secondAttribute="centerX" id="wdE-Sv-ECR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="f.square.fill" catalog="system" selectedImage="f.square.fill" id="2kh-0Y-qsl"/>
@@ -70,8 +119,19 @@
             </objects>
             <point key="canvasLocation" x="-706.10687022900765" y="-192.25352112676057"/>
         </scene>
+        <!--Current-->
+        <scene sceneID="2Zx-pB-cfX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TempActivities" referencedIdentifier="Current" id="oaT-Zb-PlD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P2Z-Rf-fnp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y44-Ey-f0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-117"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Colaboration" width="1200" height="675"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

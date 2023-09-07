@@ -6,13 +6,14 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct Activity: Identifiable {
     var id: String = UUID().uuidString
     var title: String
     var notes: String? = nil
     var isComplete: Bool = false
+    var image: UIImage?
 }
 
 extension [Activity] {
@@ -30,7 +31,7 @@ extension Activity {
         Activity(
             title: "Actividad 1",
             notes: "Identificación",
-            isComplete: true),
+            isComplete: true, image: UIImage.self(named:"instrucciones1")),
         Activity(
             title: "Actividad 2",
             notes: "Investigación",

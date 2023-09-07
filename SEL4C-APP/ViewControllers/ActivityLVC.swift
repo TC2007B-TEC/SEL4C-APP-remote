@@ -32,10 +32,7 @@ class ActivityLVC: UICollectionViewController {
                 using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
 
-
         updateSnapshot()
-
-
         collectionView.dataSource = dataSource
     }
     
@@ -57,11 +54,15 @@ class ActivityLVC: UICollectionViewController {
 
 
     private func listLayout() -> UICollectionViewCompositionalLayout {
-        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
-        listConfiguration.showsSeparators = false
-        listConfiguration.backgroundColor = .clear
+//        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        listConfiguration.showsSeparators = true
+        //listConfiguration.backgroundColor = .clear
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
+    
+
+    
 }
 
     // MARK: UICollectionViewDelegate

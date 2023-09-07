@@ -18,7 +18,7 @@ extension ActivityVC {
 
         var imageName: String? {
             switch self {
-            case .date: return "calendar.circle"
+            case .date: return "instrucciones1"
             case .notes: return "square.and.pencil"
             case .time: return "clock"
             default: return nil

@@ -63,6 +63,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Resultados Iniciales" cornerStyle="capsule">
                                             <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="FDY-1x-yBb" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="asN-y8-G7D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-2o-SCf">
                                         <rect key="frame" x="0.0" y="63" width="250" height="40"/>
@@ -93,12 +96,13 @@
                             <constraint firstItem="TW9-n2-yUk" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="uyq-sK-muQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="person.crop.circle.fill" catalog="system" selectedImage="person.crop.circle.fill" id="VsJ-lN-MPl"/>
+                    <tabBarItem key="tabBarItem" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="idR-Ft-gtM"/>
+                    <navigationItem key="navigationItem" id="prg-lH-x5L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6W-0K-j4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706.10687022900765" y="1741.549295774648"/>
+            <point key="canvasLocation" x="220.61068702290075" y="1741.549295774648"/>
         </scene>
         <!--Main-->
         <scene sceneID="TNg-dK-42r">
@@ -106,12 +110,62 @@
                 <viewControllerPlaceholder storyboardName="Main" id="ALF-6s-6KF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6L-H3-hPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80" y="1742"/>
+            <point key="canvasLocation" x="221" y="2190"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="JR7-AV-rBY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBar" id="pqW-Qc-y4P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlB-tz-rzY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="2189"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RFx-T6-PvF">
+            <objects>
+                <viewController storyboardIdentifier="Results" id="FDY-1x-yBb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dby-V4-5ER">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Resultados" translatesAutoresizingMaskIntoConstraints="NO" id="0lK-w5-5CT">
+                                <rect key="frame" x="16" y="118" width="360" height="617"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-Im-pip">
+                                <rect key="frame" x="104" y="72" width="184" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG5-J2-c1I">
+                                <rect key="frame" x="95" y="751" width="202" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ir a Inicio" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pqW-Qc-y4P" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="EO5-iU-yQG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Itx-3r-a5a"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jjD-hl-Zef"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPr-qv-OI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119.8473282442749" y="1741.549295774648"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Resultados" width="1170" height="1908"/>
         <image name="girl-sunglasses-sitting-down copy" width="828" height="828"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

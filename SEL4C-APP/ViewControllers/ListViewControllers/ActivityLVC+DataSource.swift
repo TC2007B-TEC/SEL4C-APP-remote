@@ -54,9 +54,11 @@ extension ActivityLVC {
             .customView(configuration: doneButtonConfiguration), .disclosureIndicator(displayed: .always)
         ]
         
-//        var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
-//        backgroundConfiguration.backgroundColor = UIColor.black
+        
+//       var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
+//        backgroundConfiguration.backgroundColor = UIColor.lightGray
 //        cell.backgroundConfiguration = backgroundConfiguration
+        
     }
     
     func activity(withId id: Activity.ID) -> Activity {
