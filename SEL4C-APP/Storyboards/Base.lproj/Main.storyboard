@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uYp-fu-NfP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -151,7 +152,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YOI-Wb-1hw" secondAttribute="bottom" constant="22" id="B0v-tz-EWV"/>
                                     <constraint firstItem="YOI-Wb-1hw" firstAttribute="leading" secondItem="N6e-CH-zOu" secondAttribute="leading" constant="40" id="iiq-3I-Mzu"/>
@@ -539,7 +540,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k4p-EB-ghE"/>
+        <segue reference="2Ze-zV-Y8O"/>
         <segue reference="phS-sz-gOc"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -551,6 +552,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
