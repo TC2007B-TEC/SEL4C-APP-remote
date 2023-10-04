@@ -97,5 +97,3 @@ extension ActivityLVC {
 
     
 }
-
-

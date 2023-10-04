@@ -59,18 +59,32 @@ class ActivityLVC: UICollectionViewController {
 //        navigationController?.pushViewController(viewController, animated: true)
 //
 //    }
-//    
+    
     func pushDetailViewForActivity(withId id: Activity.ID) {
         let activity = activity(withId: id)
         let title = activity.title
         
-        if title == "Actividad 1" || title == "Actividad 3" {
-            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActivityTest")
+        if title == "" {
+            
+        } else if title == "Actividad 1"  {
+            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad1")
             navigationController?.pushViewController(viewController, animated: true)
-        } else {
-            let viewController = ActivityVC(activity: activity)
+        } else if title == "Actividad 2"  {
+            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2")
             navigationController?.pushViewController(viewController, animated: true)
-        }
+        } else if title == "Actividad 3"  {
+           let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad3")
+           navigationController?.pushViewController(viewController, animated: true)
+        } else if title == "Actividad 4"  {
+           let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad4")
+           navigationController?.pushViewController(viewController, animated: true)
+        } else if title == "Actividad Final"  {
+           let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActividadFinal")
+           navigationController?.pushViewController(viewController, animated: true)}
+//        } else  {
+//            let viewController = ActivityVC(activity: activity)
+//            navigationController?.pushViewController(viewController, animated: true)
+//        }
     }
     
 

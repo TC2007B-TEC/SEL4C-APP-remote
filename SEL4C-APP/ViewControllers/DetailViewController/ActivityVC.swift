@@ -9,8 +9,8 @@ import UIKit
 
 
 class   ActivityVC: UICollectionViewController {
-    private typealias DataSource = UICollectionViewDiffableDataSource<Int, Row>
-    private typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Row>
+    private typealias DataSource = UICollectionViewDiffableDataSource<Section, Row>
+    private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Row>
     
     var activity: Activity
     private var dataSource: DataSource!
@@ -43,18 +43,35 @@ class   ActivityVC: UICollectionViewController {
                 navigationItem.style = .navigator
             }
             navigationItem.title = NSLocalizedString("Activity", comment: "Activity view controller title")
+            navigationItem.rightBarButtonItem = editButtonItem
 
-            updateSnapshot()
+            updateSnapshotForViewing()
+        }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+            super.setEditing(editing, animated: animated)
+            if editing {
+                updateSnapshotForEditing()
+            } else {
+                updateSnapshotForViewing()
+            }
         }
     
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, row: Row) {
-        var contentConfiguration = cell.defaultContentConfiguration()
-        contentConfiguration.text = text(for: row)
-        contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
-        contentConfiguration.image = row.image
-        cell.contentConfiguration = contentConfiguration
-        cell.tintColor = UIColor.systemPurple
-    }
+            let section = section(for: indexPath)
+            switch (section, row) {
+            case (.view, _):
+                var contentConfiguration = cell.defaultContentConfiguration()
+                contentConfiguration.text = text(for: row)
+                contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
+                contentConfiguration.image = row.image
+                cell.contentConfiguration = contentConfiguration
+                cell.tintColor = UIColor.systemBlue
+            default:
+                fatalError("Unexpected combination of section and row.")
+            }
+            cell.tintColor = UIColor.systemPurple
+        }
     
     func text(for row: Row) -> String? {
            switch row {
@@ -67,10 +84,24 @@ class   ActivityVC: UICollectionViewController {
            }
        }
     
-    private func updateSnapshot() {
+    private func updateSnapshotForEditing() {
+            var snapshot = Snapshot()
+            snapshot.appendSections([.title, .date, .notes])
+            dataSource.apply(snapshot)
+        }
+    
+    private func updateSnapshotForViewing() {
         var snapshot = Snapshot()
-        snapshot.appendSections([0])
-        snapshot.appendItems([Row.title, Row.date, Row.time, Row.notes], toSection: 0)
+        snapshot.appendSections([.view])
+        snapshot.appendItems([Row.title, Row.date, Row.time, Row.notes], toSection: .view)
         dataSource.apply(snapshot)
     }
+    
+    private func section(for indexPath: IndexPath) -> Section {
+            let sectionNumber = isEditing ? indexPath.section + 1 : indexPath.section
+            guard let section = Section(rawValue: sectionNumber) else {
+                fatalError("Unable to find matching section")
+            }
+            return section
+        }
 }
