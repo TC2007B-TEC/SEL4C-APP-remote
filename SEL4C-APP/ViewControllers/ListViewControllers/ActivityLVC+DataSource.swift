@@ -46,7 +46,7 @@ extension ActivityLVC {
         cell.contentConfiguration = contentConfiguration
 
         var doneButtonConfiguration = doneButtonConfiguration(for: activity)
-        doneButtonConfiguration.tintColor = UIColor.systemPurple
+        doneButtonConfiguration.tintColor = UIColor.systemBlue
         
         
         

@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="AccentColor"/>
-                        <color key="selectedImageTintColor" systemColor="systemPurpleColor"/>
+                        <color key="selectedImageTintColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <tabBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </tabBarAppearance>
@@ -29,6 +29,7 @@
                         <segue destination="4SP-1D-ov3" kind="relationship" relationship="viewControllers" id="PEA-bh-rJW"/>
                         <segue destination="jlU-kt-Nnv" kind="relationship" relationship="viewControllers" id="Edm-5s-fub"/>
                         <segue destination="K0w-H7-wy7" kind="relationship" relationship="viewControllers" id="iJ7-BU-8So"/>
+                        <segue destination="wQq-9E-NGu" kind="relationship" relationship="viewControllers" id="NQ3-Mo-KQ9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXX-pX-iR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -152,7 +153,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="AzulTec"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YOI-Wb-1hw" secondAttribute="bottom" constant="22" id="B0v-tz-EWV"/>
                                     <constraint firstItem="YOI-Wb-1hw" firstAttribute="leading" secondItem="N6e-CH-zOu" secondAttribute="leading" constant="40" id="iiq-3I-Mzu"/>
@@ -476,7 +477,7 @@
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Terminar registro" cornerStyle="capsule">
-                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                    <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="oC9-4Z-wJC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="5pg-IU-ZgQ"/>
@@ -540,7 +541,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k4p-EB-ghE"/>
+        <segue reference="2Ze-zV-Y8O"/>
         <segue reference="phS-sz-gOc"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -549,6 +550,9 @@
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AzulTec">
+            <color red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

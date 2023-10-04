@@ -18,13 +18,10 @@ class ActivityLVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
 
-
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
-
 
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Activity.ID) in
@@ -32,8 +29,18 @@ class ActivityLVC: UICollectionViewController {
                 using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
 
-        updateSnapshot()
+        
         collectionView.dataSource = dataSource
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.hidesBarsOnSwipe = true
+//        navigationController?.navigationBar.largeTitleTextAttributes = [
+//            NSAttributedString.Key.foregroundColor: UIColor.orange
+//        ]
+        
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        
+        updateSnapshot()
     }
     
     override func collectionView(
@@ -45,10 +52,25 @@ class ActivityLVC: UICollectionViewController {
     }
 
 
+//    func pushDetailViewForActivity(withId id: Activity.ID) {
+//        let activity = activity(withId: id)
+//        
+//        let viewController = ActivityVC(activity: activity)
+//        navigationController?.pushViewController(viewController, animated: true)
+//
+//    }
+//    
     func pushDetailViewForActivity(withId id: Activity.ID) {
         let activity = activity(withId: id)
-        let viewController = ActivityVC(activity: activity)
-        navigationController?.pushViewController(viewController, animated: true)
+        let title = activity.title
+        
+        if title == "Actividad 1" || title == "Actividad 3" {
+            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActivityTest")
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let viewController = ActivityVC(activity: activity)
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
 
