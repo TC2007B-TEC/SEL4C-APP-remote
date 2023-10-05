@@ -42,6 +42,34 @@ final class SEL4C_APP_Tests: XCTestCase {
 //        let r = ln.suma(a:2, b:2)
 //        XCTAssertNotEqual(r,5)
 //    }
+    
+    func testValidFetchAPI() {
+        let loginVC = LoginVC()
+        let expectation = self.expectation(description: "Valid API Request")
+
+        loginVC.fetchAPI(email: "raul@gmail.com", password: "Raul1234")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            XCTAssertTrue(loginVC.condicion)
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+
+    func testInvalidFetchAPI() {
+        let loginVC = LoginVC()
+        let expectation = self.expectation(description: "Invalid API Request")
+
+        loginVC.fetchAPI(email: "test@", password: "test3")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            XCTAssertFalse(loginVC.condicion)
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

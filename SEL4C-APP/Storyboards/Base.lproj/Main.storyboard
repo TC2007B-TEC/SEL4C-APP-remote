@@ -129,7 +129,7 @@
                                     <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="NNL-zr-g4M" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2Ze-zV-Y8O"/>
+                                    <segue destination="mO3-Wk-jjZ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="T5V-4o-EQs"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6e-CH-zOu">
@@ -248,7 +248,8 @@
                                     <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="uzR-AW-oij" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gOj-sl-q9b"/>
+                                    <action selector="loginWithSender:" destination="xa3-gY-H4N" eventType="touchUpInside" id="Ney-Ap-PSj"/>
+                                    <segue destination="uzR-AW-oij" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gOj-sl-q9b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhD-Vv-XSu">
@@ -379,9 +380,6 @@
                                 <color key="tintColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continuar registro" cornerStyle="capsule"/>
-                                <connections>
-                                    <segue destination="DBe-jc-8qP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mnH-I0-Ce3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bs-Sl-c7J">
                                 <rect key="frame" x="16" y="71" width="40" height="35"/>
@@ -389,9 +387,6 @@
                                 <color key="tintColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=""/>
-                                <connections>
-                                    <segue destination="uYp-fu-NfP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uzu-pm-E2X"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wz-y0-EVl">
                                 <rect key="frame" x="130" y="95" width="133" height="41"/>
@@ -418,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngy-2Y-g35" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3895" y="1346"/>
+            <point key="canvasLocation" x="-4929" y="1346"/>
         </scene>
         <!--PasswordVC-->
         <scene sceneID="j6O-hA-UIk">
@@ -480,7 +475,8 @@
                                     <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="oC9-4Z-wJC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="5pg-IU-ZgQ"/>
+                                    <action selector="createUser:" destination="DBe-jc-8qP" eventType="touchUpInside" id="Enm-rT-le5"/>
+                                    <segue destination="oC9-4Z-wJC" kind="presentation" identifier="testSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="5pg-IU-ZgQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La contraseña deberá tener por lo menos 8 caracteres, un número, una letra mayuscula y una letra minuscula  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-fi-vYA">
@@ -507,7 +503,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=""/>
                                 <connections>
-                                    <segue destination="NNL-zr-g4M" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="k4p-EB-ghE"/>
+                                    <segue destination="mO3-Wk-jjZ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="7cw-Qb-Qf9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqU-SM-xn7">
@@ -539,13 +535,214 @@
             </objects>
             <point key="canvasLocation" x="-3895" y="2137"/>
         </scene>
+        <!--RegisterVC-->
+        <scene sceneID="F1r-Nq-G8G">
+            <objects>
+                <viewController id="mO3-Wk-jjZ" customClass="RegisterVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cHz-Uk-rJS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwV-R1-PrP">
+                                <rect key="frame" x="16" y="216" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="b5u-Bu-2T2"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-UI-gAG">
+                                <rect key="frame" x="16" y="266" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="duI-kb-e3j"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-qo-I8F">
+                                <rect key="frame" x="16" y="321" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="Obh-ua-qmc"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8c-u8-7ka">
+                                <rect key="frame" x="16" y="431" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="MUR-PE-son"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SB3-Ka-BVP">
+                                <rect key="frame" x="16" y="480" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="LFJ-s9-3N3"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6N-Yl-wxL">
+                                <rect key="frame" x="16" y="657" width="361" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continuar registro" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ButtonContinue:" destination="mO3-Wk-jjZ" eventType="touchUpInside" id="L51-K4-PTq"/>
+                                    <segue destination="DBe-jc-8qP" kind="presentation" identifier="ContinueSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Bkz-hH-EZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp3-0K-GUl">
+                                <rect key="frame" x="16" y="71" width="40" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AzulTec"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=""/>
+                                <connections>
+                                    <segue destination="uYp-fu-NfP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cJf-8j-XBF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgH-LX-t3n">
+                                <rect key="frame" x="130" y="95" width="133" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rama de estudios" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c15-fQ-Uxh">
+                                <rect key="frame" x="16" y="599" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="NDH-Lv-VWe"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80M-Ee-r8b">
+                                <rect key="frame" x="330" y="480" width="46" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowtriangle.down.fill" catalog="system" title="">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="paisButton:" destination="mO3-Wk-jjZ" eventType="touchUpInside" id="o87-gG-RVI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-IW-DQi">
+                                <rect key="frame" x="330" y="598" width="46" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowtriangle.down.fill" catalog="system" title="">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ramaButton:" destination="mO3-Wk-jjZ" eventType="touchUpInside" id="kJB-aT-jou"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escuela" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TsY-h0-7Xh">
+                                <rect key="frame" x="16" y="541" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="pfE-r8-5az"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genero" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1P-KH-jsw">
+                                <rect key="frame" x="16" y="375" width="307" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="U62-sC-b6y"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhE-8o-BfE">
+                                <rect key="frame" x="331" y="375" width="46" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowtriangle.down.fill" catalog="system" title="">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="generoButton:" destination="mO3-Wk-jjZ" eventType="touchUpInside" id="1vs-Dv-z1b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-YA-2Ws">
+                                <rect key="frame" x="330" y="430" width="46" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowtriangle.down.fill" catalog="system" title="">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="edadButton:" destination="mO3-Wk-jjZ" eventType="touchUpInside" id="Abn-uE-z8p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-9F-gbG">
+                                <rect key="frame" x="330" y="541" width="46" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowtriangle.down.fill" catalog="system" title="">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="escuelaButton:" destination="mO3-Wk-jjZ" eventType="touchUpInside" id="94Q-Of-U5t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dQp-R6-Mhg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aRh-jd-ACx"/>
+                    <connections>
+                        <outlet property="Apellido" destination="J6g-UI-gAG" id="2kO-LR-iVB"/>
+                        <outlet property="Boton" destination="u6N-Yl-wxL" id="qD5-Pz-wYW"/>
+                        <outlet property="Edad" destination="X8c-u8-7ka" id="tii-F2-PBo"/>
+                        <outlet property="Email" destination="zpj-qo-I8F" id="uB1-Eq-QPN"/>
+                        <outlet property="Escuela" destination="TsY-h0-7Xh" id="qfm-VN-rRs"/>
+                        <outlet property="Genero" destination="H1P-KH-jsw" id="bHK-vF-n4j"/>
+                        <outlet property="Nombre" destination="EwV-R1-PrP" id="Y8a-M1-5Cd"/>
+                        <outlet property="Pais" destination="SB3-Ka-BVP" id="F8B-3x-ZCv"/>
+                        <outlet property="Rama" destination="c15-fQ-Uxh" id="7Bc-dn-Elr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2d-aP-Syy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3895" y="1346"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Ze-zV-Y8O"/>
-        <segue reference="phS-sz-gOc"/>
+        <segue reference="Bkz-hH-EZ5"/>
+        <segue reference="7cw-Qb-Qf9"/>
+        <segue reference="cJf-8j-XBF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LogoBlanco" width="34.333332061767578" height="33.666667938232422"/>
+        <image name="arrowtriangle.down.fill" catalog="system" width="128" height="120"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">

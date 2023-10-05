@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class PasswordVC: UIViewController {
 
@@ -17,10 +18,17 @@ class PasswordVC: UIViewController {
     @IBOutlet weak var TermsButton: UIButton!
     @IBOutlet weak var PrivacyButton: UIButton!
     
+    var nombre: String?
+    var apellido: String?
+    var email: String?
+    var genero: String?
+    var edad: String?
+    var pais: String?
+    var escuela: String?
+    var rama: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +36,7 @@ class PasswordVC: UIViewController {
     let si = UIImage(systemName: "square.fill")
     let no = UIImage(systemName: "square")
     @IBAction func ChangeTerms(_ sender: Any) {
+        print(nombre!)
         terms = !terms
         if terms == true{
             TermsButton.setImage(si, for: .normal)
@@ -132,8 +141,56 @@ class PasswordVC: UIViewController {
             Password.backgroundColor = rojo
         }
     }
-    
 
+    let group = DispatchGroup()
+    func postAPI(){
+        // preparar los datos json
+        let json: [String: Any] = [
+            "email": self.email!,
+            "password": self.Password.text!,
+            "name": self.nombre!,
+            "lname": self.apellido!,
+            "gender": self.genero!,
+            "age": self.edad!,
+            "country": self.pais!,
+            "discipline": self.rama!,
+            "school": self.escuela!
+        ]
+
+        let datosJson = try? JSONSerialization.data(withJSONObject: json)
+
+        // crear la solicitud post
+        let url = URL(string: "http://20.127.122.6:8000/usuario/")!
+        var solicitud = URLRequest(url: url)
+        solicitud.httpMethod = "POST"
+
+        // insertar los datos json a la solicitud
+        solicitud.httpBody = datosJson
+        group.enter()
+        let tarea = URLSession.shared.dataTask(with: solicitud) { datos, respuesta, error in
+          guard let datos = datos, error == nil else {
+            print(error?.localizedDescription ?? "No hay datos")
+            return
+          }
+
+          let respuestaJSON = try? JSONSerialization.jsonObject(with: datos, options: [])
+          if let respuestaJSON = respuestaJSON as? [String: Any] {
+            print(respuestaJSON)
+          }
+          self.group.leave()
+        }
+
+        tarea.resume()
+
+    }
+    
+    @IBAction func createUser(_ sender: Any) {
+        postAPI()
+        group.wait()
+        self.performSegue(withIdentifier: "testSegue", sender: self)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
