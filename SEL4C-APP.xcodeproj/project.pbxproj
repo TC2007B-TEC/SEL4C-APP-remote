@@ -11,6 +11,7 @@
 		661BD35B2AA6B17A00A4AC62 /* ActivityLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661BD35A2AA6B17A00A4AC62 /* ActivityLVC.swift */; };
 		664627C72AA6A367005CB176 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664627C62AA6A367005CB176 /* Activity.storyboard */; };
 		6660E79F2ACD46050053A5D7 /* ActivityVC+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E79E2ACD46050053A5D7 /* ActivityVC+Section.swift */; };
+		6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E7A82ACE2D510053A5D7 /* SEL4C_APP_Tests.swift */; };
 		6670FA8C2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670FA8B2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift */; };
 		6670FA8E2AA6EEB800E4B2B8 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670FA8D2AA6EEB800E4B2B8 /* ActivityVC.swift */; };
 		6670FA912AA6F0FD00E4B2B8 /* ActivityVC+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670FA902AA6F0FD00E4B2B8 /* ActivityVC+Row.swift */; };
@@ -38,11 +39,23 @@
 		66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB958A2AA88B2A00DEF549 /* Question.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6660E7AA2ACE2D510053A5D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6690D03F2AA55E63005C0DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6690D0462AA55E63005C0DE2;
+			remoteInfo = "SEL4C-APP";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		661BD3582AA6AFEB00A4AC62 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		661BD35A2AA6B17A00A4AC62 /* ActivityLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLVC.swift; sourceTree = "<group>"; };
 		664627C62AA6A367005CB176 /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		6660E79E2ACD46050053A5D7 /* ActivityVC+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityVC+Section.swift"; sourceTree = "<group>"; };
+		6660E7A62ACE2D510053A5D7 /* SEL4C-APP-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SEL4C-APP-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6660E7A82ACE2D510053A5D7 /* SEL4C_APP_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEL4C_APP_Tests.swift; sourceTree = "<group>"; };
 		6670FA8B2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityLVC+DataSource.swift"; sourceTree = "<group>"; };
 		6670FA8D2AA6EEB800E4B2B8 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		6670FA902AA6F0FD00E4B2B8 /* ActivityVC+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityVC+Row.swift"; sourceTree = "<group>"; };
@@ -73,6 +86,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6660E7A32ACE2D510053A5D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6690D0442AA55E63005C0DE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,6 +111,14 @@
 				66BB958A2AA88B2A00DEF549 /* Question.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6660E7A72ACE2D510053A5D7 /* SEL4C-APP-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6660E7A82ACE2D510053A5D7 /* SEL4C_APP_Tests.swift */,
+			);
+			path = "SEL4C-APP-Tests";
 			sourceTree = "<group>";
 		};
 		6670FA8A2AA6CB7300E4B2B8 /* ListViewControllers */ = {
@@ -115,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				6690D0492AA55E63005C0DE2 /* SEL4C-APP */,
+				6660E7A72ACE2D510053A5D7 /* SEL4C-APP-Tests */,
 				6690D0482AA55E63005C0DE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6690D0472AA55E63005C0DE2 /* SEL4C-APP.app */,
+				6660E7A62ACE2D510053A5D7 /* SEL4C-APP-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +209,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6660E7A52ACE2D510053A5D7 /* SEL4C-APP-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6660E7AC2ACE2D510053A5D7 /* Build configuration list for PBXNativeTarget "SEL4C-APP-Tests" */;
+			buildPhases = (
+				6660E7A22ACE2D510053A5D7 /* Sources */,
+				6660E7A32ACE2D510053A5D7 /* Frameworks */,
+				6660E7A42ACE2D510053A5D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6660E7AB2ACE2D510053A5D7 /* PBXTargetDependency */,
+			);
+			name = "SEL4C-APP-Tests";
+			productName = "SEL4C-APP-Tests";
+			productReference = 6660E7A62ACE2D510053A5D7 /* SEL4C-APP-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6690D0462AA55E63005C0DE2 /* SEL4C-APP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6690D05B2AA55E66005C0DE2 /* Build configuration list for PBXNativeTarget "SEL4C-APP" */;
@@ -203,9 +251,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					6660E7A52ACE2D510053A5D7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 6690D0462AA55E63005C0DE2;
+					};
 					6690D0462AA55E63005C0DE2 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -225,11 +277,19 @@
 			projectRoot = "";
 			targets = (
 				6690D0462AA55E63005C0DE2 /* SEL4C-APP */,
+				6660E7A52ACE2D510053A5D7 /* SEL4C-APP-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6660E7A42ACE2D510053A5D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6690D0452AA55E63005C0DE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +309,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6660E7A22ACE2D510053A5D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6690D0432AA55E63005C0DE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +345,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6660E7AB2ACE2D510053A5D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6690D0462AA55E63005C0DE2 /* SEL4C-APP */;
+			targetProxy = 6660E7AA2ACE2D510053A5D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6690D0502AA55E63005C0DE2 /* Main.storyboard */ = {
@@ -322,6 +398,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6660E7AD2ACE2D510053A5D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6LLKHW795;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.a01782488.SEL4C-APP-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SEL4C-APP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SEL4C-APP";
+			};
+			name = Debug;
+		};
+		6660E7AE2ACE2D510053A5D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6LLKHW795;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.a01782488.SEL4C-APP-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SEL4C-APP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SEL4C-APP";
+			};
+			name = Release;
+		};
 		6690D0592AA55E66005C0DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,6 +624,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6660E7AC2ACE2D510053A5D7 /* Build configuration list for PBXNativeTarget "SEL4C-APP-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6660E7AD2ACE2D510053A5D7 /* Debug */,
+				6660E7AE2ACE2D510053A5D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6690D0422AA55E63005C0DE2 /* Build configuration list for PBXProject "SEL4C-APP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
