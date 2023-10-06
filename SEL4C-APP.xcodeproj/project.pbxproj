@@ -15,6 +15,8 @@
 		664627C72AA6A367005CB176 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664627C62AA6A367005CB176 /* Activity.storyboard */; };
 		6660E79F2ACD46050053A5D7 /* ActivityVC+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E79E2ACD46050053A5D7 /* ActivityVC+Section.swift */; };
 		6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E7A82ACE2D510053A5D7 /* SEL4C_APP_Tests.swift */; };
+		6660E8162ACFB2000053A5D7 /* Activity1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8152ACFB2000053A5D7 /* Activity1VC.swift */; };
+		6660E8172ACFB2000053A5D7 /* Activity1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8152ACFB2000053A5D7 /* Activity1VC.swift */; };
 		6670FA8C2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670FA8B2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift */; };
 		6670FA8E2AA6EEB800E4B2B8 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670FA8D2AA6EEB800E4B2B8 /* ActivityVC.swift */; };
 		6670FA912AA6F0FD00E4B2B8 /* ActivityVC+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6670FA902AA6F0FD00E4B2B8 /* ActivityVC+Row.swift */; };
@@ -34,7 +36,7 @@
 		66BB95792AA81AE500DEF549 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95782AA81AE500DEF549 /* RegisterVC.swift */; };
 		66BB957B2AA81DD700DEF549 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB957A2AA81DD700DEF549 /* WelcomeVC.swift */; };
 		66BB957F2AA8789B00DEF549 /* TempActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BB957E2AA8789B00DEF549 /* TempActivities.storyboard */; };
-		66BB95812AA87DA500DEF549 /* TempActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95802AA87DA500DEF549 /* TempActivityVC.swift */; };
+		66BB95812AA87DA500DEF549 /* Activity4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95802AA87DA500DEF549 /* Activity4VC.swift */; };
 		66BB95832AA8896800DEF549 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BB95822AA8896800DEF549 /* Test.storyboard */; };
 		66BB95852AA889DB00DEF549 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95842AA889DB00DEF549 /* TestVC.swift */; };
 		66BB95872AA88A5900DEF549 /* Poll2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95862AA88A5900DEF549 /* Poll2Controller.swift */; };
@@ -62,6 +64,7 @@
 		6660E79E2ACD46050053A5D7 /* ActivityVC+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityVC+Section.swift"; sourceTree = "<group>"; };
 		6660E7A62ACE2D510053A5D7 /* SEL4C-APP-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SEL4C-APP-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6660E7A82ACE2D510053A5D7 /* SEL4C_APP_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEL4C_APP_Tests.swift; sourceTree = "<group>"; };
+		6660E8152ACFB2000053A5D7 /* Activity1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity1VC.swift; sourceTree = "<group>"; };
 		6670FA8B2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityLVC+DataSource.swift"; sourceTree = "<group>"; };
 		6670FA8D2AA6EEB800E4B2B8 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		6670FA902AA6F0FD00E4B2B8 /* ActivityVC+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityVC+Row.swift"; sourceTree = "<group>"; };
@@ -83,7 +86,7 @@
 		66BB95782AA81AE500DEF549 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		66BB957A2AA81DD700DEF549 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		66BB957E2AA8789B00DEF549 /* TempActivities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TempActivities.storyboard; sourceTree = "<group>"; };
-		66BB95802AA87DA500DEF549 /* TempActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempActivityVC.swift; sourceTree = "<group>"; };
+		66BB95802AA87DA500DEF549 /* Activity4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity4VC.swift; sourceTree = "<group>"; };
 		66BB95822AA8896800DEF549 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		66BB95842AA889DB00DEF549 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		66BB95862AA88A5900DEF549 /* Poll2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll2Controller.swift; sourceTree = "<group>"; };
@@ -187,7 +190,8 @@
 				6670FA8F2AA6F00D00E4B2B8 /* DetailViewController */,
 				6690D04E2AA55E63005C0DE2 /* HomeVC.swift */,
 				6690D0642AA57278005C0DE2 /* LearnVC.swift */,
-				66BB95802AA87DA500DEF549 /* TempActivityVC.swift */,
+				66BB95802AA87DA500DEF549 /* Activity4VC.swift */,
+				6660E8152ACFB2000053A5D7 /* Activity1VC.swift */,
 				6690D0662AA5728F005C0DE2 /* ProfileVC.swift */,
 				661BD35A2AA6B17A00A4AC62 /* ActivityLVC.swift */,
 				66BB95862AA88A5900DEF549 /* Poll2Controller.swift */,
@@ -323,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */,
+				6660E8172ACFB2000053A5D7 /* Activity1VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,7 @@
 				661BD35B2AA6B17A00A4AC62 /* ActivityLVC.swift in Sources */,
 				66BB957B2AA81DD700DEF549 /* WelcomeVC.swift in Sources */,
 				6670FA8E2AA6EEB800E4B2B8 /* ActivityVC.swift in Sources */,
+				6660E8162ACFB2000053A5D7 /* Activity1VC.swift in Sources */,
 				6670FA912AA6F0FD00E4B2B8 /* ActivityVC+Row.swift in Sources */,
 				6690D0652AA57278005C0DE2 /* LearnVC.swift in Sources */,
 				6670FA8C2AA6CBBB00E4B2B8 /* ActivityLVC+DataSource.swift in Sources */,
@@ -347,8 +353,12 @@
 				66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */,
 				66BB95872AA88A5900DEF549 /* Poll2Controller.swift in Sources */,
 				66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */,
+<<<<<<< Updated upstream
 				4FA2B6C72ACFD3D00009200D /* UserResponsesController.swift in Sources */,
 				66BB95812AA87DA500DEF549 /* TempActivityVC.swift in Sources */,
+=======
+				66BB95812AA87DA500DEF549 /* Activity4VC.swift in Sources */,
+>>>>>>> Stashed changes
 				66BB95792AA81AE500DEF549 /* RegisterVC.swift in Sources */,
 				4FA2B6C52ACFD3B90009200D /* UserResponses.swift in Sources */,
 				661BD3592AA6AFEB00A4AC62 /* Activity.swift in Sources */,

@@ -1,13 +1,13 @@
 //
-//  TempActivityvc.swift
+//  Activity1VC.swift
 //  SEL4C-APP
 //
-//  Created by Raúl Vélez on 06/09/23.
+//  Created by Raúl Vélez on 05/10/23.
 //
 
 import UIKit
 
-class TempActivityVC: UIViewController {
+class Activity1VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +15,3 @@ class TempActivityVC: UIViewController {
     }
     
 }
-
