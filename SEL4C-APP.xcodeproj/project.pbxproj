@@ -353,12 +353,8 @@
 				66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */,
 				66BB95872AA88A5900DEF549 /* Poll2Controller.swift in Sources */,
 				66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */,
-<<<<<<< Updated upstream
 				4FA2B6C72ACFD3D00009200D /* UserResponsesController.swift in Sources */,
-				66BB95812AA87DA500DEF549 /* TempActivityVC.swift in Sources */,
-=======
 				66BB95812AA87DA500DEF549 /* Activity4VC.swift in Sources */,
->>>>>>> Stashed changes
 				66BB95792AA81AE500DEF549 /* RegisterVC.swift in Sources */,
 				4FA2B6C52ACFD3B90009200D /* UserResponses.swift in Sources */,
 				661BD3592AA6AFEB00A4AC62 /* Activity.swift in Sources */,
