@@ -25,6 +25,9 @@ class TestVC: UIViewController {
     
     @IBOutlet weak var progress: UIProgressView!
     
+    var userResponses = UserResponses()
+    var userResponsesController = UserResponsesController()
+    var autocontrolResultados = 0
  
     @IBAction func userAnswer(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
