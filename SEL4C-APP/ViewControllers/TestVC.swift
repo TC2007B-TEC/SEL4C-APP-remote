@@ -27,30 +27,70 @@ class TestVC: UIViewController {
     
     var userResponses = UserResponses()
     var userResponsesController = UserResponsesController()
-    var autocontrolResultados = 0
+    
+    var autocResul = 0
+    var liderResul = 0
+    var concResul = 0
+    var innoResul = 0
  
     @IBAction func userAnswer(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
-        switch answer!{
-        case let str where str.contains("Nada de acuerdo"):
-            print("Nada de acuerdo")
-        case let str where str.contains("Poco de acuerdo"):
-            print("Poco de acuerdo")
-        case let str where str.contains("Ni de acuerdo ni desacuerdo"):
-            print("Ni de acuerdo ni desacuerdo")
-        case let str where str.contains("De acuerdo"):
-            print("De acuerdo")
-        default:
-            print("Muy de acuerdo")
-        }
-        //sender.backgroundColor = UIColor.purple
-        da_button.isEnabled = false
-        nand_button.isEnabled = false
-        ma_button.isEnabled = false
-        na_button.isEnabled = false
-        pa_button.isEnabled = false
+        var ans = Answer(answer: 0)
+            switch answer!{
+            case let str where str.contains("Nada de acuerdo"):
+                ans.answer = 1
+                //print("Nada de acuerdo")
+            case let str where str.contains("Poco de acuerdo"):
+                ans.answer = 2
+                //print("Poco de acuerdo")
+            case let str where str.contains("Ni de acuerdo ni desacuerdo"):
+                ans.answer = 3
+                //print("Ni de acuerdo ni desacuerdo")
+            case let str where str.contains("De acuerdo"):
+                ans.answer = 4
+                //print("De acuerdo")
+            default:
+                ans.answer = 5
+                //print("Muy de acuerdo")
+            }
+            //sender.backgroundColor = UIColor.purple
+            userResponses.responses.append(ans)
+            da_button.isEnabled = false
+            nand_button.isEnabled = false
+            ma_button.isEnabled = false
+            na_button.isEnabled = false
+            pa_button.isEnabled = false
+            
         
         if engine.nextQuestion() {
+            Task{
+                do{
+                    try await userResponsesController.insertUserResponses(newUserResponses: userResponses)
+                    updateUserResponses(title: "Las respuestas fueron almacenas con éxito en el servidor")
+                }catch{
+                    displayErrorUserResponses(UserResponsesError.itemNotFound, title: "No se pudo accer almacenar las respuestas en la base de datos")
+                }
+            }
+            
+            if engine.questionIndex > 0 || engine.questionIndex < 5 {
+                autocResul += ans.answer
+               print(autocResul)
+            }
+             
+             else if engine.questionIndex > 4 || engine.questionIndex < 11 {
+                 liderResul += ans.answer
+                print(liderResul)
+             }
+             
+             else if engine.questionIndex > 10 || engine.questionIndex < 18 {
+                 concResul += ans.answer
+                print(concResul)
+             }
+             else if engine.questionIndex > 17 || engine.questionIndex < 25 {
+                 innoResul += ans.answer
+                print(innoResul)
+             }
+            
             if engine.questionIndex == 24 {
                 // Cambiar a "Poll2Segue" después de la pregunta 24
                 performSegue(withIdentifier: "Poll2Segue", sender: self)
@@ -78,6 +118,22 @@ class TestVC: UIViewController {
         text.text = engine.getText()
         text2.text = engine.getText2()
     }
+    
+    func updateUserResponses(title: String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: "Datos almacenados con éxito", preferredStyle: .alert)
+            let continueAction = UIAlertAction(title: "Continuar", style: .default)
+            alert.addAction(continueAction)
+            self.present(alert,animated: true)
+        }
+    }
+    func displayErrorUserResponses(_ error: Error, title: String) {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
 
     @objc func nextQuestion(){
         text.text = engine.getText()

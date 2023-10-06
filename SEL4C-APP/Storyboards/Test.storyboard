@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b95-NZ-IRF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b95-NZ-IRF">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="130" width="293" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyF-gB-SW3">
@@ -31,8 +33,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Empezar">
-                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseForegroundColor" name="AzulTec"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="t8X-Ar-Vf9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="twX-5O-pwm"/>
@@ -42,7 +44,7 @@
                                         <rect key="frame" x="-11" y="26" width="314" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -50,7 +52,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oWO-B1-M6c"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" name="AzulTec"/>
                         <constraints>
                             <constraint firstItem="oWO-B1-M6c" firstAttribute="trailing" secondItem="rtE-mY-ey8" secondAttribute="trailing" constant="50" id="7mX-SZ-Z7z"/>
                             <constraint firstItem="rtE-mY-ey8" firstAttribute="leading" secondItem="oWO-B1-M6c" secondAttribute="leading" constant="50" id="7pj-4Q-KIv"/>
@@ -77,10 +79,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mif-8F-fXt">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Muy de acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="t8X-Ar-Vf9" eventType="touchUpInside" id="0zd-G3-ddB"/>
@@ -88,10 +90,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-Z1-AP8">
                                         <rect key="frame" x="0.0" y="57.333333333333314" width="250" height="34.333333333333343"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="De acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="t8X-Ar-Vf9" eventType="touchUpInside" id="sCB-A3-xD6"/>
@@ -99,10 +101,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjw-XB-yPr">
                                         <rect key="frame" x="0.0" y="114.66666666666667" width="250" height="34.333333333333329"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Ni de acuerdo ni desacuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="t8X-Ar-Vf9" eventType="touchUpInside" id="IFE-LY-z2p"/>
@@ -110,10 +112,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-Rt-5If">
                                         <rect key="frame" x="0.0" y="172" width="250" height="34.333333333333343"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Poco de acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="t8X-Ar-Vf9" eventType="touchUpInside" id="aBX-sr-leL"/>
@@ -121,10 +123,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECe-2x-FKm">
                                         <rect key="frame" x="0.0" y="229.33333333333337" width="250" height="34.333333333333314"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Nada de acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="t8X-Ar-Vf9" eventType="touchUpInside" id="x2G-aB-Lg3"/>
@@ -145,7 +147,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPx-kO-VTv">
                                 <rect key="frame" x="60" y="60" width="273" height="260"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logopurple" translatesAutoresizingMaskIntoConstraints="NO" id="B60-tr-ZPw">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoNegro" translatesAutoresizingMaskIntoConstraints="NO" id="B60-tr-ZPw">
                                         <rect key="frame" x="186" y="0.0" width="89" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -153,21 +155,21 @@
                                         <rect key="frame" x="8" y="0.0" width="78" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9T-sj-Il9">
                                         <rect key="frame" x="8" y="34" width="154" height="68"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Texto" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-9z-kqu">
                                         <rect key="frame" x="-5" y="138" width="283" height="114"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -224,8 +226,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Continuar">
-                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseForegroundColor" name="AzulTec"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="m20-4t-H1d" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bcu-Uh-Fwd"/>
@@ -235,14 +237,14 @@
                                         <rect key="frame" x="20" y="168" width="252" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final prueba Emprendedor Social" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-RC-9dt">
                                         <rect key="frame" x="16" y="26" width="261" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -250,7 +252,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N5S-1O-lqB"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" name="AzulTec"/>
                     </view>
                     <navigationItem key="navigationItem" id="PgN-Cg-H0E"/>
                 </viewController>
@@ -271,10 +273,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4Q-Rj-T63">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Muy de acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="m20-4t-H1d" eventType="touchUpInside" id="ndg-gN-OhM"/>
@@ -282,10 +284,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAj-PB-hhR">
                                         <rect key="frame" x="0.0" y="57.333333333333314" width="250" height="34.333333333333343"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="De acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="m20-4t-H1d" eventType="touchUpInside" id="f0Q-e0-zog"/>
@@ -293,10 +295,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-jw-ahJ">
                                         <rect key="frame" x="0.0" y="114.66666666666667" width="250" height="34.333333333333329"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Ni de acuerdo ni desacuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="m20-4t-H1d" eventType="touchUpInside" id="Gwt-a5-uFk"/>
@@ -304,10 +306,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxa-d2-y2X">
                                         <rect key="frame" x="0.0" y="172" width="250" height="34.333333333333343"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Poco de acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="m20-4t-H1d" eventType="touchUpInside" id="pux-dB-Sxa"/>
@@ -315,10 +317,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7p-qc-b3a">
                                         <rect key="frame" x="0.0" y="229.33333333333337" width="250" height="34.333333333333314"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" name="AzulTec"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Nada de acuerdo">
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="userAnswer:" destination="m20-4t-H1d" eventType="touchUpInside" id="91v-9V-p6H"/>
@@ -339,7 +341,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esO-BV-GWB">
                                 <rect key="frame" x="60" y="60" width="273" height="260"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logopurple" translatesAutoresizingMaskIntoConstraints="NO" id="WsN-fZ-LCl">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoNegro" translatesAutoresizingMaskIntoConstraints="NO" id="WsN-fZ-LCl">
                                         <rect key="frame" x="186" y="0.0" width="89" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -347,21 +349,21 @@
                                         <rect key="frame" x="8" y="0.0" width="78" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8be-uV-njo">
                                         <rect key="frame" x="8" y="34" width="154" height="68"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Texto" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-Yr-dga">
                                         <rect key="frame" x="-5" y="138" width="283" height="114"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -418,8 +420,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Ver resultados">
-                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseForegroundColor" name="AzulTec"/>
+                                            <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="Lhl-vm-u4S" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="KJF-i4-dKN"/>
@@ -429,7 +431,7 @@
                                         <rect key="frame" x="36" y="116" width="220" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="AzulTec"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -437,7 +439,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l4D-5s-Ufd"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" name="AzulTec"/>
                     </view>
                     <navigationItem key="navigationItem" id="eVl-60-ukq"/>
                 </viewController>
@@ -455,15 +457,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logopurple" width="261" height="261"/>
+        <image name="LogoNegro" width="3375" height="3375"/>
+        <namedColor name="AzulTec">
+            <color red="0.071000002324581146" green="0.19599999487400055" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -27,7 +27,22 @@ class Poll2Controller: UIViewController {
     
     var userResponses = UserResponses()
     var userResponsesController = UserResponsesController()
-    var autocontrolResultados = 0
+    
+    var psc = 0
+    var psh = 0
+    var psav = 0
+    
+    var pcc = 0
+    var pch = 0
+    var pcav = 0
+    
+    var pcrc = 0
+    var pcrh = 0
+    var pcrav = 0
+
+    var pic = 0
+    var pih = 0
+    var piav = 0
     
     @IBAction func userAnswer(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
@@ -58,19 +73,76 @@ class Poll2Controller: UIViewController {
             pa_button.isEnabled = false
             
             if engine.nextQuestion() {
-               if engine.questionIndex > 0 || engine.questionIndex < 5 {
-                   autocontrolResultados += ans.answer
-                  print(autocontrolResultados)
+                Task{
+                    do{
+                        try await userResponsesController.insertUserResponses(newUserResponses: userResponses)
+                        updateUserResponses(title: "Las respuestas fueron almacenas con éxito en el servidor")
+                    }catch{
+                        displayErrorUserResponses(UserResponsesError.itemNotFound, title: "No se pudo accer almacenar las respuestas en la base de datos")
+                    }
+                }
+                
+               if engine.questionIndex > 0 || engine.questionIndex < 3 {
+                   psc += ans.answer
+                  print(psc)
                }
-               
-               Task{
-                   do{
-                       try await userResponsesController.insertUserResponses(newUserResponses: userResponses)
-                       updateUserResponses(title: "Las respuestas fueron almacenas con éxito en el servidor")
-                   }catch{
-                       displayErrorUserResponses(UserResponsesError.itemNotFound, title: "No se pudo accer almacenar las respuestas en la base de datos")
-                   }
-               }
+                
+                else if engine.questionIndex > 2 || engine.questionIndex < 5 {
+                    psh += ans.answer
+                   print(psh)
+                }
+                
+                else if engine.questionIndex > 4 || engine.questionIndex < 7 {
+                    psav += ans.answer
+                   print(psav)
+                }
+                //----
+                else if engine.questionIndex > 6 || engine.questionIndex < 10 {
+                    pcc += ans.answer
+                   print(pcc)
+                }
+                 
+                 else if engine.questionIndex > 9 || engine.questionIndex < 13 {
+                     pch += ans.answer
+                    print(pch)
+                 }
+                 
+                 else if engine.questionIndex == 13 {
+                     pcav += ans.answer
+                    print(pcav)
+                 }
+                //----
+                else if engine.questionIndex > 13 || engine.questionIndex < 16 {
+                    pcrc += ans.answer
+                   print(pcrc)
+                }
+                 
+                 else if engine.questionIndex > 15 || engine.questionIndex < 18 {
+                     pcrh += ans.answer
+                    print(pcrh)
+                 }
+                 
+                 else if engine.questionIndex > 17 || engine.questionIndex < 20 {
+                     pcrav += ans.answer
+                    print(pcrav)
+                 }
+                //----
+                else if engine.questionIndex > 19 || engine.questionIndex < 22 {
+                    pic += ans.answer
+                   print(pic)
+                }
+                 
+                 else if engine.questionIndex > 21 || engine.questionIndex < 25 {
+                     pih += ans.answer
+                    print(pih)
+                 }
+                 
+                 else if engine.questionIndex == 25 {
+                     piav += ans.answer
+                    print(piav)
+                 } 
+                
+                //--
                
                 if engine.questionIndex == 24 {
                     // Cambiar a "Poll2Segue" después de la pregunta 24
