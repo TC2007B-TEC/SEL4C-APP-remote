@@ -31,11 +31,11 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == edadPicker {Edad.text = edades[row]}
-        if pickerView == paisPicker {Pais.text = paises[row]}
+        if pickerView == edadPicker {Edad.text = edades[row]; activarBoton()}
+        if pickerView == paisPicker {Pais.text = paises[row]; activarBoton()}
         if pickerView == ramaPicker {Rama.text = ramas[row]}
-        if pickerView == generoPicker {Genero.text = generos[row]}
-        if pickerView == escuelaPicker {Escuela.text = escuelas[row]}
+        if pickerView == generoPicker {Genero.text = generos[row]; activarBoton()}
+        if pickerView == escuelaPicker {Escuela.text = escuelas[row]; activarBoton()}
     }
     
     @IBOutlet weak var Nombre: UITextField!

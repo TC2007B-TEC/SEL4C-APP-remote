@@ -59,7 +59,7 @@
         <!--Actividad 1-->
         <scene sceneID="jom-5O-zIR">
             <objects>
-                <viewController storyboardIdentifier="Actividad1" title="Actividad 1" id="HuT-Yk-wC5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Actividad1" title="Actividad 1" id="HuT-Yk-wC5" customClass="Activity1VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VoS-KO-Bvv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +116,9 @@
                                             <constraint firstItem="3bt-sU-Ama" firstAttribute="leading" secondItem="jN6-wR-bq9" secondAttribute="trailing" constant="10" id="WD9-LO-viq"/>
                                             <constraint firstItem="jN6-wR-bq9" firstAttribute="centerY" secondItem="sZE-VY-Zhi" secondAttribute="centerY" id="sdR-bn-Y3J"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="subact1segue:" destination="HuT-Yk-wC5" eventType="touchUpInside" id="2N1-jb-h6g"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-zp-RYs" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="102" width="293" height="116"/>
@@ -195,6 +198,11 @@
                             <constraint firstItem="9Ph-yh-Iep" firstAttribute="leading" secondItem="L1i-Qo-vQC" secondAttribute="leading" constant="50" id="fQq-c6-RkP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="subact1But" destination="sZE-VY-Zhi" id="50p-vP-Hz4"/>
+                        <outlet property="subact2But" destination="EZT-zp-RYs" id="7k9-Jc-wgW"/>
+                        <outlet property="subact3But" destination="R11-vD-2ob" id="U2M-fq-y75"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8j-3D-A2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sj-mh-9Dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3115" y="783"/>
+            <point key="canvasLocation" x="1531" y="1589"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y60-Z5-OwO">
@@ -276,11 +284,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg0-1R-tjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4030" y="782"/>
+            <point key="canvasLocation" x="2390" y="1589"/>
+        </scene>
+        <!--Lluvia de ideas-->
+        <scene sceneID="A2a-Te-cfH">
+            <objects>
+                <viewController storyboardIdentifier="Actividad1.1" title="Lluvia de ideas" id="nrA-TS-sbp" customClass="Activity4VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXU-FX-a1g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSz-uS-mYh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-Tb-sOj">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1600"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Falta Entrega" translatesAutoresizingMaskIntoConstraints="NO" id="HqD-hB-Hlt">
+                                                <rect key="frame" x="0.0" y="1308" width="393" height="174"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lluvia de ideas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-vZ-pOw">
+                                                <rect key="frame" x="40" y="8" width="312" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                                <color key="textColor" name="AzulTec"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones1.1" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-Q4-9gc">
+                                                <rect key="frame" x="14" y="68" width="365" height="654"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1600" id="6en-Ba-z0Q"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yTR-Tb-sOj" firstAttribute="top" secondItem="LSz-uS-mYh" secondAttribute="top" id="Nj8-Wv-LLE"/>
+                                    <constraint firstItem="yTR-Tb-sOj" firstAttribute="leading" secondItem="LSz-uS-mYh" secondAttribute="leading" id="Vn9-M1-pXm"/>
+                                    <constraint firstItem="yTR-Tb-sOj" firstAttribute="trailing" secondItem="LSz-uS-mYh" secondAttribute="trailing" id="caS-j8-9x1"/>
+                                    <constraint firstAttribute="bottom" secondItem="yTR-Tb-sOj" secondAttribute="bottom" id="kmG-YK-hTA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mTl-GF-8Be"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yTR-Tb-sOj" firstAttribute="width" secondItem="xXU-FX-a1g" secondAttribute="width" id="g4f-1v-DeC"/>
+                            <constraint firstItem="LSz-uS-mYh" firstAttribute="top" secondItem="mTl-GF-8Be" secondAttribute="top" id="h9K-nz-3nh"/>
+                            <constraint firstItem="LSz-uS-mYh" firstAttribute="trailing" secondItem="mTl-GF-8Be" secondAttribute="trailing" id="lKb-SJ-XST"/>
+                            <constraint firstItem="LSz-uS-mYh" firstAttribute="bottom" secondItem="mTl-GF-8Be" secondAttribute="bottom" id="nn7-hL-UO1"/>
+                            <constraint firstItem="LSz-uS-mYh" firstAttribute="leading" secondItem="mTl-GF-8Be" secondAttribute="leading" id="ynu-Ka-CMd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e5G-gF-fWG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZW2-fD-2HM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052.6717557251909" y="142.95774647887325"/>
         </scene>
     </scenes>
     <resources>
         <image name="Falta Entrega" width="791.33331298828125" height="318"/>
+        <image name="Instrucciones1.1" width="990" height="1926"/>
         <image name="Instrucciones4" width="566" height="1948"/>
         <image name="brain.head.profile" catalog="system" width="120" height="128"/>
         <image name="checklist" catalog="system" width="128" height="107"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uzR-AW-oij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uYp-fu-NfP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -27,9 +27,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="4SP-1D-ov3" kind="relationship" relationship="viewControllers" id="PEA-bh-rJW"/>
-                        <segue destination="jlU-kt-Nnv" kind="relationship" relationship="viewControllers" id="Edm-5s-fub"/>
-                        <segue destination="K0w-H7-wy7" kind="relationship" relationship="viewControllers" id="iJ7-BU-8So"/>
                         <segue destination="wQq-9E-NGu" kind="relationship" relationship="viewControllers" id="NQ3-Mo-KQ9"/>
+                        <segue destination="K0w-H7-wy7" kind="relationship" relationship="viewControllers" id="iJ7-BU-8So"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXX-pX-iR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -538,7 +537,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="U62-sC-b6y"/>
+                                    <action selector="Cambio:" destination="mO3-Wk-jjZ" eventType="editingChanged" id="Kfk-WC-ZpF"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhE-8o-BfE">
