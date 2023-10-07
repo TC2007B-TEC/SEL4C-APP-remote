@@ -32,6 +32,11 @@ class PasswordVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     var terms = false
     let si = UIImage(systemName: "square.fill")
     let no = UIImage(systemName: "square")

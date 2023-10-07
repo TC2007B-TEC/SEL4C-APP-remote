@@ -113,6 +113,11 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     @objc func cerrarToolbar() {
         for view in subViews{
             view.removeFromSuperview()

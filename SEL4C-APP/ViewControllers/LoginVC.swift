@@ -39,6 +39,11 @@ class LoginVC: UIViewController {
     @IBOutlet weak var Login: UIButton!
     @IBOutlet weak var Show: UIButton!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     
     func validarEmail(txt:String)-> Bool{
         let exp = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
