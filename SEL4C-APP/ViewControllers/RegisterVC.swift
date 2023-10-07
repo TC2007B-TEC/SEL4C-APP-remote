@@ -64,6 +64,8 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        
         Boton.isEnabled = false
         
         edadPicker.delegate = self

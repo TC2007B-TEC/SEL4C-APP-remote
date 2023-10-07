@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victoria Villa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
-                                <rect key="frame" x="95" y="370" width="203" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@email.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
+                                <rect key="frame" x="61" y="370" width="271.33333333333331" height="38"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Cerrar Sesión"/>
                                         <connections>
-                                            <segue destination="ALF-6s-6KF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tmW-sc-LTs"/>
+                                            <action selector="logout:" destination="FxJ-Dp-TvM" eventType="touchUpInside" id="Miw-ka-lin"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl-sunglasses-sitting-down copy" translatesAutoresizingMaskIntoConstraints="NO" id="mlJ-e7-ce8">
@@ -65,7 +65,7 @@
                                             <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="FDY-1x-yBb" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="asN-y8-G7D"/>
+                                            <segue destination="FDY-1x-yBb" kind="show" id="yUc-q0-up5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-2o-SCf">
@@ -100,6 +100,9 @@
                     <tabBarItem key="tabBarItem" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="idR-Ft-gtM"/>
                     <navigationItem key="navigationItem" id="prg-lH-x5L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="usenameLabel" destination="TW9-n2-yUk" id="nO3-Gi-CBT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6W-0K-j4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +129,7 @@
             <objects>
                 <viewController storyboardIdentifier="Results" id="FDY-1x-yBb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dby-V4-5ER">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Resultados" translatesAutoresizingMaskIntoConstraints="NO" id="0lK-w5-5CT">

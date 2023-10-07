@@ -67,7 +67,9 @@
                                     <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="oaT-Zb-PlD" kind="show" id="GUE-MJ-znI"/>
+                                    <segue destination="oaT-Zb-PlD" kind="popoverPresentation" popoverAnchorView="FT3-yE-JX4" id="GUE-MJ-znI">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ventajas de SEL4C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnk-qc-TQe">

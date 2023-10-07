@@ -11,9 +11,15 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        let defaults = UserDefaults.standard
+        let isUserLogged = defaults.bool(forKey: "ISUSERLOGGEDIN")
+        
         // Do any additional setup after loading the view.
         Login.isEnabled = false
         ErrorUser.text = ""
+        
     }
     
     
@@ -88,6 +94,7 @@ class LoginVC: UIViewController {
     var condicion = false
 
     let group = DispatchGroup()
+    
     func fetchAPI(email: String, password: String){
         group.enter()
             // Define la URL de la API
@@ -109,17 +116,33 @@ class LoginVC: UIViewController {
         }
         
         
-        @IBAction func login (sender: UIButton) {
+        @IBAction func login ( sender: UIButton) {
             fetchAPI(email: User.text!,password: Pass.text!)
             group.wait()
             if condicion == true {
-                self.performSegue (withIdentifier: "loginSegue", sender: self)
+                
+                UserDefaults.standard.set(true, forKey: "ISUSERLOGGEDIN")
+                UserDefaults.standard.set(User.text, forKey: "USERNAME")
+                
+                goToHomeScreen()
+                
+                
+                //self.performSegue (withIdentifier: "loginSegue", sender: self)
+
+                //Navegar a Home Screen
+                //
             } else {
                 print ("La condición no se cumplió")
                 let alerta = UIAlertController(title: "El usuario y/o la contraseña son incorrectos", message: "Ingresa un usuario y contraseña existentes", preferredStyle: .alert)
                 alerta.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alerta, animated: true)
             }
+        }
+    
+    func goToHomeScreen() {
+        
+        let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBarVC
+        self.navigationController?.pushViewController(homeVC, animated: true)
         }
 
 

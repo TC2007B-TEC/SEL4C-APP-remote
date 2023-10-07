@@ -1,29 +1,22 @@
 //
-//  ProfileVC.swift
+//  TabBarVC.swift
 //  SEL4C-APP
 //
-//  Created by Raúl Vélez on 03/09/23.
+//  Created by Raúl Vélez on 07/10/23.
 //
 
 import UIKit
 
-class ProfileVC: UIViewController {
+class TabBarVC: UITabBarController {
 
-    @IBOutlet weak var usenameLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         let defaults = UserDefaults.standard
-        let user = defaults.string(forKey: "USERNAME")
-        usenameLabel.text = "\(user!)"
+        //let user = defaults.string(forKey: "USERNAME")
 
         // Do any additional setup after loading the view.
-    }
-    
-    
-    @IBAction func logout(_ sender: UIButton) {
-        UserDefaults.standard.set(false, forKey: "ISUSERLOGGEDIN")
-        self.navigationController?.popToRootViewController(animated: true)
     }
     
 
