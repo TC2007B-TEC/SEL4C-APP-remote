@@ -11,7 +11,7 @@ class Activity4VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Activity 4"
+        self.title = "Actividad 4"
     }
     
 }

@@ -22,4 +22,14 @@ class Activity1VC: UIViewController {
         let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad1.1")
         navigationController?.pushViewController(viewController, animated: true)
     }
+    @IBAction func subact2segue(_ sender: Any) {
+        let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad1.2")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func subact3segue(_ sender: Any) {
+        let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad1.3")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
