@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Poll2Controller: UIViewController {
+class Poll2VC: UIViewController {
     
     @IBOutlet weak var text: UILabel!
     
@@ -27,6 +27,7 @@ class Poll2Controller: UIViewController {
     
     var userResponses = UserResponses()
     var userResponsesController = UserResponsesController()
+    var email: String?
     
     var psc = 0
     var psh = 0
@@ -44,24 +45,97 @@ class Poll2Controller: UIViewController {
     var pih = 0
     var piav = 0
     
+    var respuestas = [Int]()
+    
+    func sendTestJSON() {
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")
+        
+        let data = [
+            "test_type": "Diagnostico 2",
+            "usuario": email
+        ] as [String: Any]
+        
+        let jsonData = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+        
+        sendJSONData(jsonData, to: "http://20.127.122.6:8000/newtest/") { result in
+            switch result {
+            case .success:
+                print("JSON para nuevo test enviado con éxito")
+            case .failure(let error):
+                print("Error al enviar JSON para nuevo test: \(error)")
+            }
+        }
+    }
+
+    func sendQuestionJSON(idpregunta: Int, respuesta: Int) {
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")
+        
+        let data = [
+            "idpregunta": idpregunta,
+            "usuario": email,
+            "test_type": "Diagnostico 2",
+            "resp": respuesta
+
+        ] as [String: Any]
+        
+        let jsonData = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+  
+        sendJSONData(jsonData, to: "http://20.127.122.6:8000/newpregunta/") { result in
+            switch result {
+            case .success:
+                print("JSON para nueva pregunta enviado con éxito")
+            case .failure(let error):
+                print("Error al enviar JSON para nueva pregunta: \(error)")
+            }
+        }
+    }
+
+    func sendJSONData(_ jsonData: Data, to urlString: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        var request = URLRequest(url: URL(string: urlString)!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                completion(.success(()))
+            } else {
+                completion(.failure(UserResponsesError.itemNotFound))
+            }
+        }.resume()
+    }
+
     @IBAction func userAnswer(_ sender: UIButton) {
         let answer = sender.titleLabel?.text
+
         var ans = Answer(answer: 0)
             switch answer!{
             case let str where str.contains("Nada de acuerdo"):
                 ans.answer = 1
+                respuestas.append(1)
                 //print("Nada de acuerdo")
             case let str where str.contains("Poco de acuerdo"):
                 ans.answer = 2
+                respuestas.append(2)
                 //print("Poco de acuerdo")
             case let str where str.contains("Ni de acuerdo ni desacuerdo"):
                 ans.answer = 3
+                respuestas.append(3)
                 //print("Ni de acuerdo ni desacuerdo")
             case let str where str.contains("De acuerdo"):
                 ans.answer = 4
+                respuestas.append(4)
                 //print("De acuerdo")
             default:
                 ans.answer = 5
+                respuestas.append(5)
                 //print("Muy de acuerdo")
             }
             //sender.backgroundColor = UIColor.purple
@@ -73,14 +147,8 @@ class Poll2Controller: UIViewController {
             pa_button.isEnabled = false
             
             if engine.nextQuestion() {
-                Task{
-                    do{
-                        try await userResponsesController.insertUserResponses(newUserResponses: userResponses)
-                        updateUserResponses(title: "Las respuestas fueron almacenas con éxito en el servidor")
-                    }catch{
-                        displayErrorUserResponses(UserResponsesError.itemNotFound, title: "No se pudo accer almacenar las respuestas en la base de datos")
-                    }
-                }
+                
+                
                 
                if engine.questionIndex > 0 || engine.questionIndex < 3 {
                    psc += ans.answer
@@ -145,11 +213,15 @@ class Poll2Controller: UIViewController {
                 //--
                
                 if engine.questionIndex == 24 {
-                    // Cambiar a "Poll2Segue" después de la pregunta 24
                     performSegue(withIdentifier: "Poll2Segue", sender: self)
                     Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(nextQuestion), userInfo: nil, repeats: false)
                 } else if engine.questionIndex == 47 {
-                    // Cambiar a "ResultadosSegue" después de la pregunta 49
+                    for i in 0..<respuestas.count {
+                        let namepregunta = text.text!
+                        let idpregunta = i
+                        let respuesta = respuestas[i]
+                        sendQuestionJSON(idpregunta: idpregunta, respuesta: respuesta)
+                    }
                     performSegue(withIdentifier: "ResultadosSegue", sender: self)
                     Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(nextQuestion), userInfo: nil, repeats: false)
                 } else {
@@ -170,6 +242,7 @@ class Poll2Controller: UIViewController {
             progress.progress = engine.getProgress()
             text.text = engine.getText()
             text2.text = engine.getText2()
+            sendTestJSON()
         }
        
        func updateUserResponses(title: String){

@@ -29,6 +29,8 @@ class PasswordVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        let isUserLogged = defaults.bool(forKey: "ISUSERLOGGEDIN")
         // Do any additional setup after loading the view.
     }
     
@@ -147,7 +149,7 @@ class PasswordVC: UIViewController {
             Password.backgroundColor = rojo
         }
     }
-
+    
     let group = DispatchGroup()
     func postAPI(){
         // preparar los datos json
@@ -193,6 +195,10 @@ class PasswordVC: UIViewController {
     @IBAction func createUser(_ sender: Any) {
         postAPI()
         group.wait()
+        
+        UserDefaults.standard.set(true, forKey: "ISUSERLOGGEDIN")
+        UserDefaults.standard.set(email, forKey: "USERNAME")
+        
         self.performSegue(withIdentifier: "testSegue", sender: self)
     }
     

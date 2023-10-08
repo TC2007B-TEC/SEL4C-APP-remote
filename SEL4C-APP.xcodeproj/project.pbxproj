@@ -39,8 +39,8 @@
 		66BB957F2AA8789B00DEF549 /* TempActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BB957E2AA8789B00DEF549 /* TempActivities.storyboard */; };
 		66BB95812AA87DA500DEF549 /* Activity4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95802AA87DA500DEF549 /* Activity4VC.swift */; };
 		66BB95832AA8896800DEF549 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BB95822AA8896800DEF549 /* Test.storyboard */; };
-		66BB95852AA889DB00DEF549 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95842AA889DB00DEF549 /* TestVC.swift */; };
-		66BB95872AA88A5900DEF549 /* Poll2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95862AA88A5900DEF549 /* Poll2Controller.swift */; };
+		66BB95852AA889DB00DEF549 /* Poll1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95842AA889DB00DEF549 /* Poll1VC.swift */; };
+		66BB95872AA88A5900DEF549 /* Poll2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95862AA88A5900DEF549 /* Poll2VC.swift */; };
 		66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95882AA88B1A00DEF549 /* EcomplexityEngine.swift */; };
 		66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB958A2AA88B2A00DEF549 /* Question.swift */; };
 /* End PBXBuildFile section */
@@ -90,8 +90,8 @@
 		66BB957E2AA8789B00DEF549 /* TempActivities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TempActivities.storyboard; sourceTree = "<group>"; };
 		66BB95802AA87DA500DEF549 /* Activity4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity4VC.swift; sourceTree = "<group>"; };
 		66BB95822AA8896800DEF549 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
-		66BB95842AA889DB00DEF549 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
-		66BB95862AA88A5900DEF549 /* Poll2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll2Controller.swift; sourceTree = "<group>"; };
+		66BB95842AA889DB00DEF549 /* Poll1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll1VC.swift; sourceTree = "<group>"; };
+		66BB95862AA88A5900DEF549 /* Poll2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll2VC.swift; sourceTree = "<group>"; };
 		66BB95882AA88B1A00DEF549 /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
 		66BB958A2AA88B2A00DEF549 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,8 +202,8 @@
 				66BB95762AA81A9C00DEF549 /* LoginVC.swift */,
 				66BB95782AA81AE500DEF549 /* RegisterVC.swift */,
 				669CE20F2AA94FD9000E676F /* PasswordVC.swift */,
-				66BB95862AA88A5900DEF549 /* Poll2Controller.swift */,
-				66BB95842AA889DB00DEF549 /* TestVC.swift */,
+				66BB95862AA88A5900DEF549 /* Poll2VC.swift */,
+				66BB95842AA889DB00DEF549 /* Poll1VC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66BB95852AA889DB00DEF549 /* TestVC.swift in Sources */,
+				66BB95852AA889DB00DEF549 /* Poll1VC.swift in Sources */,
 				66BB95772AA81A9C00DEF549 /* LoginVC.swift in Sources */,
 				6690D0672AA5728F005C0DE2 /* ProfileVC.swift in Sources */,
 				4FA2B6C32ACFD37C0009200D /* Answer.swift in Sources */,
@@ -354,7 +354,7 @@
 				6690D04B2AA55E63005C0DE2 /* AppDelegate.swift in Sources */,
 				669CE2102AA94FD9000E676F /* PasswordVC.swift in Sources */,
 				66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */,
-				66BB95872AA88A5900DEF549 /* Poll2Controller.swift in Sources */,
+				66BB95872AA88A5900DEF549 /* Poll2VC.swift in Sources */,
 				66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */,
 				6660E8192AD12A470053A5D7 /* Activity1VC1.swift in Sources */,
 				4FA2B6C72ACFD3D00009200D /* UserResponsesController.swift in Sources */,

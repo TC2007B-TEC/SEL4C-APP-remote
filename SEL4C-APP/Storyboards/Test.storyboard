@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TestVC-->
         <scene sceneID="mOJ-4d-9yQ">
             <objects>
-                <viewController id="b95-NZ-IRF" sceneMemberID="viewController">
+                <viewController id="b95-NZ-IRF" customClass="TestVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLZ-ED-eOZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                             <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="t8X-Ar-Vf9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="twX-5O-pwm"/>
+                                            <segue destination="t8X-Ar-Vf9" kind="presentation" identifier="Poll1Segue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="twX-5O-pwm"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Realiza tu evaluación incial" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUt-W9-VOm">
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="162.59541984732823" y="3.5211267605633805"/>
         </scene>
-        <!--TestVC-->
+        <!--Poll1VC-->
         <scene sceneID="5fQ-cy-BTM">
             <objects>
-                <viewController id="t8X-Ar-Vf9" customClass="TestVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t8X-Ar-Vf9" customClass="Poll1VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bH-Qt-pcV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="1919.8473282442746" y="3.5211267605633805"/>
         </scene>
-        <!--Poll2 Controller-->
+        <!--Poll2VC-->
         <scene sceneID="dBj-2i-xFq">
             <objects>
-                <viewController id="m20-4t-H1d" customClass="Poll2Controller" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m20-4t-H1d" customClass="Poll2VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bk-0H-R8b">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,7 +457,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoNegro" width="3375" height="3375"/>
+        <image name="LogoNegro" width="1125" height="1125"/>
         <namedColor name="AzulTec">
             <color red="0.071000002324581146" green="0.19599999487400055" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -465,7 +465,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
