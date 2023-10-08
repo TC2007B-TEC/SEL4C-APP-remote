@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sj-mh-9Dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531" y="1589"/>
+            <point key="canvasLocation" x="262" y="2576"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y60-Z5-OwO">
@@ -284,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg0-1R-tjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2390" y="1589"/>
+            <point key="canvasLocation" x="1120" y="2576"/>
         </scene>
         <!--Lluvia de ideas-->
         <scene sceneID="A2a-Te-cfH">
@@ -369,11 +369,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entregar Actividad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzZ-SD-R7J">
-                                <rect key="frame" x="126" y="224" width="141" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entregar Actividad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-o4-StM">
+                                <rect key="frame" x="40" y="125" width="312" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                <color key="textColor" name="AzulTec"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -383,22 +383,198 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQT-7s-Rs6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4141" y="143"/>
+            <point key="canvasLocation" x="4161" y="143"/>
+        </scene>
+        <!--Activity4VC-->
+        <scene sceneID="Teg-Ag-alD">
+            <objects>
+                <viewController id="ht6-R0-IGt" customClass="Activity4VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GG4-CD-NSd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hr-8j-fUb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-v0-dbd">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="650"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones1.2" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-Us-lba">
+                                                <rect key="frame" x="15" y="109" width="358" height="357"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXP-ED-ljy">
+                                                <rect key="frame" x="0.0" y="474" width="398" height="132"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-jM-Xsd">
+                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Tc-DI-eGD">
+                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9W-Nh-6fY">
+                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBA-46-owz">
+                                                <rect key="frame" x="38" y="31" width="312" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                                <color key="textColor" name="AzulTec"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="650" id="Ln9-xe-CBf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4C0-v0-dbd" firstAttribute="leading" secondItem="0hr-8j-fUb" secondAttribute="leading" id="7l4-v1-ZcQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4C0-v0-dbd" secondAttribute="bottom" id="qV0-6q-tge"/>
+                                    <constraint firstItem="4C0-v0-dbd" firstAttribute="top" secondItem="0hr-8j-fUb" secondAttribute="top" id="tFU-Jl-pd8"/>
+                                    <constraint firstItem="4C0-v0-dbd" firstAttribute="trailing" secondItem="0hr-8j-fUb" secondAttribute="trailing" id="yw1-K5-kMb"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3F8-1f-iVN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0hr-8j-fUb" firstAttribute="trailing" secondItem="3F8-1f-iVN" secondAttribute="trailing" id="1X4-kx-WZs"/>
+                            <constraint firstItem="0hr-8j-fUb" firstAttribute="bottom" secondItem="3F8-1f-iVN" secondAttribute="bottom" id="2MC-K3-wLC"/>
+                            <constraint firstItem="4C0-v0-dbd" firstAttribute="width" secondItem="GG4-CD-NSd" secondAttribute="width" id="73Z-pH-OmR"/>
+                            <constraint firstItem="0hr-8j-fUb" firstAttribute="top" secondItem="3F8-1f-iVN" secondAttribute="top" id="wV9-pj-7K0"/>
+                            <constraint firstItem="0hr-8j-fUb" firstAttribute="leading" secondItem="3F8-1f-iVN" secondAttribute="leading" id="yC9-NJ-FIP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4s7-Of-8lL"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9x-my-jmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3053" y="821"/>
+        </scene>
+        <!--Activity4VC-->
+        <scene sceneID="vOD-1e-tCQ">
+            <objects>
+                <viewController id="4HQ-Hd-cGM" customClass="Activity4VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vca-a4-2Q0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmL-zC-Ip1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxu-J4-whI">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="650"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones1.3" translatesAutoresizingMaskIntoConstraints="NO" id="TlC-Sv-rA2">
+                                                <rect key="frame" x="16" y="109" width="360" height="369"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wa-qI-lk4">
+                                                <rect key="frame" x="-5" y="471" width="398" height="132"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDo-re-Gyt">
+                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xij-CY-gY3">
+                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-ne-a3g">
+                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recorrido" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-fn-e6y">
+                                                <rect key="frame" x="38" y="49" width="312" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                                <color key="textColor" name="AzulTec"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="650" id="JXb-KQ-ldf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yxu-J4-whI" firstAttribute="trailing" secondItem="rmL-zC-Ip1" secondAttribute="trailing" id="0ZZ-Zd-fCn"/>
+                                    <constraint firstAttribute="bottom" secondItem="yxu-J4-whI" secondAttribute="bottom" id="5Gs-eX-Ede"/>
+                                    <constraint firstItem="yxu-J4-whI" firstAttribute="leading" secondItem="rmL-zC-Ip1" secondAttribute="leading" id="MYW-ae-gJN"/>
+                                    <constraint firstItem="yxu-J4-whI" firstAttribute="top" secondItem="rmL-zC-Ip1" secondAttribute="top" id="xM6-t7-sm8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VkT-jE-1ri"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rmL-zC-Ip1" firstAttribute="bottom" secondItem="VkT-jE-1ri" secondAttribute="bottom" id="Gp6-Pa-HtM"/>
+                            <constraint firstItem="yxu-J4-whI" firstAttribute="width" secondItem="vca-a4-2Q0" secondAttribute="width" id="Nyk-vE-UAx"/>
+                            <constraint firstItem="rmL-zC-Ip1" firstAttribute="top" secondItem="VkT-jE-1ri" secondAttribute="top" id="X4N-n4-yfj"/>
+                            <constraint firstItem="rmL-zC-Ip1" firstAttribute="leading" secondItem="VkT-jE-1ri" secondAttribute="leading" id="YwJ-jp-M0a"/>
+                            <constraint firstItem="rmL-zC-Ip1" firstAttribute="trailing" secondItem="VkT-jE-1ri" secondAttribute="trailing" id="rCl-TD-3Qa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hl1-3S-hC0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97G-jT-jfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3053" y="1496"/>
         </scene>
     </scenes>
     <resources>
         <image name="Falta Entrega" width="791.33331298828125" height="318"/>
         <image name="Instrucciones1.1" width="990" height="1926"/>
+        <image name="Instrucciones1.2" width="2146" height="1800"/>
+        <image name="Instrucciones1.3" width="1812" height="1602"/>
         <image name="Instrucciones4" width="566" height="1948"/>
         <image name="brain.head.profile" catalog="system" width="120" height="128"/>
         <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="figure.walk.circle" catalog="system" width="128" height="123"/>
         <image name="person.line.dotted.person" catalog="system" width="128" height="59"/>
+        <image name="square.and.arrow.down" catalog="system" width="112" height="128"/>
         <namedColor name="AzulTec">
             <color red="0.071000002324581146" green="0.19599999487400055" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
