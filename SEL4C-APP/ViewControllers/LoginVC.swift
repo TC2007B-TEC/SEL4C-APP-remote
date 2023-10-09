@@ -96,33 +96,144 @@ class LoginVC: UIViewController {
         }
     }
     
-    var condicion = false
 
+//    let group = DispatchGroup()
+    
+//    func fetchAPI(email: String, password: String){
+//        group.enter()
+//            // Define la URL de la API
+//        let url = URL(string:"http://20.127.122.6:8000/usuario/?email=\(email)&password=\(password)")!
+//            // Crea la tarea de descarga
+//            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+//                if let error = error {
+//                    print("Error: \(error)")
+//                } else if let data = data {
+//                    // Imprime los datos como una cadena
+//                    let str = String(data: data, encoding: .utf8)
+//                    print("Received data:\n\(str ?? "")")
+//                    if (str == "[]") {self.condicion = false}
+//                    else {self.condicion = true}
+//                }
+//                self.group.leave()
+//            }
+//            task.resume()
+//        }
+    
+    
+    var condicion = false
     let group = DispatchGroup()
     
-    func fetchAPI(email: String, password: String){
+//    func getAPI(email: String,password: String){
+//        // preparar los datos json
+//        let json: [String: Any] = [
+//            "email": email,
+//            "password": password,
+//        ]
+//        
+//        print(json)
+//
+//        let datosJson = try? JSONSerialization.data(withJSONObject: json)
+//        
+//        print(datosJson)
+//
+//        // crear la solicitud post
+//        let url = URL(string: "http://20.127.122.6:8000/usuariolog/")!
+//        var solicitud = URLRequest(url: url)
+//        solicitud.httpMethod = "POST"
+//
+//        // insertar los datos json a la solicitud
+//        solicitud.httpBody = datosJson
+//        group.enter()
+//        
+//        let tarea = URLSession.shared.dataTask(with: solicitud) { datos, respuesta, error in
+//          guard let datos = datos, error == nil else {
+//              print("tarea entro")
+//            print(error?.localizedDescription ?? "No hay datos")
+//            return
+//          }
+//
+//          let respuestaJSON = try? JSONSerialization.jsonObject(with: datos, options: [])
+//          if let respuestaJSON = respuestaJSON as? [String: Any] {
+//            print("Respuestas JSON entro")
+//            print(respuestaJSON)
+//          }
+//          self.group.leave()
+//        }
+//
+//        tarea.resume()
+//
+//    }
+    
+    
+    func getAPI(email: String,password: String){
+        // Definir la URL del endpoint de la API
+        let url = URL(string: "http://20.127.122.6:8000/usuariolog/")!
+
+        // Crear un objeto URLRequest con el método POST
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+
+        // Crear el objeto JSON que se enviará como cuerpo de la solicitud
+        let json = [
+            "email": email,
+            "password": password
+        ]
+
+        // Codificar el objeto JSON a datos binarios
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+
+        // Asignar los datos binarios al cuerpo de la solicitud
+        request.httpBody = jsonData
+
+        // Asignar el tipo de contenido adecuado a los encabezados de la solicitud
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         group.enter()
-            // Define la URL de la API
-        let url = URL(string:"http://20.127.122.6:8000/usuario/?email=\(email)&password=\(password)")!
-            // Crea la tarea de descarga
-            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-                if let error = error {
-                    print("Error: \(error)")
-                } else if let data = data {
-                    // Imprime los datos como una cadena
-                    let str = String(data: data, encoding: .utf8)
-                    print("Received data:\n\(str ?? "")")
-                    if (str == "[]") {self.condicion = false}
-                    else {self.condicion = true}
-                }
-                self.group.leave()
+        
+
+        // Crear una tarea URLSession para enviar la solicitud y recibir la respuesta
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            // Comprobar si hay algún error
+            if let error = error {
+                print("Error al enviar la solicitud: \(error)")
+                return
             }
-            task.resume()
+            
+            
+            
+            // Comprobar si hay datos en la respuesta
+            if let data = data {
+                
+                
+                // Intentar decodificar los datos como un objeto JSON
+                if let json = try? JSONSerialization.jsonObject(with: data) {
+                    // Imprimir el objeto JSON
+                    print("Respuesta JSON: \(json)")
+                    self.condicion = true
+                } else {
+                    // Imprimir los datos como una cadena
+                    print("Respuesta de texto: \(String(data: data, encoding: .utf8) ?? "")")
+                    
+                }
+            }
+            self.group.leave()
         }
+
+        // Iniciar la tarea
+        task.resume()
+
+
+    }
+    
+    
+    
+    
+    
         
         
         @IBAction func login ( sender: UIButton) {
-            fetchAPI(email: User.text!,password: Pass.text!)
+            getAPI(email: User.text!,password: Pass.text!)
             group.wait()
             if condicion == true {
                 
