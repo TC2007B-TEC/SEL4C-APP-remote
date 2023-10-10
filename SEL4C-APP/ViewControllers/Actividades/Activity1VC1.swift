@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Activity1VC1: UIViewController{
+class Activity1VC1: UIViewController, TurninVCDelegate{
     
     @IBOutlet weak var turninBut: UIButton!
     @IBOutlet weak var actStatus: UILabel!
@@ -23,23 +23,8 @@ class Activity1VC1: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
         
-        let defaults = UserDefaults.standard
-        let email = defaults.string(forKey: "USERNAME")!
-            //turninBut.isHidden = true // Hide the button when returning to this view controller
+        self.wasTurnedIn()
         
-        getAPI(email: email,name: actName)
-        group.wait()
-        if condicion == true {
-            
-            turninBut.isHidden = true
-            actStatus.isHidden = false
-            
-            
-            //self.performSegue (withIdentifier: "loginSegue", sender: self)
-
-            //Navegar a Home Screen
-            //
-        }
     }
     
     
@@ -54,27 +39,28 @@ class Activity1VC1: UIViewController{
 
 
         //navigationController?.pushViewController(viewController, animated: true)
+        let modalViewController = viewController
+        modalViewController.delegate = self
         present(viewController, animated: true) {
             
-            let defaults = UserDefaults.standard
-            let email = defaults.string(forKey: "USERNAME")!
-
-            let group = DispatchGroup()
-            self.getAPI(email: email, name: self.actName)
-            self.group.wait()
-
-            if self.condicion == true {
-                self.turninBut.isHidden = true
-                self.actStatus.isHidden = false
-            }
+            self.wasTurnedIn()
         }
     }
     
-    func isturnedin(){
+    func wasTurnedIn(){
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")!
+
+        let group = DispatchGroup()
+        self.getAPI(email: email, name: self.actName)
+        self.group.wait()
+
+        if self.condicion == true {
+            self.turninBut.isHidden = true
+            self.actStatus.isHidden = false
+        }
         
     }
-    
-    
     
     var condicion = false
     let group = DispatchGroup()

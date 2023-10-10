@@ -9,11 +9,15 @@ import UIKit
 import AVKit
 import MobileCoreServices
 
+protocol TurninVCDelegate: AnyObject {
+    func wasTurnedIn()
+}
+
 class TurninVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     
-    var receivedActivity: String?
+    weak var delegate: TurninVCDelegate?
     
-    weak var delegate:Activity1VC1?
+    var receivedActivity: String?
     
     @IBOutlet weak var uploadingLbl: UILabel!
     
@@ -96,7 +100,9 @@ class TurninVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                     } else {
                         print("File uploaded successfully!")
                         DispatchQueue.main.async {
-                            self.dismiss(animated: true, completion: nil)
+                            self.dismiss(animated: true) {
+                                self.delegate?.wasTurnedIn()
+                            }
                         }
                     }
                 }
