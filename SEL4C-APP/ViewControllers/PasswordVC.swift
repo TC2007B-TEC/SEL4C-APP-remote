@@ -150,6 +150,7 @@ class PasswordVC: UIViewController {
         }
     }
     
+    var condicion = false
     let group = DispatchGroup()
     func postAPI(){
         // preparar los datos json
@@ -184,7 +185,9 @@ class PasswordVC: UIViewController {
           let respuestaJSON = try? JSONSerialization.jsonObject(with: datos, options: [])
           if let respuestaJSON = respuestaJSON as? [String: Any] {
             print(respuestaJSON)
+              self.condicion = true
           }
+            else{self.condicion = false}
           self.group.leave()
         }
 
@@ -196,11 +199,23 @@ class PasswordVC: UIViewController {
         postAPI()
         group.wait()
         
-        UserDefaults.standard.set(true, forKey: "ISUSERLOGGEDIN")
-        UserDefaults.standard.set(email, forKey: "USERNAME")
-        
-        self.performSegue(withIdentifier: "testSegue", sender: self)
+        if condicion {
+            
+            UserDefaults.standard.set(true, forKey: "ISUSERLOGGEDIN")
+            UserDefaults.standard.set(email, forKey: "USERNAME")
+            
+            let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
+
+            // Use presentViewController to present the view controller modally
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        else {
+            let alerta = UIAlertController(title: "Error al registrar usuario", message: "Puede que ya exista una cuenta con este correo", preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alerta, animated: true)
+        }
     }
+    
     
     
     /*

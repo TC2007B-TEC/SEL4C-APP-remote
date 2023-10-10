@@ -315,9 +315,16 @@
                                                     <color key="baseBackgroundColor" name="AzulTec"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="rhj-jy-UPL" kind="showDetail" id="V8G-8K-QjB"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="sJS-lo-HJY"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNX-Ag-74D">
+                                                <rect key="frame" x="65" y="862" width="263" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,6 +354,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="e5G-gF-fWG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="actStatus" destination="YNX-Ag-74D" id="eaZ-YG-y8d"/>
+                        <outlet property="turninBut" destination="mlc-3D-fjN" id="FBf-Ym-DrZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW2-fD-2HM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,11 +368,11 @@
             <objects>
                 <viewController storyboardIdentifier="Turnin" title="Turnin" id="rhj-jy-UPL" customClass="TurninVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSR-BY-GlY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entregar Actividad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-o4-StM">
-                                <rect key="frame" x="34" y="110" width="320" height="32.666666666666657"/>
+                                <rect key="frame" x="34" y="169" width="320" height="32.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="K7M-Vt-eo1"/>
                                 </constraints>
@@ -370,7 +381,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N04-hZ-jeB">
-                                <rect key="frame" x="20" y="611" width="348" height="111"/>
+                                <rect key="frame" x="20" y="587" width="348" height="111"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBT-AI-hkJ" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="111"/>
@@ -419,6 +430,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="116" id="r9H-vy-fNC"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="gallerySelector:" destination="rhj-jy-UPL" eventType="touchUpInside" id="K0a-mm-wfA"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyS-mn-E5B" customClass="UIControl">
                                         <rect key="frame" x="232" y="0.0" width="116" height="111"/>
@@ -457,44 +471,33 @@
                                     <constraint firstItem="PyS-mn-E5B" firstAttribute="leading" secondItem="Nfr-hr-BiX" secondAttribute="trailing" id="vOD-TZ-NnT"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUS-m6-eGb">
-                                <rect key="frame" x="25" y="202.66666666666663" width="338" height="360"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subiendo actividad..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvh-GN-RoZ">
+                                <rect key="frame" x="64" y="361.66666666666669" width="260" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="4VT-Tp-FZ8"/>
+                                    <constraint firstAttribute="width" constant="260" id="fxZ-fU-COZ"/>
+                                    <constraint firstAttribute="height" constant="35" id="zmx-Up-cQO"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDR-ek-6zR">
-                                <rect key="frame" x="156.66666666666666" y="742" width="75" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="Dy7-pO-GqO"/>
-                                    <constraint firstAttribute="height" constant="35" id="Nof-T1-Lko"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
-                                <connections>
-                                    <action selector="guardarImagen:" destination="rhj-jy-UPL" eventType="touchUpInside" id="8GM-lP-xpw"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n4P-9O-GSv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bUS-m6-eGb" firstAttribute="top" secondItem="W74-o4-StM" secondAttribute="bottom" constant="60" id="3su-aI-Lvh"/>
-                            <constraint firstItem="CDR-ek-6zR" firstAttribute="centerX" secondItem="dSR-BY-GlY" secondAttribute="centerX" id="4xh-1V-QPc"/>
+                            <constraint firstItem="uvh-GN-RoZ" firstAttribute="top" secondItem="W74-o4-StM" secondAttribute="bottom" constant="160" id="2BB-HT-XjI"/>
                             <constraint firstItem="N04-hZ-jeB" firstAttribute="leading" secondItem="n4P-9O-GSv" secondAttribute="leading" constant="20" id="5Nq-tR-0YQ"/>
-                            <constraint firstItem="bUS-m6-eGb" firstAttribute="leading" secondItem="n4P-9O-GSv" secondAttribute="leading" constant="25" id="AAm-8s-gfk"/>
                             <constraint firstItem="W74-o4-StM" firstAttribute="centerX" secondItem="dSR-BY-GlY" secondAttribute="centerX" id="BPG-x3-jZ0"/>
-                            <constraint firstItem="CDR-ek-6zR" firstAttribute="top" secondItem="N04-hZ-jeB" secondAttribute="bottom" constant="20" id="eTe-DR-PYA"/>
+                            <constraint firstItem="uvh-GN-RoZ" firstAttribute="centerX" secondItem="dSR-BY-GlY" secondAttribute="centerX" id="MpH-jf-lxm"/>
                             <constraint firstItem="N04-hZ-jeB" firstAttribute="centerX" secondItem="dSR-BY-GlY" secondAttribute="centerX" id="gO6-VO-36f"/>
                             <constraint firstItem="W74-o4-StM" firstAttribute="top" secondItem="n4P-9O-GSv" secondAttribute="top" constant="110" id="r48-2z-jVs"/>
                             <constraint firstItem="n4P-9O-GSv" firstAttribute="trailing" secondItem="N04-hZ-jeB" secondAttribute="trailing" constant="20" id="vRE-9e-9tW"/>
                             <constraint firstItem="n4P-9O-GSv" firstAttribute="bottom" secondItem="N04-hZ-jeB" secondAttribute="bottom" constant="120" id="wua-VA-cOn"/>
-                            <constraint firstItem="n4P-9O-GSv" firstAttribute="trailing" secondItem="bUS-m6-eGb" secondAttribute="trailing" constant="25" id="yGf-9h-74d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IyN-Yx-YBn"/>
                     <connections>
-                        <outlet property="imageView" destination="bUS-m6-eGb" id="Nen-CA-2En"/>
+                        <outlet property="uploadingLbl" destination="uvh-GN-RoZ" id="v4n-r2-YQa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQT-7s-Rs6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1242,7 +1245,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

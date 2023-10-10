@@ -41,7 +41,7 @@ class Poll1VC: UIViewController {
         let email = defaults.string(forKey: "USERNAME")
         
         let data = [
-            "test_type": "Diagnostico 1",
+            "test_type": "D1",
             "usuario": email
         ] as [String: Any]
         
@@ -64,7 +64,7 @@ class Poll1VC: UIViewController {
         let data = [
             "idpregunta": idpregunta,
             "usuario": email,
-            "test_type": "Diagnostico 1",
+            "test_type": "D1",
             "resp": respuesta
 
         ] as [String: Any]

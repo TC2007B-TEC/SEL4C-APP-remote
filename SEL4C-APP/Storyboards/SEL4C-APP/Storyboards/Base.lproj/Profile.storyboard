@@ -65,7 +65,7 @@
                                             <color key="baseBackgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="FDY-1x-yBb" kind="show" id="yUc-q0-up5"/>
+                                            <action selector="showResultsWeb:" destination="FxJ-Dp-TvM" eventType="touchUpInside" id="DtA-sI-Wb4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-2o-SCf">
@@ -124,12 +124,53 @@
             </objects>
             <point key="canvasLocation" x="1126" y="2189"/>
         </scene>
+        <!--WebVC-->
+        <scene sceneID="adp-J5-9zf">
+            <objects>
+                <viewController storyboardIdentifier="ResultsWeb" id="SuI-3I-hEI" customClass="WebVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRw-SD-3Pe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-cs-amA">
+                                <rect key="frame" x="95" y="753" width="202" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ir a Inicio" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="return2prof:" destination="SuI-3I-hEI" eventType="touchUpInside" id="QPt-23-3zP"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0h6-WA-hIC">
+                                <rect key="frame" x="36" y="97" width="320" height="632"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NXZ-BQ-rEz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="0h6-WA-hIC" id="IMO-bK-rNK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYP-MP-SKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.885496183206" y="1059.8591549295775"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="RFx-T6-PvF">
             <objects>
                 <viewController storyboardIdentifier="Results" id="FDY-1x-yBb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dby-V4-5ER">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Resultados" translatesAutoresizingMaskIntoConstraints="NO" id="0lK-w5-5CT">
@@ -170,6 +211,9 @@
         <image name="Resultados" width="1170" height="1908"/>
         <image name="girl-sunglasses-sitting-down copy" width="828" height="828"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="AzulTec">
+            <color red="0.071000002324581146" green="0.19599999487400055" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

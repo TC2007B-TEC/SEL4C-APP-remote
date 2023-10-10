@@ -34,7 +34,6 @@
 		6690D0732AA57880005C0DE2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6690D0712AA57880005C0DE2 /* Profile.storyboard */; };
 		669CE2102AA94FD9000E676F /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CE20F2AA94FD9000E676F /* PasswordVC.swift */; };
 		66A08FB32AD2941500370526 /* TurninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FB22AD2941500370526 /* TurninVC.swift */; };
-		66A08FB52AD2AD3600370526 /* MultipartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FB42AD2AD3600370526 /* MultipartRequest.swift */; };
 		66A08FB72AD2AD4000370526 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FB62AD2AD4000370526 /* Data.swift */; };
 		66A08FBD2AD2C71200370526 /* Activity1VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBC2AD2C71200370526 /* Activity1VC2.swift */; };
 		66A08FBF2AD2C72600370526 /* ActIvity1VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBE2AD2C72600370526 /* ActIvity1VC3.swift */; };
@@ -56,6 +55,8 @@
 		66BB95872AA88A5900DEF549 /* Poll2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95862AA88A5900DEF549 /* Poll2VC.swift */; };
 		66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB95882AA88B1A00DEF549 /* EcomplexityEngine.swift */; };
 		66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB958A2AA88B2A00DEF549 /* Question.swift */; };
+		66ED4FD22AD4CD610001E173 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD12AD4CD610001E173 /* WebVC.swift */; };
+		66ED4FD42AD4E4480001E173 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD32AD4E4480001E173 /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +99,6 @@
 		6690D0722AA57880005C0DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SEL4C-APP/Storyboards/Base.lproj/Profile.storyboard"; sourceTree = "<group>"; };
 		669CE20F2AA94FD9000E676F /* PasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
 		66A08FB22AD2941500370526 /* TurninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurninVC.swift; sourceTree = "<group>"; };
-		66A08FB42AD2AD3600370526 /* MultipartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartRequest.swift; sourceTree = "<group>"; };
 		66A08FB62AD2AD4000370526 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		66A08FBC2AD2C71200370526 /* Activity1VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity1VC2.swift; sourceTree = "<group>"; };
 		66A08FBE2AD2C72600370526 /* ActIvity1VC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIvity1VC3.swift; sourceTree = "<group>"; };
@@ -118,6 +118,8 @@
 		66BB95862AA88A5900DEF549 /* Poll2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll2VC.swift; sourceTree = "<group>"; };
 		66BB95882AA88B1A00DEF549 /* EcomplexityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomplexityEngine.swift; sourceTree = "<group>"; };
 		66BB958A2AA88B2A00DEF549 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		66ED4FD12AD4CD610001E173 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		66ED4FD32AD4E4480001E173 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +149,6 @@
 				4FA2B6C22ACFD37C0009200D /* Answer.swift */,
 				4FA2B6C42ACFD3B90009200D /* UserResponses.swift */,
 				4FA2B6C62ACFD3D00009200D /* UserResponsesController.swift */,
-				66A08FB42AD2AD3600370526 /* MultipartRequest.swift */,
 				66A08FB62AD2AD4000370526 /* Data.swift */,
 			);
 			path = Models;
@@ -221,9 +222,11 @@
 				6660E81A2AD12F1C0053A5D7 /* TabBarVC.swift */,
 				6690D04E2AA55E63005C0DE2 /* HomeVC.swift */,
 				6690D0662AA5728F005C0DE2 /* ProfileVC.swift */,
+				66ED4FD12AD4CD610001E173 /* WebVC.swift */,
 				661BD35A2AA6B17A00A4AC62 /* ActivityLVC.swift */,
 				66A08FC02AD2CA2F00370526 /* Actividades */,
 				66A08FB22AD2941500370526 /* TurninVC.swift */,
+				66ED4FD32AD4E4480001E173 /* TestVC.swift */,
 				66BB95762AA81A9C00DEF549 /* LoginVC.swift */,
 				66BB95782AA81AE500DEF549 /* RegisterVC.swift */,
 				669CE20F2AA94FD9000E676F /* PasswordVC.swift */,
@@ -406,9 +409,10 @@
 				66A08FB72AD2AD4000370526 /* Data.swift in Sources */,
 				66A08FC62AD2CA6C00370526 /* Activity2VC1.swift in Sources */,
 				66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */,
+				66ED4FD42AD4E4480001E173 /* TestVC.swift in Sources */,
 				6660E8192AD12A470053A5D7 /* Activity1VC1.swift in Sources */,
-				66A08FB52AD2AD3600370526 /* MultipartRequest.swift in Sources */,
 				66A08FCE2AD2CA9900370526 /* ActivityFinalVC.swift in Sources */,
+				66ED4FD22AD4CD610001E173 /* WebVC.swift in Sources */,
 				4FA2B6C72ACFD3D00009200D /* UserResponsesController.swift in Sources */,
 				66BB95812AA87DA500DEF549 /* Activity4VC.swift in Sources */,
 				66BB95792AA81AE500DEF549 /* RegisterVC.swift in Sources */,

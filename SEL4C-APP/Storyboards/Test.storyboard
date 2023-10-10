@@ -13,7 +13,7 @@
         <!--TestVC-->
         <scene sceneID="mOJ-4d-9yQ">
             <objects>
-                <viewController id="b95-NZ-IRF" customClass="TestVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="testID" id="b95-NZ-IRF" customClass="TestVC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLZ-ED-eOZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                             <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="t8X-Ar-Vf9" kind="presentation" identifier="Poll1Segue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="twX-5O-pwm"/>
+                                            <segue destination="t8X-Ar-Vf9" kind="show" identifier="Poll1Segue" id="twX-5O-pwm"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Realiza tu evaluación incial" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUt-W9-VOm">
@@ -71,7 +71,7 @@
             <objects>
                 <viewController id="t8X-Ar-Vf9" customClass="Poll1VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bH-Qt-pcV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-3S-aJt">
@@ -138,7 +138,7 @@
                                 </constraints>
                             </stackView>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h6F-Wt-Jei">
-                                <rect key="frame" x="56.666666666666657" y="828" width="280" height="4"/>
+                                <rect key="frame" x="56.666666666666657" y="818" width="280" height="4"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="gIu-1t-2Wz"/>
@@ -202,7 +202,7 @@
                         <outlet property="progress" destination="h6F-Wt-Jei" id="psK-JA-x4n"/>
                         <outlet property="text" destination="Lca-9z-kqu" id="r3x-DC-b2U"/>
                         <outlet property="text2" destination="C9T-sj-Il9" id="ieZ-vN-yCO"/>
-                        <segue destination="EJI-xX-T16" kind="presentation" identifier="Poll2Segue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dNC-83-T6m"/>
+                        <segue destination="EJI-xX-T16" kind="show" identifier="Poll2Segue" id="dNC-83-T6m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6I-g6-DNZ" sceneMemberID="firstResponder"/>
@@ -214,7 +214,7 @@
             <objects>
                 <viewController id="EJI-xX-T16" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBl-f5-cV9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkT-py-mKG">
@@ -230,7 +230,7 @@
                                             <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="m20-4t-H1d" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bcu-Uh-Fwd"/>
+                                            <segue destination="m20-4t-H1d" kind="show" id="bcu-Uh-Fwd"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Iniciar prueba pensamiento complejo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41O-ha-fRP">
@@ -265,7 +265,7 @@
             <objects>
                 <viewController id="m20-4t-H1d" customClass="Poll2VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bk-0H-R8b">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="zZ1-Uq-vWT">
@@ -332,7 +332,7 @@
                                 </constraints>
                             </stackView>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fnX-lr-yrd">
-                                <rect key="frame" x="56.666666666666657" y="828" width="280" height="4"/>
+                                <rect key="frame" x="56.666666666666657" y="818" width="280" height="4"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="cY4-DJ-CQE"/>
@@ -396,7 +396,7 @@
                         <outlet property="progress" destination="fnX-lr-yrd" id="Lal-U9-YQf"/>
                         <outlet property="text" destination="RSs-Yr-dga" id="Xkp-gt-Sin"/>
                         <outlet property="text2" destination="8be-uV-njo" id="5oq-Rq-W2U"/>
-                        <segue destination="WMl-il-eiS" kind="presentation" identifier="ResultadosSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="e5t-uZ-6Dt"/>
+                        <segue destination="WMl-il-eiS" kind="show" identifier="ResultadosSegue" id="e5t-uZ-6Dt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSR-U2-I5c" sceneMemberID="firstResponder"/>
@@ -408,7 +408,7 @@
             <objects>
                 <viewController id="WMl-il-eiS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zq2-s1-gyI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yas-w6-mVc">
@@ -424,7 +424,7 @@
                                             <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Lhl-vm-u4S" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="KJF-i4-dKN"/>
+                                            <segue destination="Lhl-vm-u4S" kind="show" id="KJF-i4-dKN"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Test inicial" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYO-SH-Xdp">
@@ -447,10 +447,12 @@
             </objects>
             <point key="canvasLocation" x="3740" y="4"/>
         </scene>
-        <!--Results-->
+        <!--ResultsWeb-->
         <scene sceneID="7ns-Mg-VzW">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="Results" id="Lhl-vm-u4S" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ResultsWeb" id="Lhl-vm-u4S" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nK0-TW-ygF"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM5-In-9HU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4581" y="4"/>
@@ -465,7 +467,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -17,6 +17,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Se utilizara la camara</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Se utilizara el microfono</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

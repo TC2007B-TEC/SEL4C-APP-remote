@@ -157,14 +157,6 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let h = Escuela.text! != escuelas[0] && Escuela.text!.count != 0
         let i = Rama.text! != ramas[0] && Rama.text!.count != 0
         
-        print("---")
-        print(e)
-        print(f)
-        print(g)
-        print(h)
-        print(i)
-        print("---")
-        
         if a && b && c && d && e && f && g && h && i{
             Boton.isEnabled = true
         }
@@ -216,6 +208,23 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBAction func ButtonContinue(_ sender: Any) {
         self.performSegue(withIdentifier: "ContinueSegue", sender: self)
     }
+    
+    @IBAction func nextSegue(_ sender: Any) {
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "passVC") as! PasswordVC
+            
+        viewController.nombre = Nombre.text!
+        viewController.apellido = Apellido.text!
+        viewController.email = Email.text!
+        viewController.genero = Genero.text!
+        viewController.edad = Edad.text!
+        viewController.pais = Pais.text!
+        viewController.escuela = Escuela.text!
+        viewController.rama = Rama.text!
+
+            
+            // Use presentViewController to present the view controller modally
+        navigationController?.pushViewController(viewController, animated: true)
+        }
     
     
     

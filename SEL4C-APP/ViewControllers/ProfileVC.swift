@@ -26,7 +26,10 @@ class ProfileVC: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-
+    @IBAction func showResultsWeb(_ sender: Any) {
+        let viewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ResultsWeb")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     /*
     // MARK: - Navigation
 
