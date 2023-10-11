@@ -8,6 +8,19 @@
 import UIKit
 
 
+//This isn't working yet
+class CustomCollectionViewCell: UICollectionViewCell {
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                contentView.alpha = 1.0
+            } else {
+                contentView.alpha = 0.5
+            }
+        }
+    }
+}
+
 extension ActivityLVC {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, Activity.ID>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Activity.ID>
@@ -33,6 +46,7 @@ extension ActivityLVC {
         cell:
             UICollectionViewListCell, indexPath: IndexPath, id: Activity.ID
     ) {
+        //guard let customCell = cell as? CustomCollectionViewCell else { return }
         let activity = activity(withId: id)
         var contentConfiguration = cell.defaultContentConfiguration()
         

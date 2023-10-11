@@ -28,8 +28,6 @@ class Activity1VC3: UIViewController, TurninVCDelegate{
         
     }
     
-    
-    
     @IBAction func turninSegue(_ sender: Any) {
         
         //let des = segue.destination as! TurninVC

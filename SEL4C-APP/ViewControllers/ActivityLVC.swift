@@ -35,6 +35,8 @@ class ActivityLVC: UICollectionViewController {
         setupNavBar()
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
+        
+        
         updateSnapshot()
     }
     
@@ -65,31 +67,64 @@ class ActivityLVC: UICollectionViewController {
             let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad1")
             navigationController?.pushViewController(viewController, animated: true)
         } else if title == "Actividad 2"  {
-            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2")
-            navigationController?.pushViewController(viewController, animated: true)
+            wasTurnedIn(actName: "A1_3") { success in
+                if success {
+                    let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
         } else if title == "Actividad 3"  {
-           let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad3")
-           navigationController?.pushViewController(viewController, animated: true)
+            wasTurnedIn(actName: "A2_3") { success in
+                if success {
+                    let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad3")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
         } else if title == "Actividad 4"  {
-           let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad4")
-           navigationController?.pushViewController(viewController, animated: true)
+            wasTurnedIn(actName: "A3_2") { success in
+                if success {
+                    let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad4")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
         } else if title == "Actividad Final"  {
-            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActividadFinal")
-            navigationController?.pushViewController(viewController, animated: true)
-        } else if title == "Perfil Final"  {
-            let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
-            viewController.hidesBottomBarWhenPushed =  true
+            wasTurnedIn(actName: "A4") { success in
+                if success {
+                    let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActividadFinal")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+
             
-            // Use presentViewController to present the view controller modally
-            navigationController?.pushViewController(viewController, animated: true)}
+        } else if title == "Perfil Final"  {
+            wasTurnedIn(actName: "A5") { success in
+                if success {
+                    let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
+                    viewController.hidesBottomBarWhenPushed =  true
+                    
+                    // Use presentViewController to present the view controller modally
+                    self.navigationController?.pushViewController(viewController, animated: true)}
+                }
+            }
+
 //        } else  {
 //            let viewController = ActivityVC(activity: activity)
 //            navigationController?.pushViewController(viewController, animated: true)
 //        }
     }
     
+    func wasTurnedIn(actName: String, completion: @escaping (Bool) -> Void) {
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")!
 
+        ActivityDoneAPI.shared.getAPI(email: email, name: actName) { [weak self] success in
+            DispatchQueue.main.async {
+                completion(success)
+            }
+        }
+    }
 
+    
     private func listLayout() -> UICollectionViewCompositionalLayout {
 //        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
@@ -147,3 +182,5 @@ class ActivityLVC: UICollectionViewController {
     
     }
     */
+
+
