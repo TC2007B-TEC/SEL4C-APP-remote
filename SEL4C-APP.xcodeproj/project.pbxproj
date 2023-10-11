@@ -36,7 +36,6 @@
 		66A08FB32AD2941500370526 /* TurninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FB22AD2941500370526 /* TurninVC.swift */; };
 		66A08FBD2AD2C71200370526 /* Activity1VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBC2AD2C71200370526 /* Activity1VC2.swift */; };
 		66A08FBF2AD2C72600370526 /* ActIvity1VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBE2AD2C72600370526 /* ActIvity1VC3.swift */; };
-		66A08FC12AD2CA4300370526 /* Activity1VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8182AD12A470053A5D7 /* Activity1VC1.swift */; };
 		66A08FC22AD2CA4500370526 /* Activity1VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBC2AD2C71200370526 /* Activity1VC2.swift */; };
 		66A08FC42AD2CA5F00370526 /* Activity2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FC32AD2CA5F00370526 /* Activity2VC.swift */; };
 		66A08FC62AD2CA6C00370526 /* Activity2VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FC52AD2CA6C00370526 /* Activity2VC1.swift */; };
@@ -227,7 +226,6 @@
 				66ED4FD12AD4CD610001E173 /* WebVC.swift */,
 				661BD35A2AA6B17A00A4AC62 /* ActivityLVC.swift */,
 				66A08FC02AD2CA2F00370526 /* Actividades */,
-				66A08FB22AD2941500370526 /* TurninVC.swift */,
 				66ED4FD32AD4E4480001E173 /* TestVC.swift */,
 				66ED4FD72AD64F290001E173 /* Test2VC.swift */,
 				66BB95762AA81A9C00DEF549 /* LoginVC.swift */,
@@ -242,8 +240,8 @@
 		66A08FC02AD2CA2F00370526 /* Actividades */ = {
 			isa = PBXGroup;
 			children = (
-				6660E8152ACFB2000053A5D7 /* Activity1VC.swift */,
 				6660E8182AD12A470053A5D7 /* Activity1VC1.swift */,
+				6660E8152ACFB2000053A5D7 /* Activity1VC.swift */,
 				66A08FBC2AD2C71200370526 /* Activity1VC2.swift */,
 				66A08FBE2AD2C72600370526 /* ActIvity1VC3.swift */,
 				66A08FC32AD2CA5F00370526 /* Activity2VC.swift */,
@@ -253,6 +251,7 @@
 				66A08FCB2AD2CA8E00370526 /* Activity3VC.swift */,
 				66BB95802AA87DA500DEF549 /* Activity4VC.swift */,
 				66A08FCD2AD2CA9900370526 /* ActivityFinalVC.swift */,
+				66A08FB22AD2941500370526 /* TurninVC.swift */,
 			);
 			path = Actividades;
 			sourceTree = "<group>";
@@ -377,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A08FC12AD2CA4300370526 /* Activity1VC1.swift in Sources */,
 				6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */,
 				66A08FC22AD2CA4500370526 /* Activity1VC2.swift in Sources */,
 				6660E8172ACFB2000053A5D7 /* Activity1VC.swift in Sources */,

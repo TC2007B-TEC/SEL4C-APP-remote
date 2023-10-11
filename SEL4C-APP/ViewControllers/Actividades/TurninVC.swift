@@ -9,7 +9,7 @@ import UIKit
 import AVKit
 import MobileCoreServices
 
-protocol TurninVCDelegate: AnyObject {
+public protocol TurninVCDelegate: AnyObject {
     func wasTurnedIn()
 }
 

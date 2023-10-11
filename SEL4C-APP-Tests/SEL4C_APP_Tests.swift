@@ -47,7 +47,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Valid API Request")
 
-        loginVC.fetchAPI(email: "test@email.com", password: "Password123")
+        loginVC.getAPI(email: "Prueba@prueba.com", password: "Pass1234")
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertTrue(loginVC.condicion)
@@ -61,7 +61,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Invalid API Request")
 
-        loginVC.fetchAPI(email: "test@", password: "test3")
+        loginVC.getAPI(email: "test@", password: "test3")
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertFalse(loginVC.condicion)

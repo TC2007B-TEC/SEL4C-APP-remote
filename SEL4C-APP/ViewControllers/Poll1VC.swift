@@ -233,7 +233,6 @@ class Poll1VC: UIViewController {
         progress.progress = engine.getProgress()
         text.text = engine.getText()
         text2.text = engine.getText2()
-        sendTestJSON()
         let defaults = UserDefaults.standard
         let email = defaults.string(forKey: "USERNAME")
         let D1 = verificarTest(testType: "D1", usuario: email!)
@@ -247,6 +246,7 @@ class Poll1VC: UIViewController {
             testNum = "F1"
         }
         print(testNum)
+        sendTestJSON()
     }
     
     func updateUserResponses(title: String){
@@ -282,4 +282,3 @@ class Poll1VC: UIViewController {
         pa_button.isEnabled = true
     }
 }
-

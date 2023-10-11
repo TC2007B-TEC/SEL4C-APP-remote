@@ -285,7 +285,6 @@ class Poll2VC: UIViewController {
             progress.progress = engine.getProgress()
             text.text = engine.getText()
             text2.text = engine.getText2()
-            sendTestJSON()
             let defaults = UserDefaults.standard
             let email = defaults.string(forKey: "USERNAME")
             let D1 = verificarTest(testType: "D1", usuario: email!)
@@ -298,6 +297,7 @@ class Poll2VC: UIViewController {
             if testIDone {
                 testNum = "F2"
             }
+            sendTestJSON()
             print(testNum)
         }
        
