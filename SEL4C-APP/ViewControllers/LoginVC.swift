@@ -8,6 +8,48 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    var group = DispatchGroup()
+    func verificarTest(testType: String, usuario: String) -> Bool {
+        var respuesta = false
+        // Construye la URL con los parámetros
+        let baseUrl = "http://20.127.122.6:8000/getpreguntas/?"
+        let parameters = "test_type=\(testType)&usuario=\(usuario)"
+        if let url = URL(string: baseUrl + parameters) {
+            // Crea la sesión de URLSession
+            group.enter()
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Error al realizar la solicitud: \(error)")
+                    return
+                }
+                
+                if let data = data {
+                    // Procesa los datos de la respuesta
+                    if let result = String(data: data, encoding: .utf8) {
+                        print("Respuesta: \(result)")
+                        if result != "{\"message\":\"No se encontraron preguntas\"}" {
+                            respuesta = true
+                        }
+                    } else {
+                        print("No se pudo decodificar la respuesta")
+                    }
+                }
+                self.group.leave()
+            }
+            // Inicia la tarea
+            task.resume()
+            group.wait()
+            return respuesta
+        } else {
+            print("URL no válida")
+        }
+        return respuesta
+    }
+    
+    var test1Completado = false
+    var test2Completado = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -15,7 +57,6 @@ class LoginVC: UIViewController {
         
         let defaults = UserDefaults.standard
         let isUserLogged = defaults.bool(forKey: "ISUSERLOGGEDIN")
-        
         // Do any additional setup after loading the view.
         Login.isEnabled = false
         ErrorUser.text = ""
@@ -121,7 +162,6 @@ class LoginVC: UIViewController {
     
     
     var condicion = false
-    let group = DispatchGroup()
     
 //    func getAPI(email: String,password: String){
 //        // preparar los datos json
@@ -129,11 +169,11 @@ class LoginVC: UIViewController {
 //            "email": email,
 //            "password": password,
 //        ]
-//        
+//
 //        print(json)
 //
 //        let datosJson = try? JSONSerialization.data(withJSONObject: json)
-//        
+//
 //        print(datosJson)
 //
 //        // crear la solicitud post
@@ -144,7 +184,7 @@ class LoginVC: UIViewController {
 //        // insertar los datos json a la solicitud
 //        solicitud.httpBody = datosJson
 //        group.enter()
-//        
+//
 //        let tarea = URLSession.shared.dataTask(with: solicitud) { datos, respuesta, error in
 //          guard let datos = datos, error == nil else {
 //              print("tarea entro")
@@ -226,22 +266,37 @@ class LoginVC: UIViewController {
 
     }
     
-    
-    
-    
-    
-        
-        
         @IBAction func login ( sender: UIButton) {
             getAPI(email: User.text!,password: Pass.text!)
             group.wait()
+            
+            let defaults = UserDefaults.standard
+        
             if condicion == true {
                 
                 UserDefaults.standard.set(true, forKey: "ISUSERLOGGEDIN")
                 UserDefaults.standard.set(User.text, forKey: "USERNAME")
                 
-                goToHomeScreen()
+                // revisar si el test inicial ya fue hecho
+                let email = defaults.string(forKey: "USERNAME")!
+                test1Completado = verificarTest(testType: "D1", usuario: email)
+                group.wait()
+                test2Completado = verificarTest(testType: "D2", usuario: email)
+                group.wait()
                 
+                if test1Completado == false{
+                    let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
+
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+                else if test2Completado == false {
+                    let viewController = UIStoryboard(name: "Test", bundle:nil).instantiateViewController(withIdentifier: "test2VC")
+                                    
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+                else if test1Completado && test2Completado {
+                    goToHomeScreen()
+                }
                 
                 //self.performSegue (withIdentifier: "loginSegue", sender: self)
 

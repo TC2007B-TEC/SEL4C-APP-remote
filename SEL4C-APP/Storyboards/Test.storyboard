@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="1013" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Test2VC-->
         <scene sceneID="cWC-aL-iyv">
             <objects>
-                <viewController id="EJI-xX-T16" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="test2VC" id="EJI-xX-T16" customClass="Test2VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBl-f5-cV9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

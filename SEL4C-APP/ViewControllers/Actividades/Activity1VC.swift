@@ -16,6 +16,13 @@ class Activity1VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Actividad 1"
+        
+        if let navigationController = navigationController {
+                navigationController.navigationBar.barTintColor = UIColor(red: CGFloat(0) / 255.0, green: CGFloat(51) / 255.0, blue: CGFloat(160) / 255.0, alpha: 1.0)
+                navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            }
+        
+        
     }
     
     @IBAction func subact1segue(_ sender: Any) {

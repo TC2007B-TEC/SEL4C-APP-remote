@@ -34,7 +34,6 @@
 		6690D0732AA57880005C0DE2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6690D0712AA57880005C0DE2 /* Profile.storyboard */; };
 		669CE2102AA94FD9000E676F /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CE20F2AA94FD9000E676F /* PasswordVC.swift */; };
 		66A08FB32AD2941500370526 /* TurninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FB22AD2941500370526 /* TurninVC.swift */; };
-		66A08FB72AD2AD4000370526 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FB62AD2AD4000370526 /* Data.swift */; };
 		66A08FBD2AD2C71200370526 /* Activity1VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBC2AD2C71200370526 /* Activity1VC2.swift */; };
 		66A08FBF2AD2C72600370526 /* ActIvity1VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08FBE2AD2C72600370526 /* ActIvity1VC3.swift */; };
 		66A08FC12AD2CA4300370526 /* Activity1VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8182AD12A470053A5D7 /* Activity1VC1.swift */; };
@@ -57,6 +56,8 @@
 		66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB958A2AA88B2A00DEF549 /* Question.swift */; };
 		66ED4FD22AD4CD610001E173 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD12AD4CD610001E173 /* WebVC.swift */; };
 		66ED4FD42AD4E4480001E173 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD32AD4E4480001E173 /* TestVC.swift */; };
+		66ED4FD62AD5089E0001E173 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD52AD5089E0001E173 /* Data.swift */; };
+		66ED4FD82AD64F290001E173 /* Test2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD72AD64F290001E173 /* Test2VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +100,6 @@
 		6690D0722AA57880005C0DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SEL4C-APP/Storyboards/Base.lproj/Profile.storyboard"; sourceTree = "<group>"; };
 		669CE20F2AA94FD9000E676F /* PasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
 		66A08FB22AD2941500370526 /* TurninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurninVC.swift; sourceTree = "<group>"; };
-		66A08FB62AD2AD4000370526 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		66A08FBC2AD2C71200370526 /* Activity1VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity1VC2.swift; sourceTree = "<group>"; };
 		66A08FBE2AD2C72600370526 /* ActIvity1VC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIvity1VC3.swift; sourceTree = "<group>"; };
 		66A08FC32AD2CA5F00370526 /* Activity2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity2VC.swift; sourceTree = "<group>"; };
@@ -120,6 +120,8 @@
 		66BB958A2AA88B2A00DEF549 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		66ED4FD12AD4CD610001E173 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		66ED4FD32AD4E4480001E173 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		66ED4FD52AD5089E0001E173 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		66ED4FD72AD64F290001E173 /* Test2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,7 @@
 				4FA2B6C22ACFD37C0009200D /* Answer.swift */,
 				4FA2B6C42ACFD3B90009200D /* UserResponses.swift */,
 				4FA2B6C62ACFD3D00009200D /* UserResponsesController.swift */,
-				66A08FB62AD2AD4000370526 /* Data.swift */,
+				66ED4FD52AD5089E0001E173 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 				66A08FC02AD2CA2F00370526 /* Actividades */,
 				66A08FB22AD2941500370526 /* TurninVC.swift */,
 				66ED4FD32AD4E4480001E173 /* TestVC.swift */,
+				66ED4FD72AD64F290001E173 /* Test2VC.swift */,
 				66BB95762AA81A9C00DEF549 /* LoginVC.swift */,
 				66BB95782AA81AE500DEF549 /* RegisterVC.swift */,
 				669CE20F2AA94FD9000E676F /* PasswordVC.swift */,
@@ -391,6 +394,7 @@
 				4FA2B6C32ACFD37C0009200D /* Answer.swift in Sources */,
 				66A08FC42AD2CA5F00370526 /* Activity2VC.swift in Sources */,
 				6660E81D2AD13C010053A5D7 /* FirstVC.swift in Sources */,
+				66ED4FD82AD64F290001E173 /* Test2VC.swift in Sources */,
 				66A08FBF2AD2C72600370526 /* ActIvity1VC3.swift in Sources */,
 				6690D04F2AA55E63005C0DE2 /* HomeVC.swift in Sources */,
 				66A08FBD2AD2C71200370526 /* Activity1VC2.swift in Sources */,
@@ -406,7 +410,6 @@
 				669CE2102AA94FD9000E676F /* PasswordVC.swift in Sources */,
 				66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */,
 				66BB95872AA88A5900DEF549 /* Poll2VC.swift in Sources */,
-				66A08FB72AD2AD4000370526 /* Data.swift in Sources */,
 				66A08FC62AD2CA6C00370526 /* Activity2VC1.swift in Sources */,
 				66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */,
 				66ED4FD42AD4E4480001E173 /* TestVC.swift in Sources */,
@@ -421,6 +424,7 @@
 				4FA2B6C52ACFD3B90009200D /* UserResponses.swift in Sources */,
 				661BD3592AA6AFEB00A4AC62 /* Activity.swift in Sources */,
 				66A08FB32AD2941500370526 /* TurninVC.swift in Sources */,
+				66ED4FD62AD5089E0001E173 /* Data.swift in Sources */,
 				6690D04D2AA55E63005C0DE2 /* SceneDelegate.swift in Sources */,
 				66A08FC82AD2CA7A00370526 /* Activity2VC2.swift in Sources */,
 			);

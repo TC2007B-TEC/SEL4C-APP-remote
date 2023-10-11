@@ -32,12 +32,7 @@ class ActivityLVC: UICollectionViewController {
         
         collectionView.dataSource = dataSource
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        //navigationController?.hidesBarsOnSwipe = true
-//        navigationController?.navigationBar.largeTitleTextAttributes = [
-//            NSAttributedString.Key.foregroundColor: UIColor.orange
-//        ]
-        
+        setupNavBar()
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         updateSnapshot()
@@ -95,6 +90,21 @@ class ActivityLVC: UICollectionViewController {
         listConfiguration.showsSeparators = true
         //listConfiguration.backgroundColor = .clear
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
+    }
+    
+    
+    func setupNavBar() {
+        navigationItem.title = "Actividades Test"
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = UIColor(red: CGFloat(0) / 255.0, green: CGFloat(51) / 255.0, blue: CGFloat(160) / 255.0, alpha: 1.0)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
     }
     
 

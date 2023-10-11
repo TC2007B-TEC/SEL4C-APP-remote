@@ -10,13 +10,14 @@ import UIKit
 class Activity1VC1: UIViewController, TurninVCDelegate{
     
     @IBOutlet weak var turninBut: UIButton!
-    @IBOutlet weak var actStatus: UILabel!
+    @IBOutlet weak var wasTurnedin: UIControl!
+    
     let actName = "A1_1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Actividad 1.1"
-        actStatus.isHidden = true
+        wasTurnedin.isHidden = true
         
     }
     
@@ -57,7 +58,7 @@ class Activity1VC1: UIViewController, TurninVCDelegate{
 
         if self.condicion == true {
             self.turninBut.isHidden = true
-            self.actStatus.isHidden = false
+            self.wasTurnedin.isHidden = false
         }
         
     }
@@ -120,5 +121,30 @@ class Activity1VC1: UIViewController, TurninVCDelegate{
 
 
     }
+    
+    @IBAction func downloadFile(_ sender: Any) {
+            let url = URL(string: "http://20.127.122.6:8000/filedownapp/?name=A1_1&author=Pedro@email.com")!
+
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let data = data, error == nil else {
+                    print("Failed to download file: \(error?.localizedDescription ?? "Unknown error")")
+                    return
+                }
+
+                // Save the downloaded data as a file
+                let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let fileURL = documentsDirectory.appendingPathComponent("downloadedFile.ext")
+
+                do {
+                    try data.write(to: fileURL)
+                    print("File downloaded successfully at \(fileURL)")
+                } catch {
+                    print("Error saving file: \(error)")
+                }
+            }
+
+            task.resume()
+        }
+
     
 }

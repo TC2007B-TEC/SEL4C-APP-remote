@@ -66,7 +66,7 @@ class   ActivityVC: UICollectionViewController {
                 contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
                 contentConfiguration.image = row.image
                 cell.contentConfiguration = contentConfiguration
-                cell.tintColor = UIColor.systemBlue
+                cell.tintColor = UIColor(red: CGFloat(0) / 255.0, green: CGFloat(51) / 255.0, blue: CGFloat(160) / 255.0, alpha: 1.0)
             default:
                 fatalError("Unexpected combination of section and row.")
             }

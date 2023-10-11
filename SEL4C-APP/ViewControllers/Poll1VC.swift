@@ -36,12 +36,15 @@ class Poll1VC: UIViewController {
  
     var respuestas = [Int]()
 
+    var testIDone = false
+    var testNum = "D1"
+    
     func sendTestJSON() {
         let defaults = UserDefaults.standard
         let email = defaults.string(forKey: "USERNAME")
         
         let data = [
-            "test_type": "D1",
+            "test_type": testNum,
             "usuario": email
         ] as [String: Any]
         
@@ -64,7 +67,7 @@ class Poll1VC: UIViewController {
         let data = [
             "idpregunta": idpregunta,
             "usuario": email,
-            "test_type": "D1",
+            "test_type": testNum,
             "resp": respuesta
 
         ] as [String: Any]
@@ -163,6 +166,7 @@ class Poll1VC: UIViewController {
                     let respuesta = respuestas[i]
                     sendQuestionJSON(idpregunta: idpregunta, respuesta: respuesta)
                 }
+                
                 performSegue(withIdentifier: "Poll2Segue", sender: self)
                 Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(nextQuestion), userInfo: nil, repeats: false)
             } else if engine.questionIndex == 47 {
@@ -181,6 +185,47 @@ class Poll1VC: UIViewController {
     }
     
     var engine = EcomplexityEngine(isSecondPart: false)
+
+    var group = DispatchGroup()
+    func verificarTest(testType: String, usuario: String) -> Bool {
+        var respuesta = false
+        // Construye la URL con los parámetros
+        let baseUrl = "http://20.127.122.6:8000/getpreguntas/?"
+        let parameters = "test_type=\(testType)&usuario=\(usuario)"
+        if let url = URL(string: baseUrl + parameters) {
+            // Crea la sesión de URLSession
+            group.enter()
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Error al realizar la solicitud: \(error)")
+                    return
+                }
+                
+                if let data = data {
+                    // Procesa los datos de la respuesta
+                    if let result = String(data: data, encoding: .utf8) {
+                        //print("Respuesta: \(result)")
+                        if result != "{\"message\":\"No se encontraron preguntas\"}" {
+                            respuesta = true
+                        }
+                    } else {
+                        print("No se pudo decodificar la respuesta")
+                    }
+                }
+                self.group.leave()
+            }
+            // Inicia la tarea
+            task.resume()
+            group.wait()
+            return respuesta
+        } else {
+            print("URL no válida")
+        }
+        return respuesta
+    }
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -189,6 +234,19 @@ class Poll1VC: UIViewController {
         text.text = engine.getText()
         text2.text = engine.getText2()
         sendTestJSON()
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")
+        let D1 = verificarTest(testType: "D1", usuario: email!)
+        print(D1)
+        group.wait()
+        let D2 = verificarTest(testType: "D2", usuario: email!)
+        print(D2)
+        group.wait()
+        testIDone = D1 && D2
+        if testIDone {
+            testNum = "F1"
+        }
+        print(testNum)
     }
     
     func updateUserResponses(title: String){

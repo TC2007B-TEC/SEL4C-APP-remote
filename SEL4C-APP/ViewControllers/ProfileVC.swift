@@ -40,4 +40,10 @@ class ProfileVC: UIViewController {
     }
     */
 
+    @IBAction func testFinalTest(_ sender: Any) {
+        let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
+
+        // Use presentViewController to present the view controller modally
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
