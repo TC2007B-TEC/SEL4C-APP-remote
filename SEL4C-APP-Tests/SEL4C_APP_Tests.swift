@@ -26,6 +26,14 @@ final class SEL4C_APP_Tests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
     
+    func testExample2() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Any test you write for XCTest can be annotated as throws and async.
+        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
+        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    }
+    
 //    func testCP_01_PruebaSuma() throws {
 //        let ln = LogicaNegocio()
 //        XCTAssertNotNil(ln)
@@ -43,7 +51,7 @@ final class SEL4C_APP_Tests: XCTestCase {
 //        XCTAssertNotEqual(r,5)
 //    }
     
-    func testValidFetchAPI() {
+    func testValidLoginAPI(){
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Valid API Request")
 
@@ -56,8 +64,8 @@ final class SEL4C_APP_Tests: XCTestCase {
 
         waitForExpectations(timeout: 5, handler: nil)
     }
-
-    func testInvalidFetchAPI() {
+    
+    func testInvalidLoginAPI() {
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Invalid API Request")
 
@@ -70,7 +78,30 @@ final class SEL4C_APP_Tests: XCTestCase {
 
         waitForExpectations(timeout: 5, handler: nil)
     }
-
+    
+    func testValidGetActivityAPI() {
+        let expectation = self.expectation(description: "API Call Expectation")
+        
+        ActivityDoneAPI.shared.getAPI(email: "Prueba@prueba.com", name: "A1_1") { success in
+            XCTAssertTrue(success)
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testInvalidGetActivityAPI() {
+        let expectation = self.expectation(description: "API Call Expectation")
+        
+        ActivityDoneAPI.shared.getAPI(email: "", name: "") { success in
+            XCTAssertFalse(success)
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
