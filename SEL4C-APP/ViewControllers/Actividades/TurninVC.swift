@@ -11,6 +11,7 @@ import MobileCoreServices
 
 public protocol TurninVCDelegate: AnyObject {
     func wasTurnedIn()
+    func uploadFailed()
 }
 
 class TurninVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
@@ -97,6 +98,11 @@ class TurninVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                 uploadImageToAPI(name: receivedActivity!, author: email, image: imageView!) { error in
                     if let error = error {
                         print("Error uploading file: \(error)")
+                        DispatchQueue.main.async {
+                            self.dismiss(animated: true) {
+                                self.delegate?.uploadFailed()
+                            }
+                        }
                     } else {
                         print("File uploaded successfully!")
                         DispatchQueue.main.async {
@@ -114,6 +120,11 @@ class TurninVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                     uploadVideoToAPI(name: receivedActivity!, author: email, videoURL: videoURL) { error in
                         if let error = error {
                             print("Error uploading video: \(error)")
+                            DispatchQueue.main.async {
+                                self.dismiss(animated: true) {
+                                    self.delegate?.uploadFailed()
+                                }
+                            }
                         } else {
                             print("Video uploaded successfully!")
                             DispatchQueue.main.async {

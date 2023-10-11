@@ -61,5 +61,11 @@ class Activity4VC: UIViewController, TurninVCDelegate{
                 }
             }
         }
+    
+    func uploadFailed() {
+        let alerta = UIAlertController(title: "Hubo un error", message: "Intentalo de nuevo mas tarde", preferredStyle: .alert)
+        alerta.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alerta, animated: true)
+    }
 }
 

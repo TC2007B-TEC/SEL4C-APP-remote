@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import CryptoKit
 
 class LoginVC: UIViewController {
     
@@ -266,8 +267,19 @@ class LoginVC: UIViewController {
 
     }
     
+    func sha256(_ input: String) -> String {
+        // Convertir el string a datos binarios
+        let data = Data(input.utf8)
+        // Calcular el hash SHA-256 usando la librería CryptoKit
+        let hash = SHA256.hash(data: data)
+        // Convertir el hash a un string hexadecimal
+        let hexString = hash.compactMap { String(format: "%02x", $0) }.joined()
+        // Regresar el string hexadecimal
+        return hexString
+    }
+    
         @IBAction func login ( sender: UIButton) {
-            getAPI(email: User.text!,password: Pass.text!)
+            getAPI(email: User.text!,password: sha256(Pass.text!))
             group.wait()
             
             let defaults = UserDefaults.standard

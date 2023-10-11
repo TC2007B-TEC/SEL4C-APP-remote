@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@email.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
-                                <rect key="frame" x="61" y="440" width="271.33333333333331" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Lname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
+                                <rect key="frame" x="90.666666666666671" y="440" width="211.66666666666663" height="38"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-0o-ocL">
-                                <rect key="frame" x="71.666666666666686" y="548" width="250" height="103"/>
+                                <rect key="frame" x="71.666666666666686" y="551" width="250" height="103"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjj-em-hBl">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -84,24 +84,36 @@
                                     <constraint firstAttribute="width" constant="250" id="rkr-Wz-GNf"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@email.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-8e-vsR">
+                                <rect key="frame" x="20" y="486" width="353" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="vGb-Ac-1gZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JiH-dO-oSm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TW9-n2-yUk" firstAttribute="top" secondItem="eIo-hz-ZOP" secondAttribute="bottom" constant="150" id="3dH-XC-lOn"/>
-                            <constraint firstItem="qMV-0o-ocL" firstAttribute="top" secondItem="TW9-n2-yUk" secondAttribute="bottom" constant="70" id="CKF-C8-art"/>
+                            <constraint firstItem="Keg-8e-vsR" firstAttribute="leading" secondItem="JiH-dO-oSm" secondAttribute="leading" constant="20" id="G94-Qd-cEW"/>
                             <constraint firstItem="qMV-0o-ocL" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="M8b-dx-UNo"/>
                             <constraint firstItem="eIo-hz-ZOP" firstAttribute="trailing" secondItem="JiH-dO-oSm" secondAttribute="trailing" id="W7p-8e-emj"/>
                             <constraint firstItem="eIo-hz-ZOP" firstAttribute="leading" secondItem="JiH-dO-oSm" secondAttribute="leading" id="W9w-1m-AgM"/>
+                            <constraint firstItem="qMV-0o-ocL" firstAttribute="top" secondItem="Keg-8e-vsR" secondAttribute="bottom" constant="40" id="XFs-D2-qw9"/>
                             <constraint firstItem="eIo-hz-ZOP" firstAttribute="top" secondItem="ID1-cD-Zah" secondAttribute="top" id="bzF-WY-TNY"/>
+                            <constraint firstItem="Keg-8e-vsR" firstAttribute="top" secondItem="TW9-n2-yUk" secondAttribute="bottom" constant="8" symbolic="YES" id="fdz-iK-ZXb"/>
                             <constraint firstItem="TW9-n2-yUk" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="uyq-sK-muQ"/>
+                            <constraint firstItem="JiH-dO-oSm" firstAttribute="trailing" secondItem="Keg-8e-vsR" secondAttribute="trailing" constant="20" id="xmL-tL-sIL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="idR-Ft-gtM"/>
                     <navigationItem key="navigationItem" id="prg-lH-x5L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="usenameLabel" destination="TW9-n2-yUk" id="nO3-Gi-CBT"/>
+                        <outlet property="usenameLabel" destination="Keg-8e-vsR" id="4SE-sc-RYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6W-0K-j4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

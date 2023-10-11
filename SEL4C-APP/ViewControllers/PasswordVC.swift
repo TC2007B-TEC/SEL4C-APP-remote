@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import CryptoKit
 
 class PasswordVC: UIViewController {
 
@@ -156,7 +157,7 @@ class PasswordVC: UIViewController {
         // preparar los datos json
         let json: [String: Any] = [
             "email": self.email!,
-            "password": self.Password.text!,
+            "password": sha256(self.Password.text!),
             "name": self.nombre!,
             "lname": self.apellido!,
             "gender": self.genero!,
@@ -193,6 +194,17 @@ class PasswordVC: UIViewController {
 
         tarea.resume()
 
+    }
+
+    func sha256(_ input: String) -> String {
+        // Convertir el string a datos binarios
+        let data = Data(input.utf8)
+        // Calcular el hash SHA-256 usando la librería CryptoKit
+        let hash = SHA256.hash(data: data)
+        // Convertir el hash a un string hexadecimal
+        let hexString = hash.compactMap { String(format: "%02x", $0) }.joined()
+        // Regresar el string hexadecimal
+        return hexString
     }
     
     @IBAction func createUser(_ sender: Any) {

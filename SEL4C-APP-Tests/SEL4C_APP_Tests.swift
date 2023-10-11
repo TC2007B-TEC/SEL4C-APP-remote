@@ -101,6 +101,23 @@ final class SEL4C_APP_Tests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testSendTest() {
+//        func testSendTestJSON() {
+//                // Assuming you have a setup for your test, like setting `testNum` and `USERNAME` in UserDefaults
+//                
+//                let expectation = XCTestExpectation(description: "Send test JSON expectation")
+//                
+//            Poll1VC.sendTestJSON()
+//
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                    // Assuming the server responds with status code 200 for a successful request
+//                    expectation.fulfill()
+//                }
+//                
+//                wait(for: [expectation], timeout: 5)
+//            }
+    }
+    
     
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

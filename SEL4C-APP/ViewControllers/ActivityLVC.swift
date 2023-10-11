@@ -99,11 +99,27 @@ class ActivityLVC: UICollectionViewController {
         } else if title == "Perfil Final"  {
             wasTurnedIn(actName: "A5") { success in
                 if success {
-                    let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
-                    viewController.hidesBottomBarWhenPushed =  true
                     
-                    // Use presentViewController to present the view controller modally
-                    self.navigationController?.pushViewController(viewController, animated: true)}
+                    let defaults = UserDefaults.standard
+                    let email = defaults.string(forKey: "USERNAME")!
+                    let test1Completado = self.verificarTest(testType: "F2", usuario: email)
+                    self.group.wait()
+                    
+                    if !test1Completado{
+                        let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
+                        viewController.hidesBottomBarWhenPushed =  true
+                        
+                        // Use presentViewController to present the view controller modally
+                        self.navigationController?.pushViewController(viewController, animated: true)}
+                        
+                } else {
+                    let alerta = UIAlertController(title: "Ya se ha resuleto", message: "Para consultar resultados acceder al perfil", preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alerta, animated: true)
+                }
+                
+                
+                    
                 }
             }
 
@@ -149,6 +165,45 @@ class ActivityLVC: UICollectionViewController {
     }
     
 
+    
+    var group = DispatchGroup()
+    func verificarTest(testType: String, usuario: String) -> Bool {
+        var respuesta = false
+        // Construye la URL con los parámetros
+        let baseUrl = "http://20.127.122.6:8000/getpreguntas/?"
+        let parameters = "test_type=\(testType)&usuario=\(usuario)"
+        if let url = URL(string: baseUrl + parameters) {
+            // Crea la sesión de URLSession
+            group.enter()
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Error al realizar la solicitud: \(error)")
+                    return
+                }
+                
+                if let data = data {
+                    // Procesa los datos de la respuesta
+                    if let result = String(data: data, encoding: .utf8) {
+                        print("Respuesta: \(result)")
+                        if result != "{\"message\":\"No se encontraron preguntas\"}" {
+                            respuesta = true
+                        }
+                    } else {
+                        print("No se pudo decodificar la respuesta")
+                    }
+                }
+                self.group.leave()
+            }
+            // Inicia la tarea
+            task.resume()
+            group.wait()
+            return respuesta
+        } else {
+            print("URL no válida")
+        }
+        return respuesta
+    }
     
 }
 
