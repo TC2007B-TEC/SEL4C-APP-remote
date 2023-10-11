@@ -1,22 +1,22 @@
 //
-//  Act1VC3.swift
+//  Activity3VC2.swift
 //  SEL4C-APP
 //
-//  Created by Raúl Vélez on 08/10/23.
+//  Created by Raúl Vélez on 11/10/23.
 //
 
 import UIKit
 
-class Activity2VC3: UIViewController, TurninVCDelegate{
+class Activity3VC2: UIViewController, TurninVCDelegate{
     
     @IBOutlet weak var turninBut: UIButton!
     @IBOutlet weak var wasTurnedin: UIControl!
     
-    let actName = "A2_3"
+    let actName = "A3_2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Actividad 2.3"
+        self.title = "Actividad 3.2"
         wasTurnedin.isHidden = true
         
     }

@@ -84,27 +84,16 @@
                                     <constraint firstAttribute="width" constant="250" id="rkr-Wz-GNf"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukg-Di-yfv">
-                                <rect key="frame" x="148" y="678" width="97" height="34.333333333333371"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Test Final"/>
-                                <connections>
-                                    <action selector="testFinalTest:" destination="FxJ-Dp-TvM" eventType="touchUpInside" id="PsJ-un-rFB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JiH-dO-oSm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TW9-n2-yUk" firstAttribute="top" secondItem="eIo-hz-ZOP" secondAttribute="bottom" constant="150" id="3dH-XC-lOn"/>
                             <constraint firstItem="qMV-0o-ocL" firstAttribute="top" secondItem="TW9-n2-yUk" secondAttribute="bottom" constant="70" id="CKF-C8-art"/>
-                            <constraint firstItem="Ukg-Di-yfv" firstAttribute="top" secondItem="qMV-0o-ocL" secondAttribute="bottom" constant="27" id="HbZ-IB-bFH"/>
                             <constraint firstItem="qMV-0o-ocL" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="M8b-dx-UNo"/>
                             <constraint firstItem="eIo-hz-ZOP" firstAttribute="trailing" secondItem="JiH-dO-oSm" secondAttribute="trailing" id="W7p-8e-emj"/>
                             <constraint firstItem="eIo-hz-ZOP" firstAttribute="leading" secondItem="JiH-dO-oSm" secondAttribute="leading" id="W9w-1m-AgM"/>
                             <constraint firstItem="eIo-hz-ZOP" firstAttribute="top" secondItem="ID1-cD-Zah" secondAttribute="top" id="bzF-WY-TNY"/>
-                            <constraint firstItem="Ukg-Di-yfv" firstAttribute="centerX" secondItem="qMV-0o-ocL" secondAttribute="centerX" id="dRF-sB-bW4"/>
-                            <constraint firstItem="Ukg-Di-yfv" firstAttribute="leading" secondItem="JiH-dO-oSm" secondAttribute="leading" constant="148" id="dRf-PZ-kuJ"/>
                             <constraint firstItem="TW9-n2-yUk" firstAttribute="centerX" secondItem="ID1-cD-Zah" secondAttribute="centerX" id="uyq-sK-muQ"/>
                         </constraints>
                     </view>

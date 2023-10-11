@@ -233,10 +233,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQm-UY-wqG">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1600"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Falta Entrega" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-xL-Ppn">
-                                                <rect key="frame" x="0.0" y="1308" width="393" height="174"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Socialización" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxR-T2-VWS">
                                                 <rect key="frame" x="40" y="8" width="312" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -248,6 +244,38 @@
                                                 <rect key="frame" x="-13" y="68" width="418" height="1173"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xS-C3-KOm">
+                                                <rect key="frame" x="83" y="1287" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="2Dh-LZ-6v5"/>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="l2d-aY-Dkh"/>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="nll-Qe-RgT"/>
+                                                    <action selector="turninSegue:" destination="IqE-rj-U0o" eventType="touchUpInside" id="ya7-ag-Q7P"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5t-Vb-9nU" customClass="UIControl">
+                                                <rect key="frame" x="38" y="1292" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-zQ-MuB">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="82h-yS-Ow1"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,6 +305,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="6BG-JH-Chu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="7xS-C3-KOm" id="c3h-kO-Wj5"/>
+                        <outlet property="wasTurnedin" destination="b5t-Vb-9nU" id="mjS-ct-4wQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sj-mh-9Dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -320,23 +352,11 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Gi-F3-jVc" customClass="UIControl">
-                                                <rect key="frame" x="38" y="386" width="317" height="143"/>
+                                                <rect key="frame" x="38" y="360" width="317" height="63"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-IJ-GOH">
-                                                        <rect key="frame" x="89" y="113" width="138" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nLV-Vv-k56">
-                                                        <rect key="frame" x="114" y="48" width="89" height="66"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNX-Ag-74D">
-                                                        <rect key="frame" x="28" y="11" width="263" height="32"/>
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -393,6 +413,37 @@
                     <view key="view" contentMode="scaleToFill" id="cbo-en-KdI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-US-dDh" customClass="UIControl">
+                                <rect key="frame" x="38" y="390" width="317" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-oC-d5C">
+                                        <rect key="frame" x="89" y="113" width="138" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-Aj-6DP">
+                                        <rect key="frame" x="114" y="48" width="89" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO7-cp-IAe">
+                                        <rect key="frame" x="28" y="11" width="263" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="Tr5-il-OO9"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1nR-8Z-rQB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -560,32 +611,6 @@
                                                 <rect key="frame" x="15" y="109" width="358" height="357"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXP-ED-ljy">
-                                                <rect key="frame" x="0.0" y="474" width="398" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-jM-Xsd">
-                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Tc-DI-eGD">
-                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9W-Nh-6fY">
-                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBA-46-owz">
                                                 <rect key="frame" x="38" y="31" width="312" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -593,6 +618,36 @@
                                                 <color key="textColor" name="AzulTec"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSv-J7-jeO">
+                                                <rect key="frame" x="84" y="484" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="0f9-QU-0E7"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="TwF-rq-3Oj"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZO-gD-fue" customClass="UIControl">
+                                                <rect key="frame" x="38" y="489" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br8-pD-UBm">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="m0S-nz-WaD"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -622,6 +677,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="4s7-Of-8lL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="dSv-J7-jeO" id="HNs-um-Rfj"/>
+                        <outlet property="wasTurnedin" destination="aZO-gD-fue" id="KA3-mg-SlR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9x-my-jmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -645,32 +704,6 @@
                                                 <rect key="frame" x="16" y="109" width="360" height="369"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wa-qI-lk4">
-                                                <rect key="frame" x="-5" y="471" width="398" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDo-re-Gyt">
-                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xij-CY-gY3">
-                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-ne-a3g">
-                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recorrido" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-fn-e6y">
                                                 <rect key="frame" x="38" y="49" width="312" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -678,6 +711,37 @@
                                                 <color key="textColor" name="AzulTec"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuS-Sa-yUW">
+                                                <rect key="frame" x="84" y="486" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="960-zW-duI"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="Zwq-mg-5yR"/>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="iFo-Ts-Ig1"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0n1-oh-nTg" customClass="UIControl">
+                                                <rect key="frame" x="38" y="491" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-BE-abK">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="Hdl-Vl-onm"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -707,6 +771,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hl1-3S-hC0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="OuS-Sa-yUW" id="Xo5-BH-HIj"/>
+                        <outlet property="wasTurnedin" destination="0n1-oh-nTg" id="bPf-4b-sXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97G-jT-jfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -726,32 +794,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRt-xv-2Fx">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-Gg-Flm">
-                                                <rect key="frame" x="-3" y="695" width="398" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyJ-Oh-eo3">
-                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dNK-8G-p2C">
-                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB0-Oo-neM">
-                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones2.1" translatesAutoresizingMaskIntoConstraints="NO" id="gVz-xe-y8F">
                                                 <rect key="frame" x="7" y="109" width="378" height="578"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -763,6 +805,38 @@
                                                 <color key="textColor" name="AzulTec"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsD-I4-2zB">
+                                                <rect key="frame" x="84" y="721" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="1xx-Lj-RPJ"/>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="Kaj-4A-FSK"/>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="Pcl-Kr-vgW"/>
+                                                    <action selector="turninSegue:" destination="0qe-6e-o8O" eventType="touchUpInside" id="aKE-Hx-h79"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-qf-bNV" customClass="UIControl">
+                                                <rect key="frame" x="38" y="726" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-vU-z10">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="tk6-27-6Ae"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -792,6 +866,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="HxT-tb-SeR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="TsD-I4-2zB" id="4IX-tE-m7f"/>
+                        <outlet property="wasTurnedin" destination="Nna-qf-bNV" id="RCw-FT-Lp1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aln-cm-BUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -811,32 +889,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-4Q-7pF">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gch-eK-zmr">
-                                                <rect key="frame" x="-3" y="931" width="398" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sG-aL-wrS">
-                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yOI-qb-cCH">
-                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsT-oC-nut">
-                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones2.2" translatesAutoresizingMaskIntoConstraints="NO" id="3Bn-ez-EQ3">
                                                 <rect key="frame" x="15" y="109" width="358" height="810"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -848,6 +900,38 @@
                                                 <color key="textColor" name="AzulTec"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bea-JA-5WZ">
+                                                <rect key="frame" x="82" y="953" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="CHs-QB-TpP" eventType="touchUpInside" id="Lum-UH-9VG"/>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="sIM-Kd-zn3"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="xxb-Dm-B9B"/>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="z7o-Cd-a38"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-Ju-bb5" customClass="UIControl">
+                                                <rect key="frame" x="36" y="958" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb5-52-ryG">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="vGH-Mr-Hqs"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -877,6 +961,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ob9-Px-UOD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="bea-JA-5WZ" id="jLZ-Jq-U3c"/>
+                        <outlet property="wasTurnedin" destination="XkE-Ju-bb5" id="wnO-lU-Nnw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWg-nc-l2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -896,32 +984,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRn-vc-Vo0">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXN-xj-7Tv">
-                                                <rect key="frame" x="-5" y="1260" width="398" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Esta actividad ha sido entregada!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mR-yT-0OD">
-                                                        <rect key="frame" x="52" y="8" width="295" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-83-soo">
-                                                        <rect key="frame" x="178" y="31" width="43" height="69.666666666666657"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descargar archivo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKu-Zn-uK3">
-                                                        <rect key="frame" x="137" y="92" width="125" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones2.3" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-B4-X2h">
                                                 <rect key="frame" x="16" y="109" width="360" height="1131"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -933,6 +995,38 @@
                                                 <color key="textColor" name="AzulTec"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78W-Jg-PqN">
+                                                <rect key="frame" x="84" y="1278" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="3K0-bs-KO3"/>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="8c0-ua-Y7A"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="XNu-p1-rks"/>
+                                                    <action selector="turninSegue:" destination="8fJ-HY-anG" eventType="touchUpInside" id="ngc-iQ-eS0"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="orI-cJ-nRH" customClass="UIControl">
+                                                <rect key="frame" x="38" y="1283" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-g7-jQk">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="Nzq-LS-vHT"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -962,6 +1056,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="ich-wr-cAb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="78W-Jg-PqN" id="71d-C3-y71"/>
+                        <outlet property="wasTurnedin" destination="orI-cJ-nRH" id="MOT-XL-3Gb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8Z-Kr-xbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -975,8 +1073,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Modulos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdz-Wk-Tky">
-                                <rect key="frame" x="30" y="260.66666666666663" width="80" height="21.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdz-Wk-Tky">
+                                <rect key="frame" x="30" y="149.66666666666666" width="80" height="21.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="RET-u2-ceT"/>
                                 </constraints>
@@ -984,8 +1082,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="En esta sección trabajaras viendo los desafíos actuales." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-Ra-QNy">
-                                <rect key="frame" x="31.666666666666657" y="190" width="330" height="40.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En esta sección trabajaras viendo los desafíos actuales." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-Ra-QNy">
+                                <rect key="frame" x="31.666666666666657" y="79" width="330" height="40.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="oBQ-mo-K5c"/>
                                 </constraints>
@@ -993,18 +1091,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sDd-Os-0Hm">
-                                <rect key="frame" x="50" y="312.33333333333326" width="293" height="320"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sDd-Os-0Hm">
+                                <rect key="frame" x="50" y="201.33333333333337" width="293" height="320"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sL2-Vg-ZvJ" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="102"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe.americas" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r0l-Uy-1Q9">
-                                                <rect key="frame" x="10" y="11.000000000000014" width="88" height="80.666666666666671"/>
+                                                <rect key="frame" x="10" y="11" width="88" height="80.666666666666671"/>
                                                 <color key="tintColor" name="AzulTec"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ODS y ambiente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLZ-xe-fpI">
-                                                <rect key="frame" x="108" y="38.333333333333329" width="150" height="25.333333333333329"/>
+                                                <rect key="frame" x="108" y="38.333333333333314" width="150" height="25.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="yNl-iL-jmT"/>
                                                 </constraints>
@@ -1027,17 +1125,17 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-ow-izg" customClass="UIControl">
-                                        <rect key="frame" x="0.0" y="102" width="293" height="116"/>
+                                        <rect key="frame" x="0.0" y="101.99999999999997" width="293" height="116"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.pages" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-Cc-IN4">
-                                                <rect key="frame" x="10" y="9.666666666666643" width="90" height="82.333333333333343"/>
+                                                <rect key="frame" x="10" y="9.6666666666666998" width="90" height="82.333333333333343"/>
                                                 <color key="tintColor" name="AzulTec"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="i64-bq-Xqx"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retos y Desafíos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-4z-UYR">
-                                                <rect key="frame" x="110" y="37.999999999999972" width="153" height="26.333333333333329"/>
+                                                <rect key="frame" x="110" y="38" width="153" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1102,6 +1200,7 @@
                         <constraints>
                             <constraint firstItem="0RJ-Ra-QNy" firstAttribute="centerX" secondItem="JGh-pe-FgD" secondAttribute="centerX" id="0FI-qN-8UX"/>
                             <constraint firstItem="Cdz-Wk-Tky" firstAttribute="leading" secondItem="dMM-NE-Uvd" secondAttribute="leading" constant="30" id="1hK-5z-FOA"/>
+                            <constraint firstItem="0RJ-Ra-QNy" firstAttribute="top" secondItem="dMM-NE-Uvd" secondAttribute="top" constant="20" id="WLx-Fv-xcq"/>
                             <constraint firstItem="sDd-Os-0Hm" firstAttribute="top" secondItem="Cdz-Wk-Tky" secondAttribute="bottom" constant="30" id="tkk-35-9No"/>
                             <constraint firstItem="dMM-NE-Uvd" firstAttribute="trailing" secondItem="sDd-Os-0Hm" secondAttribute="trailing" constant="50" id="u2V-y5-gQL"/>
                             <constraint firstItem="Cdz-Wk-Tky" firstAttribute="top" secondItem="0RJ-Ra-QNy" secondAttribute="bottom" constant="30" id="z8m-GB-UKW"/>
@@ -1118,73 +1217,6 @@
             </objects>
             <point key="canvasLocation" x="1451" y="2408"/>
         </scene>
-        <!--Activity3VC-->
-        <scene sceneID="kBz-lw-wmk">
-            <objects>
-                <viewController storyboardIdentifier="Actividad3" id="Bul-o4-Xs5" customClass="Activity3VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Rm-la-Mqg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy1-Cy-GCZ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Al-ML-mjP">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2000"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ideación" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0p-tE-OjZ">
-                                                <rect key="frame" x="127" y="26" width="138" height="38"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
-                                                <color key="textColor" name="AzulTec"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones3.1" translatesAutoresizingMaskIntoConstraints="NO" id="ABY-Em-Eth">
-                                                <rect key="frame" x="-13" y="127" width="418" height="812"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones3.2" translatesAutoresizingMaskIntoConstraints="NO" id="JzK-hf-mP1">
-                                                <rect key="frame" x="33" y="947" width="327" height="691"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Falta Entrega" translatesAutoresizingMaskIntoConstraints="NO" id="hie-nS-9JA">
-                                                <rect key="frame" x="0.0" y="1659" width="393" height="174"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2000" id="jqa-Lr-hfu"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="7Al-ML-mjP" firstAttribute="top" secondItem="Fy1-Cy-GCZ" secondAttribute="top" id="WVI-nb-zBI"/>
-                                    <constraint firstItem="7Al-ML-mjP" firstAttribute="trailing" secondItem="Fy1-Cy-GCZ" secondAttribute="trailing" id="ZyF-Qc-mle"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Al-ML-mjP" secondAttribute="bottom" id="iaZ-61-aKA"/>
-                                    <constraint firstItem="7Al-ML-mjP" firstAttribute="leading" secondItem="Fy1-Cy-GCZ" secondAttribute="leading" id="oHZ-hx-e18"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6BX-Og-vK4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Fy1-Cy-GCZ" firstAttribute="trailing" secondItem="6BX-Og-vK4" secondAttribute="trailing" id="EBt-Hv-7UZ"/>
-                            <constraint firstItem="7Al-ML-mjP" firstAttribute="width" secondItem="8Rm-la-Mqg" secondAttribute="width" id="U2t-p5-Bw8"/>
-                            <constraint firstItem="Fy1-Cy-GCZ" firstAttribute="top" secondItem="6BX-Og-vK4" secondAttribute="top" id="bPh-pR-U3d"/>
-                            <constraint firstItem="Fy1-Cy-GCZ" firstAttribute="bottom" secondItem="6BX-Og-vK4" secondAttribute="bottom" id="bRZ-9d-8GA"/>
-                            <constraint firstItem="Fy1-Cy-GCZ" firstAttribute="leading" secondItem="6BX-Og-vK4" secondAttribute="leading" id="rjV-9F-vyQ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="B4F-H3-eMG"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zCG-RH-yWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1387" y="3569"/>
-        </scene>
         <!--Activity FinalVC-->
         <scene sceneID="wuP-6k-q7A">
             <objects>
@@ -1200,13 +1232,41 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1600"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones5" translatesAutoresizingMaskIntoConstraints="NO" id="QPT-BC-gAK">
-                                                <rect key="frame" x="-13" y="127" width="418" height="1173"/>
+                                                <rect key="frame" x="-13" y="25" width="418" height="1173"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Falta Entrega" translatesAutoresizingMaskIntoConstraints="NO" id="OvD-7E-3do">
-                                                <rect key="frame" x="0.0" y="1308" width="393" height="174"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yr1-QY-zEM">
+                                                <rect key="frame" x="84" y="1235" width="225" height="72"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="1H2-UP-XDp"/>
+                                                    <action selector="turninSegue:" destination="eQO-me-bLi" eventType="touchUpInside" id="Bdp-YT-rYm"/>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="TUc-Nb-y5O"/>
+                                                    <action selector="turninSegue:" destination="ht6-R0-IGt" eventType="touchUpInside" id="o4c-59-cV8"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24x-6t-KR0" customClass="UIControl">
+                                                <rect key="frame" x="38" y="1240" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KS-QA-mdS">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="jUn-Wp-rlE"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1236,31 +1296,483 @@
                     </view>
                     <navigationItem key="navigationItem" id="JTL-i6-M0o"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="yr1-QY-zEM" id="qOO-PL-Q8h"/>
+                        <outlet property="wasTurnedin" destination="24x-6t-KR0" id="OdF-RN-4qO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Oh-1F-fYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3543" y="3570"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="8d0-Oa-MN8">
+            <objects>
+                <viewController storyboardIdentifier="TurninTest" id="2hy-ce-9C9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yeP-1S-AvM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entregar Actividad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-jo-fjy">
+                                <rect key="frame" x="34" y="169" width="320" height="32.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="cua-uJ-dY7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="29"/>
+                                <color key="textColor" name="AzulTec"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teP-C8-tY7">
+                                <rect key="frame" x="20" y="587" width="348" height="111"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDL-b1-7PF" customClass="UIControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="111"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxU-n8-Kgt">
+                                                <rect key="frame" x="27" y="81" width="60" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.shutter.button.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WIR-ok-WCA">
+                                                <rect key="frame" x="18" y="6" width="78" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="tHp-uR-qL3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELc-vj-jmh" customClass="UIControl">
+                                        <rect key="frame" x="116" y="0.0" width="116" height="111"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carrete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sr-nN-lsN">
+                                                <rect key="frame" x="27" y="81" width="57" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rh3-34-Uah">
+                                                <rect key="frame" x="18" y="6.0000000000000355" width="78" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="laS-If-ll2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44o-qT-nX0" customClass="UIControl">
+                                        <rect key="frame" x="232" y="0.0" width="116" height="111"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-yc-0uB">
+                                                <rect key="frame" x="18" y="5.9999999999999574" width="78" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Archivos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clr-yA-Y06">
+                                                <rect key="frame" x="20" y="82" width="75" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="hmK-2I-tz8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WDL-b1-7PF" firstAttribute="leading" secondItem="teP-C8-tY7" secondAttribute="leading" id="3BY-86-hKv"/>
+                                    <constraint firstItem="44o-qT-nX0" firstAttribute="leading" secondItem="ELc-vj-jmh" secondAttribute="trailing" id="7w0-EJ-kv3"/>
+                                    <constraint firstAttribute="trailing" secondItem="44o-qT-nX0" secondAttribute="trailing" id="URZ-Z1-HYJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ELc-vj-jmh" secondAttribute="bottom" id="XNB-4d-rXf"/>
+                                    <constraint firstItem="44o-qT-nX0" firstAttribute="top" secondItem="teP-C8-tY7" secondAttribute="top" id="Y2I-xu-JE2"/>
+                                    <constraint firstAttribute="bottom" secondItem="44o-qT-nX0" secondAttribute="bottom" id="axW-N1-DZ6"/>
+                                    <constraint firstItem="WDL-b1-7PF" firstAttribute="top" secondItem="teP-C8-tY7" secondAttribute="top" id="cMz-bz-rRk"/>
+                                    <constraint firstAttribute="bottom" secondItem="WDL-b1-7PF" secondAttribute="bottom" id="dXa-Xg-oKS"/>
+                                    <constraint firstItem="ELc-vj-jmh" firstAttribute="top" secondItem="teP-C8-tY7" secondAttribute="top" id="k42-vL-iV9"/>
+                                    <constraint firstAttribute="height" constant="111" id="l72-ah-HRY"/>
+                                    <constraint firstItem="ELc-vj-jmh" firstAttribute="leading" secondItem="WDL-b1-7PF" secondAttribute="trailing" id="pcQ-EB-HX3"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subiendo actividad..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8I-oa-0CS">
+                                <rect key="frame" x="64" y="361.66666666666669" width="260" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="noz-Oe-m1I"/>
+                                    <constraint firstAttribute="height" constant="35" id="sLq-E0-j8v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C3b-4V-OIH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C3b-4V-OIH" firstAttribute="bottom" secondItem="teP-C8-tY7" secondAttribute="bottom" constant="120" id="5Hj-OG-qt3"/>
+                            <constraint firstItem="pAh-jo-fjy" firstAttribute="top" secondItem="C3b-4V-OIH" secondAttribute="top" constant="110" id="A9J-Ym-QwN"/>
+                            <constraint firstItem="p8I-oa-0CS" firstAttribute="top" secondItem="pAh-jo-fjy" secondAttribute="bottom" constant="160" id="Wdv-wF-oKr"/>
+                            <constraint firstItem="C3b-4V-OIH" firstAttribute="trailing" secondItem="teP-C8-tY7" secondAttribute="trailing" constant="20" id="dnf-mx-uh2"/>
+                            <constraint firstItem="pAh-jo-fjy" firstAttribute="centerX" secondItem="yeP-1S-AvM" secondAttribute="centerX" id="eGx-2U-3lD"/>
+                            <constraint firstItem="teP-C8-tY7" firstAttribute="leading" secondItem="C3b-4V-OIH" secondAttribute="leading" constant="20" id="eIp-B5-9g3"/>
+                            <constraint firstItem="teP-C8-tY7" firstAttribute="centerX" secondItem="yeP-1S-AvM" secondAttribute="centerX" id="iQX-Qb-Yj0"/>
+                            <constraint firstItem="p8I-oa-0CS" firstAttribute="centerX" secondItem="yeP-1S-AvM" secondAttribute="centerX" id="q8I-Ke-sDe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gyc-KT-zh1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rQ-3y-KAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4160" y="-550"/>
+        </scene>
+        <!--Activity3VC1-->
+        <scene sceneID="iqu-5w-qxS">
+            <objects>
+                <viewController storyboardIdentifier="Actividad3.1" id="8ga-oh-eat" customClass="Activity3VC1" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W5c-ZG-oYd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUz-bJ-yzV">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7LD-ac-sgs">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones3.1 1" translatesAutoresizingMaskIntoConstraints="NO" id="5bf-EX-gmv">
+                                                <rect key="frame" x="7" y="95" width="378" height="618"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soluciones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-t6-zTq">
+                                                <rect key="frame" x="44" y="20" width="304" height="93"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                                <color key="textColor" name="AzulTec"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="im2-TV-FjJ" customClass="UIControl">
+                                                <rect key="frame" x="38" y="747" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLb-3n-52m">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="ByT-lA-Hw6"/>
+                                                </connections>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMI-hz-4eK">
+                                                <rect key="frame" x="84" y="774" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="8ga-oh-eat" eventType="touchUpInside" id="1k5-FI-QFp"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="B4R-Pb-bJR"/>
+                                                    <action selector="turninSegue:" destination="0qe-6e-o8O" eventType="touchUpInside" id="TH3-aa-vOp"/>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="imE-Zw-qoW"/>
+                                                    <action selector="turninSegue:" destination="sHC-on-YQz" eventType="touchUpInside" id="thC-Iz-L7z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="900" id="5VD-9u-ej8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7LD-ac-sgs" firstAttribute="top" secondItem="uUz-bJ-yzV" secondAttribute="top" id="1Ny-2o-IFq"/>
+                                    <constraint firstItem="7LD-ac-sgs" firstAttribute="leading" secondItem="uUz-bJ-yzV" secondAttribute="leading" id="1g8-CY-f1B"/>
+                                    <constraint firstItem="7LD-ac-sgs" firstAttribute="trailing" secondItem="uUz-bJ-yzV" secondAttribute="trailing" id="G14-8P-3vT"/>
+                                    <constraint firstAttribute="bottom" secondItem="7LD-ac-sgs" secondAttribute="bottom" id="dIy-V4-QSl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H0c-dq-WIN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uUz-bJ-yzV" firstAttribute="leading" secondItem="H0c-dq-WIN" secondAttribute="leading" id="1fR-aa-CVG"/>
+                            <constraint firstItem="7LD-ac-sgs" firstAttribute="width" secondItem="W5c-ZG-oYd" secondAttribute="width" id="Pex-cH-zVf"/>
+                            <constraint firstItem="uUz-bJ-yzV" firstAttribute="top" secondItem="H0c-dq-WIN" secondAttribute="top" id="VmQ-cP-ixq"/>
+                            <constraint firstItem="uUz-bJ-yzV" firstAttribute="trailing" secondItem="H0c-dq-WIN" secondAttribute="trailing" id="Xqk-By-k4p"/>
+                            <constraint firstItem="uUz-bJ-yzV" firstAttribute="bottom" secondItem="H0c-dq-WIN" secondAttribute="bottom" id="qdw-sQ-5ha"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yi0-dr-RyJ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="ZMI-hz-4eK" id="q6b-bX-aMi"/>
+                        <outlet property="wasTurnedin" destination="im2-TV-FjJ" id="l4G-gV-xeT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pog-eW-Bgu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263.35877862595419" y="3569.7183098591549"/>
+        </scene>
+        <!--Activity3VC2-->
+        <scene sceneID="AG6-qp-Hk3">
+            <objects>
+                <viewController storyboardIdentifier="Actividad3.2" id="sHC-on-YQz" customClass="Activity3VC2" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nhp-0h-lsU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuK-HG-6Zb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkX-IJ-Ecs">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instrucciones3.2 1" translatesAutoresizingMaskIntoConstraints="NO" id="cxg-90-QFP">
+                                                <rect key="frame" x="15" y="91" width="358" height="1064"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adaptabilidad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhd-3g-bkf">
+                                                <rect key="frame" x="84" y="32" width="225" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                                <color key="textColor" name="AzulTec"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-uj-5Lv" customClass="UIControl">
+                                                <rect key="frame" x="38" y="1185" width="317" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Actividad Entregada!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzc-SF-D1K">
+                                                        <rect key="frame" x="27" y="15" width="263" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="downloadFile:" destination="nrA-TS-sbp" eventType="touchUpInside" id="agU-Ck-BDE"/>
+                                                </connections>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6r-gp-0I6">
+                                                <rect key="frame" x="84" y="1210" width="225" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="AzulTec"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Entregar Actividad">
+                                                    <color key="baseBackgroundColor" name="AzulTec"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="turninSegue:" destination="4HQ-Hd-cGM" eventType="touchUpInside" id="2AE-2S-xB9"/>
+                                                    <action selector="turninSegue:" destination="nrA-TS-sbp" eventType="touchUpInside" id="3D1-tH-I03"/>
+                                                    <action selector="turninSegue:" destination="sHC-on-YQz" eventType="touchUpInside" id="MkU-IF-t6Z"/>
+                                                    <action selector="turninSegue:" destination="0qe-6e-o8O" eventType="touchUpInside" id="Pmb-6e-Lhs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1300" id="bxG-OQ-91l"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vkX-IJ-Ecs" secondAttribute="bottom" id="Fj2-lp-pCN"/>
+                                    <constraint firstItem="vkX-IJ-Ecs" firstAttribute="leading" secondItem="FuK-HG-6Zb" secondAttribute="leading" id="X5N-K9-o4i"/>
+                                    <constraint firstItem="vkX-IJ-Ecs" firstAttribute="trailing" secondItem="FuK-HG-6Zb" secondAttribute="trailing" id="bA3-A2-Y2K"/>
+                                    <constraint firstItem="vkX-IJ-Ecs" firstAttribute="top" secondItem="FuK-HG-6Zb" secondAttribute="top" id="yph-Nt-JbN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EDG-8L-axg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FuK-HG-6Zb" firstAttribute="bottom" secondItem="EDG-8L-axg" secondAttribute="bottom" id="NlG-87-eaq"/>
+                            <constraint firstItem="vkX-IJ-Ecs" firstAttribute="width" secondItem="Nhp-0h-lsU" secondAttribute="width" id="P5R-XL-gR5"/>
+                            <constraint firstItem="FuK-HG-6Zb" firstAttribute="leading" secondItem="EDG-8L-axg" secondAttribute="leading" id="U0w-eo-NC1"/>
+                            <constraint firstItem="FuK-HG-6Zb" firstAttribute="top" secondItem="EDG-8L-axg" secondAttribute="top" id="hrt-GT-aht"/>
+                            <constraint firstItem="FuK-HG-6Zb" firstAttribute="trailing" secondItem="EDG-8L-axg" secondAttribute="trailing" id="mwg-3w-6i6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6s3-CL-dmC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="turninBut" destination="Q6r-gp-0I6" id="wkR-8b-UMK"/>
+                        <outlet property="wasTurnedin" destination="CTC-uj-5Lv" id="dIe-41-G5s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWo-cT-hGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458.77862595419845" y="3569.7183098591549"/>
+        </scene>
+        <!--Actividad 3-->
+        <scene sceneID="cUr-Cu-eDY">
+            <objects>
+                <viewController storyboardIdentifier="Actividad3" title="Actividad 3" id="dBL-ug-jp7" customClass="Activity3VC" customModule="SEL4C_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8x7-78-Uhw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AA-op-M8W">
+                                <rect key="frame" x="30" y="170" width="80" height="21.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="wXb-X0-4Ed"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En esta sección trabajaras desarrollando soluciones a la problematica que encontraste." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXn-Dt-qxJ">
+                                <rect key="frame" x="31.666666666666657" y="79" width="330" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="OOp-HE-be0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hn8-vh-oNF">
+                                <rect key="frame" x="50" y="221.66666666666663" width="293" height="320"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymm-4a-mmW" customClass="UIControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="102"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books.vertical" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-KB-1FA">
+                                                <rect key="frame" x="10" y="9.6666666666666643" width="88" height="82.333333333333343"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soluciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E41-uS-OHj">
+                                                <rect key="frame" x="108" y="38.333333333333343" width="150" height="25.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="YQL-Qc-MYM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="F3b-KB-1FA" firstAttribute="centerY" secondItem="E41-uS-OHj" secondAttribute="centerY" id="CEV-Ih-La2"/>
+                                            <constraint firstItem="F3b-KB-1FA" firstAttribute="leading" secondItem="Ymm-4a-mmW" secondAttribute="leading" constant="10" id="Fdr-Fv-pCd"/>
+                                            <constraint firstItem="E41-uS-OHj" firstAttribute="leading" secondItem="F3b-KB-1FA" secondAttribute="trailing" constant="10" id="RTe-sF-ZuR"/>
+                                            <constraint firstAttribute="trailing" secondItem="E41-uS-OHj" secondAttribute="trailing" constant="35" id="ST1-z1-5A1"/>
+                                            <constraint firstItem="F3b-KB-1FA" firstAttribute="top" secondItem="Ymm-4a-mmW" secondAttribute="top" constant="10.000000000000004" id="hE7-15-cd9"/>
+                                            <constraint firstItem="F3b-KB-1FA" firstAttribute="centerY" secondItem="Ymm-4a-mmW" secondAttribute="centerY" id="uoE-0s-xMM"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="subact1segue:" destination="dBL-ug-jp7" eventType="touchUpInside" id="EzY-Ao-GOp"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBi-vu-FM9" customClass="UIControl">
+                                        <rect key="frame" x="0.0" y="102.00000000000003" width="293" height="116"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="usk-d3-8l7">
+                                                <rect key="frame" x="10" y="12.333333333333314" width="90" height="79"/>
+                                                <color key="tintColor" name="AzulTec"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="3lU-Ji-XQ5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adaptabilidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqZ-bQ-Q8h">
+                                                <rect key="frame" x="110" y="38" width="153" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LqZ-bQ-Q8h" firstAttribute="leading" secondItem="usk-d3-8l7" secondAttribute="trailing" constant="10" id="1nf-Rv-Khm"/>
+                                            <constraint firstItem="usk-d3-8l7" firstAttribute="leading" secondItem="pBi-vu-FM9" secondAttribute="leading" constant="10" id="Krj-Te-lLF"/>
+                                            <constraint firstAttribute="trailing" secondItem="LqZ-bQ-Q8h" secondAttribute="trailing" constant="30" id="RGD-af-wdD"/>
+                                            <constraint firstAttribute="bottom" secondItem="usk-d3-8l7" secondAttribute="bottom" constant="25" id="bXM-tU-Pg2"/>
+                                            <constraint firstItem="LqZ-bQ-Q8h" firstAttribute="top" secondItem="pBi-vu-FM9" secondAttribute="top" constant="38" id="dvL-3i-L1E"/>
+                                            <constraint firstItem="usk-d3-8l7" firstAttribute="centerY" secondItem="LqZ-bQ-Q8h" secondAttribute="centerY" id="nnw-dQ-5CM"/>
+                                            <constraint firstItem="usk-d3-8l7" firstAttribute="top" secondItem="pBi-vu-FM9" secondAttribute="top" constant="11.333333333333336" id="rgh-PS-Yg6"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="subact2segue:" destination="dBL-ug-jp7" eventType="touchUpInside" id="o3I-bs-b9k"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEj-lB-xdR" customClass="UIControl">
+                                        <rect key="frame" x="0.0" y="218" width="293" height="102"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BEj-lB-xdR" firstAttribute="top" secondItem="pBi-vu-FM9" secondAttribute="bottom" id="4vE-gI-req"/>
+                                    <constraint firstItem="pBi-vu-FM9" firstAttribute="centerY" secondItem="hn8-vh-oNF" secondAttribute="centerY" id="N9V-9Y-T9Q"/>
+                                    <constraint firstItem="pBi-vu-FM9" firstAttribute="top" secondItem="hn8-vh-oNF" secondAttribute="top" constant="102" id="ZXX-QJ-f3g"/>
+                                    <constraint firstItem="pBi-vu-FM9" firstAttribute="top" secondItem="Ymm-4a-mmW" secondAttribute="bottom" id="jbf-8u-2Lk"/>
+                                    <constraint firstAttribute="height" constant="320" id="uvm-3E-SWd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NSt-LJ-WFP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LXn-Dt-qxJ" firstAttribute="top" secondItem="NSt-LJ-WFP" secondAttribute="top" constant="20" id="BGW-6A-iX4"/>
+                            <constraint firstItem="4AA-op-M8W" firstAttribute="leading" secondItem="NSt-LJ-WFP" secondAttribute="leading" constant="30" id="Bh0-ET-GKy"/>
+                            <constraint firstItem="4AA-op-M8W" firstAttribute="top" secondItem="LXn-Dt-qxJ" secondAttribute="bottom" constant="30" id="Oit-zl-IQb"/>
+                            <constraint firstItem="hn8-vh-oNF" firstAttribute="leading" secondItem="NSt-LJ-WFP" secondAttribute="leading" constant="50" id="cfa-65-Ye9"/>
+                            <constraint firstItem="LXn-Dt-qxJ" firstAttribute="centerX" secondItem="8x7-78-Uhw" secondAttribute="centerX" id="cnN-tx-C2q"/>
+                            <constraint firstItem="hn8-vh-oNF" firstAttribute="top" secondItem="4AA-op-M8W" secondAttribute="bottom" constant="30" id="rtC-5U-8Y1"/>
+                            <constraint firstItem="NSt-LJ-WFP" firstAttribute="trailing" secondItem="hn8-vh-oNF" secondAttribute="trailing" constant="50" id="xTl-E4-AcC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subact1But" destination="Ymm-4a-mmW" id="DWl-l1-GrE"/>
+                        <outlet property="subact2But" destination="pBi-vu-FM9" id="HR6-zy-gG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jj7-qv-drt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1277.0992366412213" y="3569.7183098591549"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Falta Entrega" width="791.33331298828125" height="318"/>
         <image name="Instrucciones1.1" width="2318" height="1446"/>
         <image name="Instrucciones1.2" width="2146" height="1800"/>
         <image name="Instrucciones1.3" width="1812" height="1602"/>
         <image name="Instrucciones2.1" width="1242" height="1846"/>
         <image name="Instrucciones2.2" width="870" height="1900"/>
         <image name="Instrucciones2.3" width="604" height="1906"/>
-        <image name="Instrucciones3.1" width="782" height="1904"/>
-        <image name="Instrucciones3.2" width="782" height="1642"/>
+        <image name="Instrucciones3.1 1" width="1106" height="1896"/>
+        <image name="Instrucciones3.2 1" width="610" height="1962"/>
         <image name="Instrucciones4" width="566" height="1948"/>
-        <image name="Instrucciones5" width="612" height="1944"/>
+        <image name="Instrucciones5" width="614" height="1956"/>
         <image name="book.pages" catalog="system" width="107" height="128"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="brain.head.profile" catalog="system" width="120" height="128"/>
         <image name="camera.shutter.button.fill" catalog="system" width="128" height="108"/>
         <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="figure.walk.circle" catalog="system" width="128" height="123"/>
         <image name="globe.americas" catalog="system" width="128" height="123"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
         <image name="person.line.dotted.person" catalog="system" width="128" height="59"/>
         <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="square.and.arrow.down" catalog="system" width="112" height="128"/>

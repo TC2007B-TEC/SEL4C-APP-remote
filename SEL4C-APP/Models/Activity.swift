@@ -56,16 +56,20 @@ extension Activity {
                             Activity(title: "Actividad 3.1", notes: "Posibles soluciones", subActivities: [], isComplete: false),
                             Activity(title: "Subactividad 3.2", notes: "Reflexión", subActivities: [], isComplete: false),
                         ],
-            isComplete: false),
+            isComplete: true),
         Activity(
             title: "Actividad 4",
             notes: "Socialización",
             subActivities: [],
-            isComplete: false),
+            isComplete: true),
         Activity(
             title: "Actividad Final",
             subActivities: [],
-            isComplete: false),
+            isComplete: true),
+        Activity(
+            title: "Perfil Final",
+            subActivities: [],
+            isComplete: true),
         
     ]
     
@@ -73,3 +77,5 @@ extension Activity {
 
 
 #endif
+
+

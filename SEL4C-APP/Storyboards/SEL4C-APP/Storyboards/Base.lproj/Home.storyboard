@@ -20,21 +20,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-BK-5xG">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emprendedor en proceso" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-BO-8Ik">
-                                        <rect key="frame" x="30" y="158.33333333333334" width="230" height="71.666666666666657"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emprendedor social en proceso" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-BO-8Ik">
+                                        <rect key="frame" x="30" y="158.33333333333334" width="370" height="71.666666666666657"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="230" id="WUI-Vw-ltW"/>
+                                            <constraint firstAttribute="width" constant="370" id="WUI-Vw-ltW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="32"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8k-bD-m7s">
-                                        <rect key="frame" x="268" y="169" width="113" height="51"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="hB9-9u-yzL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -42,10 +33,8 @@
                                 <color key="backgroundColor" red="0.070588238540000001" green="0.19607841970000001" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Gqw-BO-8Ik" secondAttribute="bottom" constant="50" id="NNs-am-EKO"/>
-                                    <constraint firstItem="b8k-bD-m7s" firstAttribute="leading" secondItem="Gqw-BO-8Ik" secondAttribute="trailing" constant="8" symbolic="YES" id="Qgj-5p-9nH"/>
                                     <constraint firstAttribute="height" constant="280" id="aPV-0t-QfZ"/>
                                     <constraint firstItem="Gqw-BO-8Ik" firstAttribute="leading" secondItem="aOn-BK-5xG" secondAttribute="leading" constant="30" id="jNs-LI-w7j"/>
-                                    <constraint firstAttribute="bottom" secondItem="b8k-bD-m7s" secondAttribute="bottom" constant="60" id="n5o-VB-aaU"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHd-SD-xyU">
@@ -93,7 +82,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="vcv-Q3-F0C"/>
                                 </constraints>
-                                <string key="text">SEL4C responde a las necesidades de aprendizaje de todo estudiante con espíritu emprendedor, incluso cuando no cuentan con acceso a experiencias en emprendimiento social o recursos humanos.</string>
+                                <string key="text">SEL4C responde a las necesidades de aprendizaje de todo estudiante con espíritu emprendedor social, incluso cuando no cuentan con acceso a experiencias en emprendimiento social o recursos humanos.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,6 +106,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="f.square.fill" catalog="system" selectedImage="f.square.fill" id="2kh-0Y-qsl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="actAct" destination="FT3-yE-JX4" id="4bb-VS-n0v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-E9-TjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

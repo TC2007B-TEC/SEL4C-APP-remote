@@ -74,8 +74,14 @@ class ActivityLVC: UICollectionViewController {
            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad4")
            navigationController?.pushViewController(viewController, animated: true)
         } else if title == "Actividad Final"  {
-           let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActividadFinal")
-           navigationController?.pushViewController(viewController, animated: true)}
+            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActividadFinal")
+            navigationController?.pushViewController(viewController, animated: true)
+        } else if title == "Perfil Final"  {
+            let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
+            viewController.hidesBottomBarWhenPushed =  true
+            
+            // Use presentViewController to present the view controller modally
+            navigationController?.pushViewController(viewController, animated: true)}
 //        } else  {
 //            let viewController = ActivityVC(activity: activity)
 //            navigationController?.pushViewController(viewController, animated: true)
@@ -94,7 +100,7 @@ class ActivityLVC: UICollectionViewController {
     
     
     func setupNavBar() {
-        navigationItem.title = "Actividades Test"
+        navigationItem.title = "Actividades"
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
