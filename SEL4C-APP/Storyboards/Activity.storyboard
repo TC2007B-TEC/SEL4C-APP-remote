@@ -210,6 +210,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="img1" destination="jN6-wR-bq9" id="69q-hP-5Kc"/>
+                        <outlet property="img2" destination="0c9-xg-qro" id="BKb-AC-Egk"/>
+                        <outlet property="img3" destination="1kI-Or-XbW" id="4lE-C9-rJT"/>
                         <outlet property="subact1But" destination="sZE-VY-Zhi" id="50p-vP-Hz4"/>
                         <outlet property="subact2But" destination="EZT-zp-RYs" id="7k9-Jc-wgW"/>
                         <outlet property="subact3But" destination="R11-vD-2ob" id="U2M-fq-y75"/>
@@ -1787,7 +1790,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

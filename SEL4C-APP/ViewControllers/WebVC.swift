@@ -11,22 +11,36 @@ import WebKit
 class WebVC: UIViewController {
     
     @IBOutlet var webView : WKWebView!
+    var testF = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadYoutube()
+        url()
     }
     
-    func loadYoutube() {
-        guard let youtubeURL = URL(string: "https://youtu.be/t_mypMqSXNw?si=3ScdZqI0NvuE1fqT") else { return }
-        webView.load( URLRequest(url: youtubeURL) )
+    func url() {
+        let defaults = UserDefaults.standard
+        let user = defaults.string(forKey: "USERNAME")
+        let base_url = "https://74.208.39.10:3000/radar/"
+        let urlAux = base_url + user!
+        
+        guard let url = URL(string: urlAux) else { return }
+        webView.load( URLRequest(url: url) )
     }
     
+    func wasTurnedIn(actName: String, completion: @escaping (Bool) -> Void) {
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")!
 
+        ActivityDoneAPI.shared.getAPI(email: email, name: actName) { [weak self] success in
+            DispatchQueue.main.async {
+                completion(success)
+            }
+        }
+    }
+    
     @IBAction func return2prof(_ sender: Any) {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
-
 }

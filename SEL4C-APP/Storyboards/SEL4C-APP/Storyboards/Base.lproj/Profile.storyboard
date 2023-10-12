@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Lname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Lname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW9-n2-yUk">
                                 <rect key="frame" x="90.666666666666671" y="440" width="211.66666666666663" height="38"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-0o-ocL">
-                                <rect key="frame" x="71.666666666666686" y="551" width="250" height="103"/>
+                                <rect key="frame" x="71.666666666666686" y="551" width="250" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjj-em-hBl">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -68,14 +68,14 @@
                                             <action selector="showResultsWeb:" destination="FxJ-Dp-TvM" eventType="touchUpInside" id="DtA-sI-Wb4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-2o-SCf">
-                                        <rect key="frame" x="0.0" y="63" width="250" height="40"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-2o-SCf">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="FAx-xe-I2t"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Resultados Finales" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="filled" title="Resultados" cornerStyle="capsule">
                                             <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                                         </buttonConfiguration>
                                     </button>
@@ -89,7 +89,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="vGb-Ac-1gZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -113,6 +113,7 @@
                     <navigationItem key="navigationItem" id="prg-lH-x5L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="nameLabel" destination="TW9-n2-yUk" id="DKB-X7-6cN"/>
                         <outlet property="usenameLabel" destination="Keg-8e-vsR" id="4SE-sc-RYA"/>
                     </connections>
                 </viewController>
@@ -188,7 +189,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

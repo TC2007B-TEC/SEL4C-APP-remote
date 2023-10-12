@@ -13,23 +13,83 @@ class Activity2VC: UIViewController {
     @IBOutlet weak var subact2But: UIControl!
     @IBOutlet weak var subact3But: UIControl!
     
+    var A1Done = false
+    var A2Done = false
+    var A3Done = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Actividad 2"
+        
+        wasTurnedIn(actName: "A2_1"){success in
+            if success {
+                self.A1Done = true
+            }
+            else {
+                self.A1Done = false
+            }
+        }
+                
+        wasTurnedIn(actName: "A2_2"){success in
+            if success {
+                self.A2Done = true
+            }
+            else {
+                self.A2Done = false
+            }
+        }
+
+        wasTurnedIn(actName: "A2_3"){success in
+            if success {
+                self.A3Done = true
+            }
+            else {
+                self.A3Done = false
+            }
+        }
+    }
+    
+    func wasTurnedIn(actName: String, completion: @escaping (Bool) -> Void) {
+        let defaults = UserDefaults.standard
+        let email = defaults.string(forKey: "USERNAME")!
+
+        ActivityDoneAPI.shared.getAPI(email: email, name: actName) { [weak self] success in
+            DispatchQueue.main.async {
+                completion(success)
+            }
+        }
     }
     
     @IBAction func subact1segue(_ sender: Any) {
-        let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2.1")
-        navigationController?.pushViewController(viewController, animated: true)
+            let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2.1")
+            navigationController?.pushViewController(viewController, animated: true)
     }
     @IBAction func subact2segue(_ sender: Any) {
-        let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2.2")
-        navigationController?.pushViewController(viewController, animated: true)
+        wasTurnedIn(actName: "A2_1"){success in
+            if success {
+                let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2.2")
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            else {
+                let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alerta, animated: true)
+            }
+        }
     }
     
     @IBAction func subact3segue(_ sender: Any) {
-        let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2.3")
-        navigationController?.pushViewController(viewController, animated: true)
+        wasTurnedIn(actName: "A2_2"){success in
+            if success {
+                let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2.3")
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            else {
+                let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alerta, animated: true)
+            }
+        }
     }
     
 }

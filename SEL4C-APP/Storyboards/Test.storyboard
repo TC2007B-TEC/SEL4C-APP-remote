@@ -419,12 +419,12 @@
                                         <rect key="frame" x="49" y="228" width="195" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Ver resultados">
+                                        <buttonConfiguration key="configuration" style="tinted" title="Ir a inicio">
                                             <color key="baseForegroundColor" name="AzulTec"/>
                                             <color key="baseBackgroundColor" name="AzulTec"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Lhl-vm-u4S" kind="show" id="KJF-i4-dKN"/>
+                                            <segue destination="BIf-pp-v6L" kind="show" id="ZLw-2r-WOC"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final del Perfil" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYO-SH-Xdp">
@@ -447,15 +447,25 @@
             </objects>
             <point key="canvasLocation" x="3740" y="4"/>
         </scene>
-        <!--ResultsWeb-->
+        <!--TabBar-->
         <scene sceneID="7ns-Mg-VzW">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ResultsWeb" id="Lhl-vm-u4S" sceneMemberID="viewController">
+                <viewControllerPlaceholder referencedIdentifier="TabBar" id="Lhl-vm-u4S" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nK0-TW-ygF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM5-In-9HU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4581" y="4"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="VWE-Hd-oxp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBar" id="BIf-pp-v6L" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ujf-qN-KuW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbv-r3-4Ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4581" y="51"/>
         </scene>
     </scenes>
     <resources>
@@ -467,7 +477,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
