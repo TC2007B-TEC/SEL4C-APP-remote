@@ -39,9 +39,9 @@ class Poll1VC: UIViewController {
     var testIDone = false
     var testNum = "D1"
     
-    func sendTestJSON() {
-        let defaults = UserDefaults.standard
-        let email = defaults.string(forKey: "USERNAME")
+   
+    
+    func sendTestJSON(_ email: String, _ testNum : String) {
         
         let data = [
             "test_type": testNum,
@@ -60,9 +60,7 @@ class Poll1VC: UIViewController {
         }
     }
 
-    func sendQuestionJSON(idpregunta: Int, respuesta: Int) {
-        let defaults = UserDefaults.standard
-        let email = defaults.string(forKey: "USERNAME")
+    func sendQuestionJSON(_ email: String, _ testNum : String, idpregunta: Int, respuesta: Int) {
         
         let data = [
             "idpregunta": idpregunta,
@@ -164,7 +162,10 @@ class Poll1VC: UIViewController {
                     let namepregunta = text.text!
                     let idpregunta = i
                     let respuesta = respuestas[i]
-                    sendQuestionJSON(idpregunta: idpregunta, respuesta: respuesta)
+                    
+                    let defaults = UserDefaults.standard
+                    let email = defaults.string(forKey: "USERNAME")
+                    sendQuestionJSON(email!, testNum, idpregunta: idpregunta, respuesta: respuesta)
                 }
                 
                 performSegue(withIdentifier: "Poll2Segue", sender: self)
@@ -246,7 +247,8 @@ class Poll1VC: UIViewController {
             testNum = "F1"
         }
         print(testNum)
-        sendTestJSON()
+        
+        sendTestJSON(email!,testNum)
     }
     
     func updateUserResponses(title: String){

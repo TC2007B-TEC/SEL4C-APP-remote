@@ -71,6 +71,10 @@ class ActivityLVC: UICollectionViewController {
                 if success {
                     let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad2")
                     self.navigationController?.pushViewController(viewController, animated: true)
+                } else {
+                    let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alerta, animated: true)
                 }
             }
         } else if title == "Actividad 3"  {
@@ -78,6 +82,10 @@ class ActivityLVC: UICollectionViewController {
                 if success {
                     let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad3")
                     self.navigationController?.pushViewController(viewController, animated: true)
+                } else {
+                    let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alerta, animated: true)
                 }
             }
         } else if title == "Actividad 4"  {
@@ -85,6 +93,10 @@ class ActivityLVC: UICollectionViewController {
                 if success {
                     let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad4")
                     self.navigationController?.pushViewController(viewController, animated: true)
+                } else {
+                    let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alerta, animated: true)
                 }
             }
         } else if title == "Actividad Final"  {
@@ -92,6 +104,10 @@ class ActivityLVC: UICollectionViewController {
                 if success {
                     let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "ActividadFinal")
                     self.navigationController?.pushViewController(viewController, animated: true)
+                } else {
+                    let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alerta, animated: true)
                 }
             }
 
@@ -110,13 +126,20 @@ class ActivityLVC: UICollectionViewController {
                         viewController.hidesBottomBarWhenPushed =  true
                         
                         // Use presentViewController to present the view controller modally
-                        self.navigationController?.pushViewController(viewController, animated: true)}
+                        self.navigationController?.pushViewController(viewController, animated: true)
+                    } else {
+                            let alerta = UIAlertController(title: "Ya se ha resuleto", message: "Para consultar resultados acceder al perfil", preferredStyle: .alert)
+                            alerta.addAction(UIAlertAction(title: "OK", style: .default))
+                            self.present(alerta, animated: true)
+                        }
                         
                 } else {
-                    let alerta = UIAlertController(title: "Ya se ha resuleto", message: "Para consultar resultados acceder al perfil", preferredStyle: .alert)
+                    let alerta = UIAlertController(title: "No tienes accesso", message: "Primero tienes que terminar las actividades anteriores", preferredStyle: .alert)
                     alerta.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(alerta, animated: true)
                 }
+                
+                
                 
                 
                     

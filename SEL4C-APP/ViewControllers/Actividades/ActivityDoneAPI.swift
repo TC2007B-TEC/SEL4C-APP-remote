@@ -40,13 +40,15 @@ class ActivityDoneAPI {
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             // ...
-            if let json = try? JSONSerialization.jsonObject(with: data!) {
-                print("Respuesta JSON: \(json)")
-                completion(true)
-            } else {
-                print("Respuesta de texto: \(String(data: data!, encoding: .utf8) ?? "")")
-                completion(false)
-            }
+            do {
+                if let json = try? JSONSerialization.jsonObject(with: data!) {
+                    print("Respuesta JSON: \(json)")
+                    completion(true)
+                } else {
+                    print("Respuesta de texto: \(String(data: data!, encoding: .utf8) ?? "")")
+                    completion(false)
+                }
+            } catch {print("Error ")}
         }
         task.resume()
     }

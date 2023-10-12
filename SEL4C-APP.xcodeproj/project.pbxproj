@@ -59,6 +59,7 @@
 		66ED4FDA2AD696BF0001E173 /* Activity3VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FD92AD696BF0001E173 /* Activity3VC1.swift */; };
 		66ED4FDC2AD696D10001E173 /* Activity3VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FDB2AD696D10001E173 /* Activity3VC2.swift */; };
 		66ED4FDE2AD6A18E0001E173 /* ActivityDoneAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FDD2AD6A18E0001E173 /* ActivityDoneAPI.swift */; };
+		66ED4FE02AD773D40001E173 /* PollAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ED4FDF2AD773D40001E173 /* PollAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		66ED4FD92AD696BF0001E173 /* Activity3VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity3VC1.swift; sourceTree = "<group>"; };
 		66ED4FDB2AD696D10001E173 /* Activity3VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity3VC2.swift; sourceTree = "<group>"; };
 		66ED4FDD2AD6A18E0001E173 /* ActivityDoneAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDoneAPI.swift; sourceTree = "<group>"; };
+		66ED4FDF2AD773D40001E173 /* PollAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				669CE20F2AA94FD9000E676F /* PasswordVC.swift */,
 				66BB95862AA88A5900DEF549 /* Poll2VC.swift */,
 				66BB95842AA889DB00DEF549 /* Poll1VC.swift */,
+				66ED4FDF2AD773D40001E173 /* PollAPI.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,7 +248,6 @@
 		66A08FC02AD2CA2F00370526 /* Actividades */ = {
 			isa = PBXGroup;
 			children = (
-				66A08FB22AD2941500370526 /* TurninVC.swift */,
 				66ED4FDD2AD6A18E0001E173 /* ActivityDoneAPI.swift */,
 				6660E8152ACFB2000053A5D7 /* Activity1VC.swift */,
 				6660E8182AD12A470053A5D7 /* Activity1VC1.swift */,
@@ -260,6 +262,7 @@
 				66ED4FDB2AD696D10001E173 /* Activity3VC2.swift */,
 				66BB95802AA87DA500DEF549 /* Activity4VC.swift */,
 				66A08FCD2AD2CA9900370526 /* ActivityFinalVC.swift */,
+				66A08FB22AD2941500370526 /* TurninVC.swift */,
 			);
 			path = Actividades;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				66BB95892AA88B1A00DEF549 /* EcomplexityEngine.swift in Sources */,
 				66BB95872AA88A5900DEF549 /* Poll2VC.swift in Sources */,
 				66A08FC62AD2CA6C00370526 /* Activity2VC1.swift in Sources */,
+				66ED4FE02AD773D40001E173 /* PollAPI.swift in Sources */,
 				66BB958B2AA88B2A00DEF549 /* Question.swift in Sources */,
 				66ED4FD42AD4E4480001E173 /* TestVC.swift in Sources */,
 				6660E8192AD12A470053A5D7 /* Activity1VC1.swift in Sources */,

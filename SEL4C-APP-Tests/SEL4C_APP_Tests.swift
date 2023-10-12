@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import CryptoKit
+
 @testable import SEL4C_APP
 
 final class SEL4C_APP_Tests: XCTestCase {
@@ -51,11 +53,22 @@ final class SEL4C_APP_Tests: XCTestCase {
 //        XCTAssertNotEqual(r,5)
 //    }
     
+    func sha256(_ input: String) -> String {
+        // Convertir el string a datos binarios
+        let data = Data(input.utf8)
+        // Calcular el hash SHA-256 usando la librería CryptoKit
+        let hash = SHA256.hash(data: data)
+        // Convertir el hash a un string hexadecimal
+        let hexString = hash.compactMap { String(format: "%02x", $0) }.joined()
+        // Regresar el string hexadecimal
+        return hexString
+    }
+    
     func testValidLoginAPI(){
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Valid API Request")
 
-        loginVC.getAPI(email: "Prueba@prueba.com", password: "Pass1234")
+        loginVC.getAPI(email: "Prueba@prueba.com", password: sha256("Prueba123"))
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertTrue(loginVC.condicion)
@@ -102,20 +115,36 @@ final class SEL4C_APP_Tests: XCTestCase {
     }
     
     func testSendTest() {
-//        func testSendTestJSON() {
-//                // Assuming you have a setup for your test, like setting `testNum` and `USERNAME` in UserDefaults
-//                
-//                let expectation = XCTestExpectation(description: "Send test JSON expectation")
-//                
-//            Poll1VC.sendTestJSON()
-//
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//                    // Assuming the server responds with status code 200 for a successful request
-//                    expectation.fulfill()
-//                }
-//                
-//                wait(for: [expectation], timeout: 5)
-//            }
+        
+                // Assuming you have a setup for your test, like setting `testNum` and `USERNAME` in UserDefaults
+                
+                let expectation = XCTestExpectation(description: "Send test JSON expectation")
+                
+            Poll1VC().sendTestJSON("Prueba@prueba.com","D1")
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    // Assuming the server responds with status code 200 for a successful request
+                    expectation.fulfill()
+                }
+                
+                wait(for: [expectation], timeout: 5)
+            
+    }
+    
+    func testInvalidSendTest(){
+        // Assuming you have a setup for your test, like setting `testNum` and `USERNAME` in UserDefaults
+        
+        let expectation = XCTestExpectation(description: "Invalid Send Test JSON expectation")
+        
+        // Intentionally passing incorrect parameters to the function
+        Poll1VC().sendTestJSON("", "")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            // Assuming the server responds with status code 200 for a successful request
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
     }
     
     
