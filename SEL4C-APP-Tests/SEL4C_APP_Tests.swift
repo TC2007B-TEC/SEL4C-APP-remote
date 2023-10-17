@@ -64,7 +64,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         return hexString
     }
     
-    func testValidLoginAPI(){
+    func testCP_01_login_valid(){
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Valid API Request")
 
@@ -78,7 +78,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testInvalidLoginAPI() {
+    func testCP_01_login_invalid() {
         let loginVC = LoginVC()
         let expectation = self.expectation(description: "Invalid API Request")
 
@@ -92,7 +92,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testValidGetActivityAPI() {
+    func testCP_02_getActivity_valid() {
         let expectation = self.expectation(description: "API Call Expectation")
         
         ActivityDoneAPI.shared.getAPI(email: "Prueba@prueba.com", name: "A1_1") { success in
@@ -103,7 +103,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testInvalidGetActivityAPI() {
+    func testCP_02_getActivity_invalid() {
         let expectation = self.expectation(description: "API Call Expectation")
         
         ActivityDoneAPI.shared.getAPI(email: "", name: "") { success in
@@ -114,7 +114,7 @@ final class SEL4C_APP_Tests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testSendTest() {
+    func testCP_01_sendTest_valid() {
         
                 // Assuming you have a setup for your test, like setting `testNum` and `USERNAME` in UserDefaults
                 
@@ -131,7 +131,7 @@ final class SEL4C_APP_Tests: XCTestCase {
             
     }
     
-    func testInvalidSendTest(){
+    func testCP_01_sendTest_invalid(){
         // Assuming you have a setup for your test, like setting `testNum` and `USERNAME` in UserDefaults
         
         let expectation = XCTestExpectation(description: "Invalid Send Test JSON expectation")

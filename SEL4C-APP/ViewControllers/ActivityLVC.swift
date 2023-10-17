@@ -122,11 +122,13 @@ class ActivityLVC: UICollectionViewController {
                     self.group.wait()
                     
                     if !test1Completado{
+                        
                         let viewController = UIStoryboard(name: "Test", bundle: nil).instantiateViewController(withIdentifier: "testID")
                         viewController.hidesBottomBarWhenPushed =  true
                         
                         // Use presentViewController to present the view controller modally
                         self.navigationController?.pushViewController(viewController, animated: true)
+                        
                     } else {
                             let alerta = UIAlertController(title: "Ya se ha resuleto", message: "Para consultar resultados acceder al perfil", preferredStyle: .alert)
                             alerta.addAction(UIAlertAction(title: "OK", style: .default))

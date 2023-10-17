@@ -16,7 +16,6 @@
 		6660E79F2ACD46050053A5D7 /* ActivityVC+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E79E2ACD46050053A5D7 /* ActivityVC+Section.swift */; };
 		6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E7A82ACE2D510053A5D7 /* SEL4C_APP_Tests.swift */; };
 		6660E8162ACFB2000053A5D7 /* Activity1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8152ACFB2000053A5D7 /* Activity1VC.swift */; };
-		6660E8172ACFB2000053A5D7 /* Activity1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8152ACFB2000053A5D7 /* Activity1VC.swift */; };
 		6660E8192AD12A470053A5D7 /* Activity1VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E8182AD12A470053A5D7 /* Activity1VC1.swift */; };
 		6660E81B2AD12F1C0053A5D7 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E81A2AD12F1C0053A5D7 /* TabBarVC.swift */; };
 		6660E81D2AD13C010053A5D7 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660E81C2AD13C010053A5D7 /* FirstVC.swift */; };
@@ -248,7 +247,6 @@
 		66A08FC02AD2CA2F00370526 /* Actividades */ = {
 			isa = PBXGroup;
 			children = (
-				66ED4FDD2AD6A18E0001E173 /* ActivityDoneAPI.swift */,
 				6660E8152ACFB2000053A5D7 /* Activity1VC.swift */,
 				6660E8182AD12A470053A5D7 /* Activity1VC1.swift */,
 				66A08FBC2AD2C71200370526 /* Activity1VC2.swift */,
@@ -263,6 +261,7 @@
 				66BB95802AA87DA500DEF549 /* Activity4VC.swift */,
 				66A08FCD2AD2CA9900370526 /* ActivityFinalVC.swift */,
 				66A08FB22AD2941500370526 /* TurninVC.swift */,
+				66ED4FDD2AD6A18E0001E173 /* ActivityDoneAPI.swift */,
 			);
 			path = Actividades;
 			sourceTree = "<group>";
@@ -388,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6660E7A92ACE2D510053A5D7 /* SEL4C_APP_Tests.swift in Sources */,
-				6660E8172ACFB2000053A5D7 /* Activity1VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
