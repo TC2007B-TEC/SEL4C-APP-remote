@@ -214,7 +214,7 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             
         viewController.nombre = Nombre.text!
         viewController.apellido = Apellido.text!
-        viewController.email = Email.text!
+        viewController.email = Email.text!.lowercased()
         viewController.genero = Genero.text!
         viewController.edad = Edad.text!
         viewController.pais = Pais.text!

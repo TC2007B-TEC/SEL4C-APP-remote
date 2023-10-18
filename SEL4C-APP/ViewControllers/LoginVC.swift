@@ -279,7 +279,7 @@ class LoginVC: UIViewController {
     }
     
         @IBAction func login ( sender: UIButton) {
-            getAPI(email: User.text!,password: sha256(Pass.text!))
+            getAPI(email: User.text! ,password: sha256(Pass.text!))
             group.wait()
             
             let defaults = UserDefaults.standard

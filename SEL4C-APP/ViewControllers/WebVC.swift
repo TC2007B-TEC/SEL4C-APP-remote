@@ -21,11 +21,13 @@ class WebVC: UIViewController {
     func url() {
         let defaults = UserDefaults.standard
         let user = defaults.string(forKey: "USERNAME")
-        let base_url = "https://74.208.39.10:3000/radar/"
+        let base_url = "http://74.208.39.10:3000/radar/"
         let urlAux = base_url + user!
         
         guard let url = URL(string: urlAux) else { return }
+        print(url)
         webView.load( URLRequest(url: url) )
+        print(url)
     }
     
     func wasTurnedIn(actName: String, completion: @escaping (Bool) -> Void) {

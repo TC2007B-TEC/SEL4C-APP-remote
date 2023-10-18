@@ -83,6 +83,26 @@ class TurninVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    @IBAction func fileSelector(_ sender: Any) {
+        let actionSheet = UIAlertController(title: "Subir archivo", message: "Accion a realizar", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Escribir aqui", style: .default, handler: { [self] _ in
+            //Pantalla para escribir aquí
+            print("Escribir Aqui fue seleccionado")
+            
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Acceder a archivos del iPhone", style: .default, handler: {[self]  _ in
+
+           //Acceder archivos
+           
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+        
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         let defaults = UserDefaults.standard

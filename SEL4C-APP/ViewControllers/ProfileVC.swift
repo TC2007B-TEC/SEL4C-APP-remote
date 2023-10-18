@@ -70,15 +70,15 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func showResultsWeb(_ sender: Any) {
-        //let viewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ResultsWeb")
-        //navigationController?.pushViewController(viewController, animated: true)
-        let defaults = UserDefaults.standard
-        let user = defaults.string(forKey: "USERNAME")
-        let base_url = "http://74.208.39.10:3000/radar/"
-        let urlAux = base_url + user!
-        
-        guard let url = URL(string: urlAux) else { return }
-        UIApplication.shared.open(url)
+        let viewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ResultsWeb")
+        navigationController?.pushViewController(viewController, animated: true)
+//        let defaults = UserDefaults.standard
+//        let user = defaults.string(forKey: "USERNAME")
+//        let base_url = "http://74.208.39.10:3000/radar/"
+//        let urlAux = base_url + user!
+//        
+//        guard let url = URL(string: urlAux) else { return }
+//        UIApplication.shared.open(url)
     }
     /*
     // MARK: - Navigation

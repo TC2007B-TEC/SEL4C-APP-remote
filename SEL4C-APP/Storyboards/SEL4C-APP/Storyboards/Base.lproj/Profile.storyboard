@@ -145,9 +145,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-cs-amA">
-                                <rect key="frame" x="95" y="753" width="202" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-cs-amA">
+                                <rect key="frame" x="96.666666666666686" y="750" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ifr-7c-jDx"/>
+                                    <constraint firstAttribute="height" constant="40" id="vBG-NA-EGq"/>
+                                </constraints>
                                 <color key="tintColor" red="0.59607843140000005" green="0.38823529410000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ir a Inicio" cornerStyle="capsule">
@@ -157,10 +160,12 @@
                                     <action selector="return2prof:" destination="SuI-3I-hEI" eventType="touchUpInside" id="QPt-23-3zP"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0h6-WA-hIC">
-                                <rect key="frame" x="36" y="97" width="320" height="632"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0h6-WA-hIC">
+                                <rect key="frame" x="0.0" y="59" width="393" height="666"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="666" id="Y1J-Sc-Gc2"/>
+                                </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -169,6 +174,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NXZ-BQ-rEz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZoG-cs-amA" firstAttribute="centerX" secondItem="IRw-SD-3Pe" secondAttribute="centerX" id="Dzi-Ng-CAp"/>
+                            <constraint firstItem="0h6-WA-hIC" firstAttribute="top" secondItem="NXZ-BQ-rEz" secondAttribute="top" id="Jbn-56-fTd"/>
+                            <constraint firstItem="ZoG-cs-amA" firstAttribute="top" secondItem="0h6-WA-hIC" secondAttribute="bottom" constant="25" id="Mxr-lh-lFb"/>
+                            <constraint firstItem="NXZ-BQ-rEz" firstAttribute="trailing" secondItem="0h6-WA-hIC" secondAttribute="trailing" id="TNJ-9c-OKU"/>
+                            <constraint firstItem="0h6-WA-hIC" firstAttribute="leading" secondItem="NXZ-BQ-rEz" secondAttribute="leading" id="jEN-7p-EvC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="0h6-WA-hIC" id="IMO-bK-rNK"/>
@@ -189,7 +201,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
