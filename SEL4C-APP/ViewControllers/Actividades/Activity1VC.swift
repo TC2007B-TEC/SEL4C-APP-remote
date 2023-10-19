@@ -21,6 +21,8 @@ class Activity1VC: UIViewController {
     var A3Done = false
     
     let group = DispatchGroup()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Actividad 1"
@@ -32,9 +34,16 @@ class Activity1VC: UIViewController {
                 navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             }
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         wasTurnedIn(actName: "A1_1"){success in
             if success {
                 self.A1Done = true
+                self.img1.image = UIImage(systemName: "brain.head.profile.fill")
             }
             else {
                 self.A1Done = false
@@ -44,6 +53,7 @@ class Activity1VC: UIViewController {
         wasTurnedIn(actName: "A1_2"){success in
             if success {
                 self.A2Done = true
+                self.img2.image = UIImage(systemName: "person.line.dotted.person.fill")
             }
             else {
                 self.A2Done = false
@@ -53,6 +63,7 @@ class Activity1VC: UIViewController {
         wasTurnedIn(actName: "A1_3"){success in
             if success {
                 self.A3Done = true
+                self.img3.image = UIImage(systemName: "figure.walk.circle.fill")
             }
             else {
                 self.A3Done = false

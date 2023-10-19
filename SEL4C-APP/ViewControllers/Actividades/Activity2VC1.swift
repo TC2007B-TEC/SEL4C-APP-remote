@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import WebKit
 
 class Activity2VC1: UIViewController, TurninVCDelegate{
     
     @IBOutlet weak var turninBut: UIButton!
     @IBOutlet weak var wasTurnedin: UIControl!
+    
+    @IBOutlet weak var video1: WKWebView!
+    @IBOutlet weak var video2: WKWebView!
     
     let actName = "A2_1"
     
@@ -25,6 +29,16 @@ class Activity2VC1: UIViewController, TurninVCDelegate{
             super.viewWillAppear(animated)
         
         self.wasTurnedIn()
+        
+        if let youtubeURL1 = URL(string: "https://www.youtube.com/embed/MCKH5xk8X-g") {
+                    let request = URLRequest(url: youtubeURL1)
+            video1.load(request)
+                }
+        
+        if let youtubeURL2 = URL(string: "https://www.undp.org/es/sustainable-development-goals") {
+                    let request = URLRequest(url: youtubeURL2)
+            video2.load(request)
+                }
         
     }
     

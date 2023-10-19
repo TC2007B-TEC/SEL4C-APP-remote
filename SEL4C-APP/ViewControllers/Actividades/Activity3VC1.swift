@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import WebKit
 
 class Activity3VC1: UIViewController, TurninVCDelegate{
     
     @IBOutlet weak var turninBut: UIButton!
     @IBOutlet weak var wasTurnedin: UIControl!
+    
+    @IBOutlet weak var web1: WKWebView!
+    @IBOutlet weak var web2: WKWebView!
     
     let actName = "A3_1"
     
@@ -19,12 +23,24 @@ class Activity3VC1: UIViewController, TurninVCDelegate{
         self.title = "Actividad 3.1"
         wasTurnedin.isHidden = true
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
         
         self.wasTurnedIn()
+        
+        if let URL1 = URL(string: "https://www.sistemab.org/ser-b/") {
+                    let request = URLRequest(url: URL1)
+            web1.load(request)
+                }
+        
+        if let URL2 = URL(string: "https://www.ashoka.org/en-us/our-network") {
+                    let request = URLRequest(url: URL2)
+            web2.load(request)
+                }
         
     }
     

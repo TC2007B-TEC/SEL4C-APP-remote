@@ -12,6 +12,10 @@ class Activity2VC: UIViewController {
     @IBOutlet weak var subact1But: UIControl!
     @IBOutlet weak var subact2But: UIControl!
     @IBOutlet weak var subact3But: UIControl!
+    @IBOutlet weak var img1: UIImageView!
+    @IBOutlet weak var img2: UIImageView!
+    @IBOutlet weak var img3: UIImageView!
+    
     
     var A1Done = false
     var A2Done = false
@@ -21,9 +25,16 @@ class Activity2VC: UIViewController {
         super.viewDidLoad()
         self.title = "Actividad 2"
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         wasTurnedIn(actName: "A2_1"){success in
             if success {
                 self.A1Done = true
+                self.img1.image = UIImage(systemName: "globe.americas.fill")
             }
             else {
                 self.A1Done = false
@@ -33,6 +44,7 @@ class Activity2VC: UIViewController {
         wasTurnedIn(actName: "A2_2"){success in
             if success {
                 self.A2Done = true
+                self.img2.image = UIImage(systemName: "book.pages.fill")
             }
             else {
                 self.A2Done = false
@@ -42,6 +54,7 @@ class Activity2VC: UIViewController {
         wasTurnedIn(actName: "A2_3"){success in
             if success {
                 self.A3Done = true
+                self.img3.image = UIImage(systemName: "tree.fill")
             }
             else {
                 self.A3Done = false

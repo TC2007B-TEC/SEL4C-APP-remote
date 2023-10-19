@@ -12,6 +12,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var usenameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
 
+    
     let group = DispatchGroup()
     func getNombre() -> String{
         

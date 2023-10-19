@@ -17,6 +17,58 @@ class ActivityLVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activities[0].isComplete = false
+        self.activities[1].isComplete = false
+        self.activities[2].isComplete = false
+        self.activities[3].isComplete = false
+        self.activities[4].isComplete = false
+        self.activities[5].isComplete = false
+        
+        let grupo = DispatchGroup()
+        grupo.enter()
+        wasTurnedIn(actName: "A1_3"){success in
+            if success{
+                self.activities[0].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A2_3"){success in
+            if success{
+                self.activities[1].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A3_2"){success in
+            if success{
+                self.activities[2].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A4"){success in
+            if success{
+                self.activities[3].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A5"){success in
+            if success{
+                self.activities[4].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
 
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -36,9 +88,89 @@ class ActivityLVC: UICollectionViewController {
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         
-        
-        updateSnapshot()
+        grupo.notify(queue: .main){
+            self.updateSnapshot()
+        }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.activities[0].isComplete = false
+        self.activities[1].isComplete = false
+        self.activities[2].isComplete = false
+        self.activities[3].isComplete = false
+        self.activities[4].isComplete = false
+        self.activities[5].isComplete = false
+        
+        let grupo = DispatchGroup()
+        grupo.enter()
+        wasTurnedIn(actName: "A1_3"){success in
+            if success{
+                self.activities[0].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A2_3"){success in
+            if success{
+                self.activities[1].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A3_2"){success in
+            if success{
+                self.activities[2].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A4"){success in
+            if success{
+                self.activities[3].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A5"){success in
+            if success{
+                self.activities[4].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
+
+        let listLayout = listLayout()
+        collectionView.collectionViewLayout = listLayout
+
+        let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
+
+        dataSource = DataSource(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Activity.ID) in
+            return collectionView.dequeueConfiguredReusableCell(
+                using: cellRegistration, for: indexPath, item: itemIdentifier)
+        }
+
+        
+        collectionView.dataSource = dataSource
+        
+        setupNavBar()
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        
+        
+        grupo.notify(queue: .main){
+            self.updateSnapshot()
+        }
+    }
+
     
     override func collectionView(
         _ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath
@@ -51,7 +183,7 @@ class ActivityLVC: UICollectionViewController {
 
 //    func pushDetailViewForActivity(withId id: Activity.ID) {
 //        let activity = activity(withId: id)
-//        
+//
 //        let viewController = ActivityVC(activity: activity)
 //        navigationController?.pushViewController(viewController, animated: true)
 //
@@ -60,7 +192,6 @@ class ActivityLVC: UICollectionViewController {
     func pushDetailViewForActivity(withId id: Activity.ID) {
         let activity = activity(withId: id)
         let title = activity.title
-        
         if title == "" {
             
         } else if title == "Actividad 1"  {
@@ -262,5 +393,4 @@ class ActivityLVC: UICollectionViewController {
     
     }
     */
-
 

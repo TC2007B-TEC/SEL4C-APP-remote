@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class ActivityFinalVC: UIViewController, TurninVCDelegate{
     
@@ -13,6 +14,7 @@ class ActivityFinalVC: UIViewController, TurninVCDelegate{
     @IBOutlet weak var wasTurnedin: UIControl!
     
     let actName = "A5"
+    @IBOutlet weak var video: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,11 @@ class ActivityFinalVC: UIViewController, TurninVCDelegate{
             super.viewWillAppear(animated)
         
         self.wasTurnedIn()
+        
+        if let youtubeURL1 = URL(string: "https://www.youtube.com/embed/E7EzITdzarI") {
+                    let request = URLRequest(url: youtubeURL1)
+            video.load(request)
+                }
         
     }
     
