@@ -62,8 +62,8 @@ struct EcomplexityEngine{
     Question(text: "Analizo problemas de investigación contemplando el contexto para crear soluciones?"),
     Question(text: "Tiendo a evaluar con sentido crítico e innovador las soluciones derivadas de un problema")]
     
-    let parts = [Question(text: "Emprendedor Social"),
-    Question(text: "Pensamiento Complejo")]
+    let parts = [Question(text: "de Perfil Emprendedor"),
+        Question(text: "E-Complexity")]
     var isSecondPart: Bool
     
     init(isSecondPart: Bool) {

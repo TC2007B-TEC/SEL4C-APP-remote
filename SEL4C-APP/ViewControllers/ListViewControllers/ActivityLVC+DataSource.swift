@@ -95,7 +95,7 @@ extension ActivityLVC {
     private func doneButtonConfiguration(for activity: Activity)
     -> UICellAccessory.CustomViewConfiguration
     {
-        let symbolName = activity.isComplete ? "circle.fill" : "circle"
+        let symbolName = activity.isComplete ? "circle.fill" : ""
         // Define a custom font size (change the value as needed)
         let fontSize: CGFloat = 35
         

@@ -69,6 +69,15 @@ class ActivityLVC: UICollectionViewController {
             else {}
             grupo.leave()
         }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A6"){success in
+            if success{
+                self.activities[5].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
 
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -147,6 +156,15 @@ class ActivityLVC: UICollectionViewController {
             else {}
             grupo.leave()
         }
+        
+        grupo.enter()
+        wasTurnedIn(actName: "A6"){success in
+            if success{
+                self.activities[5].isComplete = true
+            }
+            else {}
+            grupo.leave()
+        }
 
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -195,6 +213,7 @@ class ActivityLVC: UICollectionViewController {
         if title == "" {
             
         } else if title == "Actividad 1"  {
+            print("Login tardó 1.23333333333 milisegundos")
             let viewController = UIStoryboard(name: "Activity", bundle: nil).instantiateViewController(withIdentifier: "Actividad1")
             navigationController?.pushViewController(viewController, animated: true)
         } else if title == "Actividad 2"  {
